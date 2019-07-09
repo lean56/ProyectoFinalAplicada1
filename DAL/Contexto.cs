@@ -11,6 +11,6 @@ namespace DAL
     public class Contexto : DbContext
     {
         public DbSet<Usuarios> Usuario { get; set; }
-        public Contexto() : base("Contr") { }
+        public Contexto() : base("Constr") { }
     }
 }

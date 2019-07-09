@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DAL
+namespace BLL
 {
     public interface IRepository<T> where T : class
     {
@@ -13,5 +13,6 @@ namespace DAL
         bool Modificar(T entity);
         T Buscar(int id);
         List<T> GetList(Expression<Func<T, bool>> expression);
+        bool Eliminar(int id);
     }
 }

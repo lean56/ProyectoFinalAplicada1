@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAL;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -6,9 +7,9 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DAL
+namespace BLL
 {
-   public class RepositorioBase<T> : IDisposable, IRepository<T> where T : class
+    public class RepositorioBase<T> : IDisposable, IRepository<T> where T : class
     {
         internal Contexto _contexto;
 
