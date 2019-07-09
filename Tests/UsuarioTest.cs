@@ -10,9 +10,8 @@ using Entidades;
 namespace BLL.Tests
 {
     [TestClass()]
-    public class RepositorioBaseTests
+    public class UsuarioTest
     {
-     
         [TestMethod()]
         public void GuardarTest()
         {
@@ -23,10 +22,9 @@ namespace BLL.Tests
                 UsuarioId = 1,
                 Nombre = "Prueba",
                 NivelUsuario = "Admin",
-                Usuario = "P1",
-                Clave = "1234",
+                Usuario = "p1",
+                Clave = "123",
                 FechaIngreso = DateTime.Now
-
             };
 
             Assert.IsTrue(db.Guardar(usuario));
@@ -41,11 +39,10 @@ namespace BLL.Tests
             {
                 UsuarioId = 1,
                 Nombre = "Prueba",
-                NivelUsuario = "User",
-                Usuario = "P1",
-                Clave = "1234",
+                NivelUsuario = "user",
+                Usuario = "p1",
+                Clave = "123",
                 FechaIngreso = DateTime.Now
-
             };
 
             Assert.IsTrue(db.Modificar(usuario));
@@ -84,14 +81,15 @@ namespace BLL.Tests
             {
                 UsuarioId = 1,
                 Nombre = "Prueba",
-                NivelUsuario = "User",
-                Usuario = "P1",
-                Clave = "1234",
+                NivelUsuario = "user",
+                Usuario = "p1",
+                Clave = "123",
                 FechaIngreso = DateTime.Now
-
             };
 
-            Assert.IsTrue(db.Duplicado(t=> true));
+            Assert.IsTrue(db.Duplicado(p => true));
         }
+
+
     }
 }
