@@ -1,5 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using DAL;
+using BLL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Entidades;
 
-namespace DAL.Tests
+namespace BLL.Tests
 {
     [TestClass()]
     public class RepositorioBaseTests
@@ -22,10 +22,11 @@ namespace DAL.Tests
             {
                 UsuarioId = 1,
                 Nombre = "Prueba",
-                NivelUsuario = "admin",
-                Usuario = "p1",
+                NivelUsuario = "Admin",
+                Usuario = "P1",
                 Clave = "1234",
                 FechaIngreso = DateTime.Now
+
             };
 
             Assert.IsTrue(db.Guardar(usuario));
@@ -34,37 +35,63 @@ namespace DAL.Tests
         [TestMethod()]
         public void ModificarTest()
         {
-            Assert.Fail();
+            RepositorioBase<Usuarios> db = new RepositorioBase<Usuarios>();
+
+            Usuarios usuario = new Usuarios()
+            {
+                UsuarioId = 1,
+                Nombre = "Prueba",
+                NivelUsuario = "User",
+                Usuario = "P1",
+                Clave = "1234",
+                FechaIngreso = DateTime.Now
+
+            };
+
+            Assert.IsTrue(db.Modificar(usuario));
         }
 
         [TestMethod()]
         public void EliminarTest()
         {
-            Assert.Fail();
+            RepositorioBase<Usuarios> db = new RepositorioBase<Usuarios>();
+
+            Assert.IsTrue(db.Eliminar(1));
         }
 
         [TestMethod()]
         public void BuscarTest()
         {
-            Assert.Fail();
+            RepositorioBase<Usuarios> db = new RepositorioBase<Usuarios>();
+
+            Assert.IsNotNull(db.Buscar(1));
         }
 
         [TestMethod()]
         public void GetListTest()
         {
-            Assert.Fail();
-        }
+            RepositorioBase<Usuarios> db = new RepositorioBase<Usuarios>();
 
-        [TestMethod()]
-        public void DisposeTest()
-        {
-            Assert.Fail();
+            Assert.IsNotNull(db.GetList(t => true));
         }
 
         [TestMethod()]
         public void DuplicadoTest()
         {
-            Assert.Fail();
+            RepositorioBase<Usuarios> db = new RepositorioBase<Usuarios>();
+
+            Usuarios usuario = new Usuarios()
+            {
+                UsuarioId = 1,
+                Nombre = "Prueba",
+                NivelUsuario = "User",
+                Usuario = "P1",
+                Clave = "1234",
+                FechaIngreso = DateTime.Now
+
+            };
+
+            Assert.IsTrue(db.Duplicado(t=> true));
         }
     }
 }

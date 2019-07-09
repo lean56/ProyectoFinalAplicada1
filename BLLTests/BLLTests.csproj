@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DAE14A30-2CC6-40F5-BAAB-6BC1F611D41D}</ProjectGuid>
+    <ProjectGuid>{4C944695-143F-47F2-85CB-4878D1DF16C9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BLLTests</RootNamespace>
-    <AssemblyName>BLLTests</AssemblyName>
+    <RootNamespace>BLLTests1</RootNamespace>
+    <AssemblyName>BLLTests1</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
