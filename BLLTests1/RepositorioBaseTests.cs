@@ -12,12 +12,7 @@ namespace BLL.Tests
     [TestClass()]
     public class RepositorioBaseTests
     {
-        [TestMethod()]
-        public void RepositorioBaseTest()
-        {
-            Assert.Fail();
-        }
-
+     
         [TestMethod()]
         public void GuardarTest()
         {
@@ -40,37 +35,63 @@ namespace BLL.Tests
         [TestMethod()]
         public void ModificarTest()
         {
-            Assert.Fail();
+            RepositorioBase<Usuarios> db = new RepositorioBase<Usuarios>();
+
+            Usuarios usuario = new Usuarios()
+            {
+                UsuarioId = 1,
+                Nombre = "Prueba",
+                NivelUsuario = "User",
+                Usuario = "P1",
+                Clave = "1234",
+                FechaIngreso = DateTime.Now
+
+            };
+
+            Assert.IsTrue(db.Modificar(usuario));
         }
 
         [TestMethod()]
         public void EliminarTest()
         {
-            Assert.Fail();
+            RepositorioBase<Usuarios> db = new RepositorioBase<Usuarios>();
+
+            Assert.IsTrue(db.Eliminar(1));
         }
 
         [TestMethod()]
         public void BuscarTest()
         {
-            Assert.Fail();
+            RepositorioBase<Usuarios> db = new RepositorioBase<Usuarios>();
+
+            Assert.IsNotNull(db.Buscar(1));
         }
 
         [TestMethod()]
         public void GetListTest()
         {
-            Assert.Fail();
-        }
+            RepositorioBase<Usuarios> db = new RepositorioBase<Usuarios>();
 
-        [TestMethod()]
-        public void DisposeTest()
-        {
-            Assert.Fail();
+            Assert.IsNotNull(db.GetList(t => true));
         }
 
         [TestMethod()]
         public void DuplicadoTest()
         {
-            Assert.Fail();
+            RepositorioBase<Usuarios> db = new RepositorioBase<Usuarios>();
+
+            Usuarios usuario = new Usuarios()
+            {
+                UsuarioId = 1,
+                Nombre = "Prueba",
+                NivelUsuario = "User",
+                Usuario = "P1",
+                Clave = "1234",
+                FechaIngreso = DateTime.Now
+
+            };
+
+            Assert.IsTrue(db.Duplicado(t=> true));
         }
     }
 }
