@@ -19,5 +19,16 @@ namespace Entidades
         public string Email { get; set; }
         public DateTime Fecha { get; set; }
 
+        public Clientes()
+        {
+            ClienteId = 0;
+            Nombres = string.Empty;
+            Cedula = string.Empty;
+            Direccion = string.Empty;
+            Telefono = string.Empty;
+            Celular = string.Empty;
+            Email = string.Empty;
+            Fecha = DateTime.Now;
+        }
     }
 }
