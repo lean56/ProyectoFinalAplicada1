@@ -30,5 +30,11 @@ namespace ProyectoFinalAplicada1
             cUsuarios cu = new cUsuarios();
             cu.Show();
         }
+
+        private void registroProductosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rProductos rp = new rProductos();
+            rp.Show();
+        }
     }
 }

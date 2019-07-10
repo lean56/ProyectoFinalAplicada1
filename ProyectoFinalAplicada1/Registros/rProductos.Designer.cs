@@ -129,12 +129,13 @@
             // 
             // Buscarbutton
             // 
-            this.Buscarbutton.Location = new System.Drawing.Point(180, 17);
+            this.Buscarbutton.Location = new System.Drawing.Point(183, 17);
             this.Buscarbutton.Name = "Buscarbutton";
             this.Buscarbutton.Size = new System.Drawing.Size(62, 23);
             this.Buscarbutton.TabIndex = 8;
             this.Buscarbutton.Text = "Buscar";
             this.Buscarbutton.UseVisualStyleBackColor = true;
+            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
             // DescripciontextBox
             // 
@@ -161,7 +162,6 @@
             // 
             this.InventariotextBox.Location = new System.Drawing.Point(100, 200);
             this.InventariotextBox.Name = "InventariotextBox";
-            this.InventariotextBox.ReadOnly = true;
             this.InventariotextBox.Size = new System.Drawing.Size(75, 20);
             this.InventariotextBox.TabIndex = 12;
             // 
@@ -192,6 +192,7 @@
             this.Nuevobutton.TabIndex = 15;
             this.Nuevobutton.Text = "Nuevo";
             this.Nuevobutton.UseVisualStyleBackColor = true;
+            this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click);
             // 
             // Guardarbutton
             // 
@@ -201,6 +202,7 @@
             this.Guardarbutton.TabIndex = 16;
             this.Guardarbutton.Text = "Guardar";
             this.Guardarbutton.UseVisualStyleBackColor = true;
+            this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
             // 
             // Eliminarbutton
             // 
@@ -210,6 +212,7 @@
             this.Eliminarbutton.TabIndex = 17;
             this.Eliminarbutton.Text = "Eliminar";
             this.Eliminarbutton.UseVisualStyleBackColor = true;
+            this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
             // 
             // CategoriacomboBox
             // 

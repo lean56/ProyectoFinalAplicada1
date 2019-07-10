@@ -117,7 +117,7 @@ namespace ProyectoFinalAplicada1.Registros
                 LlenaCampo(usuario);
             }
             else
-                MyErrorProvider.SetError(IdnumericUpDown, "Usuario no Encontrada");
+                MyErrorProvider.SetError(IdnumericUpDown, "Usuario no Encontrado");
         }
 
         private void Guardarbutton_Click(object sender, EventArgs e)
