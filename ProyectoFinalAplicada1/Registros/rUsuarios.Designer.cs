@@ -1,4 +1,4 @@
-﻿namespace ProyectoFinalAplicada1.Registro.Registro_Usuarios
+﻿namespace ProyectoFinalAplicada1.Registros
 {
     partial class rUsuarios
     {

@@ -31,13 +31,16 @@
             this.MenuStrip = new System.Windows.Forms.MenuStrip();
             this.registroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registroUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultaUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // MenuStrip
             // 
             this.MenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.registroToolStripMenuItem});
+            this.registroToolStripMenuItem,
+            this.consultaToolStripMenuItem});
             this.MenuStrip.Location = new System.Drawing.Point(0, 0);
             this.MenuStrip.Name = "MenuStrip";
             this.MenuStrip.Size = new System.Drawing.Size(800, 24);
@@ -58,6 +61,21 @@
             this.registroUsuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.registroUsuarioToolStripMenuItem.Text = "Registro Usuario";
             this.registroUsuarioToolStripMenuItem.Click += new System.EventHandler(this.registroUsuarioToolStripMenuItem_Click);
+            // 
+            // consultaToolStripMenuItem
+            // 
+            this.consultaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.consultaUsuariosToolStripMenuItem});
+            this.consultaToolStripMenuItem.Name = "consultaToolStripMenuItem";
+            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.consultaToolStripMenuItem.Text = "Consulta";
+            // 
+            // consultaUsuariosToolStripMenuItem
+            // 
+            this.consultaUsuariosToolStripMenuItem.Name = "consultaUsuariosToolStripMenuItem";
+            this.consultaUsuariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultaUsuariosToolStripMenuItem.Text = "Consulta Usuarios";
+            this.consultaUsuariosToolStripMenuItem.Click += new System.EventHandler(this.consultaUsuariosToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -80,6 +98,8 @@
         private System.Windows.Forms.MenuStrip MenuStrip;
         private System.Windows.Forms.ToolStripMenuItem registroToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registroUsuarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultaUsuariosToolStripMenuItem;
     }
 }
 

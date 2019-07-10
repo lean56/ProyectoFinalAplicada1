@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProyectoFinalAplicada1.Registro.Registro_Usuarios
+namespace ProyectoFinalAplicada1.Registros
 {
     public partial class rUsuarios : Form
     {
@@ -42,7 +42,7 @@ namespace ProyectoFinalAplicada1.Registro.Registro_Usuarios
             else
                 usuario.NivelUsuario = "Administrador";
             usuario.Usuario = UsuariotextBox.Text;
-            usuario.Clave = ClavemaskedTextBox.Text;
+            usuario.Contraseña = ClavemaskedTextBox.Text;
             usuario.FechaIngreso = FechadateTimePicker.Value;
 
             return usuario;
@@ -65,7 +65,7 @@ namespace ProyectoFinalAplicada1.Registro.Registro_Usuarios
                 if (usuario.NivelUsuario == "Administrador")
                 AdminradioButton.Checked = true;
             UsuariotextBox.Text = usuario.Usuario;
-            ClavemaskedTextBox.Text = usuario.Clave;
+            ClavemaskedTextBox.Text = usuario.Contraseña;
             FechadateTimePicker.Value = usuario.FechaIngreso;
         }
 

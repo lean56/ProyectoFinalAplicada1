@@ -7,8 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ProyectoFinalAplicada1.Registro.Registro_Usuarios;
-
+using ProyectoFinalAplicada1.Consultas;
+using ProyectoFinalAplicada1.Registros;
 
 namespace ProyectoFinalAplicada1
 {
@@ -23,6 +23,12 @@ namespace ProyectoFinalAplicada1
         {
             rUsuarios ru = new rUsuarios();
             ru.Show();
+        }
+
+        private void consultaUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cUsuarios cu = new cUsuarios();
+            cu.Show();
         }
     }
 }
