@@ -1,5 +1,6 @@
 ﻿using BLL;
 using Entidades;
+using ProyectoFinalAplicada1.Ventana_Reportes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -54,7 +55,7 @@ namespace ProyectoFinalAplicada1.Consultas
                 {
                     case 0://Todo: todo
                         listado = repositorioE.GetList(p => true);
-                        // Imprimirbutton.Visible = true;
+                         Imprimirbutton.Visible = true;
                         break;
                     case 1: //Todo: ID
                         if (CristerioTextBox.Text.Any(x => !char.IsNumber(x)))
@@ -65,12 +66,12 @@ namespace ProyectoFinalAplicada1.Consultas
                         {
                             int id = Convert.ToInt32(CristerioTextBox.Text);
                             listado = repositorioE.GetList(p => p.UsuarioId == id);
-                            // Imprimirbutton.Visible = true;
+                             Imprimirbutton.Visible = true;
                         }
                         break;
                     case 2://Todo: Nombres
                         listado = repositorioE.GetList(p => p.Nombre.Contains(CristerioTextBox.Text));
-                        //  Imprimirbutton.Visible = true;
+                          Imprimirbutton.Visible = true;
                         break;
                     case 3://Usuarios
                         listado = repositorioE.GetList(p => p.Usuario.Contains(CristerioTextBox.Text));
@@ -94,7 +95,20 @@ namespace ProyectoFinalAplicada1.Consultas
             cUsuariosdataGridView.Columns[1].Width = 150;
             cUsuariosdataGridView.Columns[2].HeaderText = "Nivel Usuario";
             cUsuariosdataGridView.Columns[5].DefaultCellStyle.Format = "dd-MM-yyyy";
+        }
 
+        private void Imprimirbutton_Click(object sender, EventArgs e)
+        {
+            if (listaUsuario.Count == 0)
+            {
+                MessageBox.Show("No Hay Datos para imprimir");
+                return;
+            }
+            else
+            {
+                VentanaRptUsuarios rptE = new VentanaRptUsuarios(listaUsuario);
+                rptE.ShowDialog();
+            }
         }
     }
 }
