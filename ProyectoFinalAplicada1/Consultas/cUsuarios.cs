@@ -21,10 +21,32 @@ namespace ProyectoFinalAplicada1.Consultas
             InitializeComponent();
         }
 
+        private bool Validar()
+        {
+            bool paso = true;
+            MyErrorProvider.Clear();
+
+            if (FiltroComboBox.Text == string.Empty)
+            {
+                MyErrorProvider.SetError(FiltroComboBox, "No ha selecionado ningun filtro");
+                FiltroComboBox.Focus();
+                paso = false;
+            }
+            if (CristerioTextBox.Text == string.Empty)
+            {
+                MyErrorProvider.SetError(CristerioTextBox, "El campo Criterio esta vacio");
+                CristerioTextBox.Focus();
+            }
+            return paso;
+        }
+
         private void ConsultaUserbutton_Click(object sender, EventArgs e)
         {
             var listado = new List<Usuarios>();
             RepositorioBase<Usuarios> repositorioE = new RepositorioBase<Usuarios>();
+
+            if (!Validar())
+                return;
 
             if (CristerioTextBox.Text.Trim().Length > 0)
             {
@@ -60,7 +82,6 @@ namespace ProyectoFinalAplicada1.Consultas
             {
                 listado = repositorioE.GetList(p => true);
             }
-
             cUsuariosdataGridView.DataSource = null;
 
             listaUsuario = repositorioE.GetList(p => true);
