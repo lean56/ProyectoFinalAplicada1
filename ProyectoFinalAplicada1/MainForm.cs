@@ -42,5 +42,11 @@ namespace ProyectoFinalAplicada1
             rEntradaProductos entradaProductos = new rEntradaProductos();
             entradaProductos.Show();
         }
+
+        private void registroDeClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rClientes rc = new rClientes();
+            rc.Show();
+        }
     }
 }
