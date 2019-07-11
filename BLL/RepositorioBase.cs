@@ -17,7 +17,10 @@ namespace BLL
         {
             _contexto = new Contexto();
         }
-
+        public RepositorioBase(Contexto contexto)
+        {
+            _contexto = contexto;
+        }
         public virtual bool Guardar(T entity)
         {
             bool paso = false;
@@ -122,6 +125,17 @@ namespace BLL
             }
 
             return paso;
+        }
+
+        public virtual decimal PorcientoGanancia(decimal costo, decimal precio)
+        {
+            decimal PctGanancia;
+
+            PctGanancia = precio - costo;
+            PctGanancia = PctGanancia / costo;
+            PctGanancia *= 100;
+
+            return PctGanancia;
         }
     }
 }

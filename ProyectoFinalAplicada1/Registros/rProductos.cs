@@ -23,8 +23,8 @@ namespace ProyectoFinalAplicada1.Registros
         {
             IdnumericUpDown.Value = 0;
             DescripciontextBox.Text = string.Empty;
-            CostonumericUpDown.Value = 0;
-            PrecionumericUpDown.Value = 0;
+            CostotextBox.Text = string.Empty;
+            PreciotextBox.Text = string.Empty;
             GananciatextBox.Text = string.Empty;
             InventariotextBox.Text = string.Empty;
            // CategoriacomboBox.SelectedIndex = 0;
@@ -37,10 +37,10 @@ namespace ProyectoFinalAplicada1.Registros
             
             producto.ProductoId = (int)IdnumericUpDown.Value;
             producto.Descripcion = DescripciontextBox.Text;
-            producto.Costo = (int)CostonumericUpDown.Value;
-            producto.Precio = (int)PrecionumericUpDown.Value;
+            producto.Costo = Convert.ToDecimal(CostotextBox.Text);
+            producto.Precio = Convert.ToDecimal(PreciotextBox.Text);
             producto.Ganancia = Convert.ToDecimal(GananciatextBox.Text);
-            producto.Inventario = Convert.ToDecimal(InventariotextBox.Text);
+            producto.Inventario = 0;
             producto.FechaCreacion = FechadateTimePicker.Value;
            
             return producto;
@@ -50,8 +50,8 @@ namespace ProyectoFinalAplicada1.Registros
         {
             IdnumericUpDown.Value = producto.ProductoId;
             DescripciontextBox.Text = producto.Descripcion;
-            CostonumericUpDown.Value = producto.Costo;
-            PrecionumericUpDown.Value = producto.Precio;
+            CostotextBox.Text = producto.Costo.ToString();
+            PreciotextBox.Text = producto.Precio.ToString();
             GananciatextBox.Text = producto.Ganancia.ToString();
             InventariotextBox.Text = producto.Inventario.ToString();
             FechadateTimePicker.Value = producto.FechaCreacion;
@@ -77,6 +77,7 @@ namespace ProyectoFinalAplicada1.Registros
             {
                 MyErrorProvider.Clear();
                 LlenaCampo(producto);
+                InventariotextBox.Text = producto.Inventario.ToString();
             }
             else
                 MyErrorProvider.SetError(IdnumericUpDown, "Producto no Encontrado");
@@ -141,6 +142,40 @@ namespace ProyectoFinalAplicada1.Registros
             {
                 Limpiar();
                 MessageBox.Show("Producto Eliminado!!", "Exito!!!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private decimal ToDecimal(object valor)
+        {
+            decimal retorno = 0;
+            decimal.TryParse(valor.ToString(), out retorno);
+
+            return Convert.ToDecimal(retorno);
+        }
+
+        private void CalcularGanancia()
+        {
+            RepositorioBase<Productos> repositorio = new RepositorioBase<Productos>();
+
+            decimal costo, precio;
+            costo = ToDecimal(CostotextBox.Text);
+            precio = ToDecimal(PreciotextBox.Text);
+            GananciatextBox.Text = repositorio.PorcientoGanancia(costo, precio).ToString("0.##");
+        }
+
+        private void CostotextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (CostotextBox.Text != string.Empty)
+            {
+                CalcularGanancia();
+            }
+        }
+
+        private void PreciotextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (PreciotextBox.Text != string.Empty)
+            {
+                CalcularGanancia();
             }
         }
     }

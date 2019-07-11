@@ -16,7 +16,7 @@ namespace Entidades
         public decimal Precio { get; set; }
         public decimal Ganancia { get; set; }
         public DateTime FechaCreacion { get; set; }
-        public decimal Inventario { get; set; }
+        public int Inventario { get; set; }
 
         public Productos()
         {

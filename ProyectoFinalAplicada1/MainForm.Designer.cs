@@ -31,9 +31,10 @@
             this.MenuStrip = new System.Windows.Forms.MenuStrip();
             this.registroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registroUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registroProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultaUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registroProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.entradaDeProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,7 +53,8 @@
             // 
             this.registroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.registroUsuarioToolStripMenuItem,
-            this.registroProductosToolStripMenuItem});
+            this.registroProductosToolStripMenuItem,
+            this.entradaDeProductosToolStripMenuItem});
             this.registroToolStripMenuItem.Name = "registroToolStripMenuItem";
             this.registroToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.registroToolStripMenuItem.Text = "Registro";
@@ -60,9 +62,16 @@
             // registroUsuarioToolStripMenuItem
             // 
             this.registroUsuarioToolStripMenuItem.Name = "registroUsuarioToolStripMenuItem";
-            this.registroUsuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.registroUsuarioToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
             this.registroUsuarioToolStripMenuItem.Text = "Registro Usuario";
             this.registroUsuarioToolStripMenuItem.Click += new System.EventHandler(this.registroUsuarioToolStripMenuItem_Click);
+            // 
+            // registroProductosToolStripMenuItem
+            // 
+            this.registroProductosToolStripMenuItem.Name = "registroProductosToolStripMenuItem";
+            this.registroProductosToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.registroProductosToolStripMenuItem.Text = "Registro Productos";
+            this.registroProductosToolStripMenuItem.Click += new System.EventHandler(this.registroProductosToolStripMenuItem_Click);
             // 
             // consultaToolStripMenuItem
             // 
@@ -79,12 +88,12 @@
             this.consultaUsuariosToolStripMenuItem.Text = "Consulta Usuarios";
             this.consultaUsuariosToolStripMenuItem.Click += new System.EventHandler(this.consultaUsuariosToolStripMenuItem_Click);
             // 
-            // registroProductosToolStripMenuItem
+            // entradaDeProductosToolStripMenuItem
             // 
-            this.registroProductosToolStripMenuItem.Name = "registroProductosToolStripMenuItem";
-            this.registroProductosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.registroProductosToolStripMenuItem.Text = "Registro Productos";
-            this.registroProductosToolStripMenuItem.Click += new System.EventHandler(this.registroProductosToolStripMenuItem_Click);
+            this.entradaDeProductosToolStripMenuItem.Name = "entradaDeProductosToolStripMenuItem";
+            this.entradaDeProductosToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.entradaDeProductosToolStripMenuItem.Text = "Entrada de Productos";
+            this.entradaDeProductosToolStripMenuItem.Click += new System.EventHandler(this.entradaDeProductosToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -110,6 +119,7 @@
         private System.Windows.Forms.ToolStripMenuItem consultaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultaUsuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registroProductosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem entradaDeProductosToolStripMenuItem;
     }
 }
 

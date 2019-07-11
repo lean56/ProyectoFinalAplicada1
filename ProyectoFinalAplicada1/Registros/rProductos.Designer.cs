@@ -39,8 +39,6 @@
             this.IdnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.Buscarbutton = new System.Windows.Forms.Button();
             this.DescripciontextBox = new System.Windows.Forms.TextBox();
-            this.CostonumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.PrecionumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.InventariotextBox = new System.Windows.Forms.TextBox();
             this.FechadateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.GananciatextBox = new System.Windows.Forms.TextBox();
@@ -51,9 +49,9 @@
             this.CategoriacomboBox = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.CostotextBox = new System.Windows.Forms.TextBox();
+            this.PreciotextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.IdnumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CostonumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PrecionumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,7 +76,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 97);
+            this.label3.Location = new System.Drawing.Point(12, 152);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(34, 13);
             this.label3.TabIndex = 2;
@@ -87,7 +85,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 124);
+            this.label4.Location = new System.Drawing.Point(12, 187);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(37, 13);
             this.label4.TabIndex = 3;
@@ -96,16 +94,16 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 162);
+            this.label5.Location = new System.Drawing.Point(114, 152);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 13);
+            this.label5.Size = new System.Drawing.Size(67, 13);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Ganancia";
+            this.label5.Text = "% Ganancia ";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(11, 203);
+            this.label6.Location = new System.Drawing.Point(114, 187);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(54, 13);
             this.label6.TabIndex = 5;
@@ -114,7 +112,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(11, 277);
+            this.label7.Location = new System.Drawing.Point(12, 233);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(82, 13);
             this.label7.TabIndex = 6;
@@ -122,14 +120,14 @@
             // 
             // IdnumericUpDown
             // 
-            this.IdnumericUpDown.Location = new System.Drawing.Point(100, 20);
+            this.IdnumericUpDown.Location = new System.Drawing.Point(81, 20);
             this.IdnumericUpDown.Name = "IdnumericUpDown";
             this.IdnumericUpDown.Size = new System.Drawing.Size(74, 20);
             this.IdnumericUpDown.TabIndex = 7;
             // 
             // Buscarbutton
             // 
-            this.Buscarbutton.Location = new System.Drawing.Point(183, 17);
+            this.Buscarbutton.Location = new System.Drawing.Point(161, 17);
             this.Buscarbutton.Name = "Buscarbutton";
             this.Buscarbutton.Size = new System.Drawing.Size(62, 23);
             this.Buscarbutton.TabIndex = 8;
@@ -139,45 +137,33 @@
             // 
             // DescripciontextBox
             // 
-            this.DescripciontextBox.Location = new System.Drawing.Point(100, 57);
+            this.DescripciontextBox.Location = new System.Drawing.Point(81, 57);
             this.DescripciontextBox.Name = "DescripciontextBox";
-            this.DescripciontextBox.Size = new System.Drawing.Size(115, 20);
+            this.DescripciontextBox.Size = new System.Drawing.Size(134, 20);
             this.DescripciontextBox.TabIndex = 9;
-            // 
-            // CostonumericUpDown
-            // 
-            this.CostonumericUpDown.Location = new System.Drawing.Point(100, 90);
-            this.CostonumericUpDown.Name = "CostonumericUpDown";
-            this.CostonumericUpDown.Size = new System.Drawing.Size(75, 20);
-            this.CostonumericUpDown.TabIndex = 10;
-            // 
-            // PrecionumericUpDown
-            // 
-            this.PrecionumericUpDown.Location = new System.Drawing.Point(100, 124);
-            this.PrecionumericUpDown.Name = "PrecionumericUpDown";
-            this.PrecionumericUpDown.Size = new System.Drawing.Size(74, 20);
-            this.PrecionumericUpDown.TabIndex = 11;
             // 
             // InventariotextBox
             // 
-            this.InventariotextBox.Location = new System.Drawing.Point(100, 200);
+            this.InventariotextBox.Location = new System.Drawing.Point(182, 187);
             this.InventariotextBox.Name = "InventariotextBox";
-            this.InventariotextBox.Size = new System.Drawing.Size(75, 20);
+            this.InventariotextBox.ReadOnly = true;
+            this.InventariotextBox.Size = new System.Drawing.Size(55, 20);
             this.InventariotextBox.TabIndex = 12;
             // 
             // FechadateTimePicker
             // 
             this.FechadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.FechadateTimePicker.Location = new System.Drawing.Point(100, 270);
+            this.FechadateTimePicker.Location = new System.Drawing.Point(95, 227);
             this.FechadateTimePicker.Name = "FechadateTimePicker";
-            this.FechadateTimePicker.Size = new System.Drawing.Size(115, 20);
+            this.FechadateTimePicker.Size = new System.Drawing.Size(120, 20);
             this.FechadateTimePicker.TabIndex = 13;
             // 
             // GananciatextBox
             // 
-            this.GananciatextBox.Location = new System.Drawing.Point(100, 162);
+            this.GananciatextBox.Location = new System.Drawing.Point(182, 149);
             this.GananciatextBox.Name = "GananciatextBox";
-            this.GananciatextBox.Size = new System.Drawing.Size(74, 20);
+            this.GananciatextBox.ReadOnly = true;
+            this.GananciatextBox.Size = new System.Drawing.Size(55, 20);
             this.GananciatextBox.TabIndex = 14;
             // 
             // MyErrorProvider
@@ -186,7 +172,7 @@
             // 
             // Nuevobutton
             // 
-            this.Nuevobutton.Location = new System.Drawing.Point(15, 317);
+            this.Nuevobutton.Location = new System.Drawing.Point(8, 286);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(75, 23);
             this.Nuevobutton.TabIndex = 15;
@@ -196,7 +182,7 @@
             // 
             // Guardarbutton
             // 
-            this.Guardarbutton.Location = new System.Drawing.Point(100, 317);
+            this.Guardarbutton.Location = new System.Drawing.Point(93, 286);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(75, 23);
             this.Guardarbutton.TabIndex = 16;
@@ -206,7 +192,7 @@
             // 
             // Eliminarbutton
             // 
-            this.Eliminarbutton.Location = new System.Drawing.Point(197, 317);
+            this.Eliminarbutton.Location = new System.Drawing.Point(190, 286);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(75, 23);
             this.Eliminarbutton.TabIndex = 17;
@@ -217,15 +203,15 @@
             // CategoriacomboBox
             // 
             this.CategoriacomboBox.FormattingEnabled = true;
-            this.CategoriacomboBox.Location = new System.Drawing.Point(100, 232);
+            this.CategoriacomboBox.Location = new System.Drawing.Point(81, 102);
             this.CategoriacomboBox.Name = "CategoriacomboBox";
-            this.CategoriacomboBox.Size = new System.Drawing.Size(121, 21);
+            this.CategoriacomboBox.Size = new System.Drawing.Size(134, 21);
             this.CategoriacomboBox.TabIndex = 18;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(12, 240);
+            this.label8.Location = new System.Drawing.Point(12, 108);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(52, 13);
             this.label8.TabIndex = 19;
@@ -235,17 +221,35 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(227, 235);
+            this.label9.Location = new System.Drawing.Point(221, 102);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(16, 17);
             this.label9.TabIndex = 20;
             this.label9.Text = "+";
             // 
+            // CostotextBox
+            // 
+            this.CostotextBox.Location = new System.Drawing.Point(52, 149);
+            this.CostotextBox.Name = "CostotextBox";
+            this.CostotextBox.Size = new System.Drawing.Size(56, 20);
+            this.CostotextBox.TabIndex = 21;
+            this.CostotextBox.TextChanged += new System.EventHandler(this.CostotextBox_TextChanged);
+            // 
+            // PreciotextBox
+            // 
+            this.PreciotextBox.Location = new System.Drawing.Point(52, 184);
+            this.PreciotextBox.Name = "PreciotextBox";
+            this.PreciotextBox.Size = new System.Drawing.Size(56, 20);
+            this.PreciotextBox.TabIndex = 22;
+            this.PreciotextBox.TextChanged += new System.EventHandler(this.PreciotextBox_TextChanged);
+            // 
             // rProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(318, 356);
+            this.ClientSize = new System.Drawing.Size(294, 326);
+            this.Controls.Add(this.PreciotextBox);
+            this.Controls.Add(this.CostotextBox);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.CategoriacomboBox);
@@ -255,8 +259,6 @@
             this.Controls.Add(this.GananciatextBox);
             this.Controls.Add(this.FechadateTimePicker);
             this.Controls.Add(this.InventariotextBox);
-            this.Controls.Add(this.PrecionumericUpDown);
-            this.Controls.Add(this.CostonumericUpDown);
             this.Controls.Add(this.DescripciontextBox);
             this.Controls.Add(this.Buscarbutton);
             this.Controls.Add(this.IdnumericUpDown);
@@ -270,8 +272,6 @@
             this.Name = "rProductos";
             this.Text = "Registro de Productos";
             ((System.ComponentModel.ISupportInitialize)(this.IdnumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CostonumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PrecionumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -290,8 +290,6 @@
         private System.Windows.Forms.NumericUpDown IdnumericUpDown;
         private System.Windows.Forms.Button Buscarbutton;
         private System.Windows.Forms.TextBox DescripciontextBox;
-        private System.Windows.Forms.NumericUpDown CostonumericUpDown;
-        private System.Windows.Forms.NumericUpDown PrecionumericUpDown;
         private System.Windows.Forms.TextBox InventariotextBox;
         private System.Windows.Forms.DateTimePicker FechadateTimePicker;
         private System.Windows.Forms.TextBox GananciatextBox;
@@ -302,5 +300,7 @@
         private System.Windows.Forms.Button Eliminarbutton;
         private System.Windows.Forms.Button Guardarbutton;
         private System.Windows.Forms.Button Nuevobutton;
+        private System.Windows.Forms.TextBox PreciotextBox;
+        private System.Windows.Forms.TextBox CostotextBox;
     }
 }
