@@ -174,7 +174,7 @@
             this.Controls.Add(this.IdNumericUpDown);
             this.Controls.Add(this.label1);
             this.Name = "rEntradaProductos";
-            this.Text = "e";
+            this.Text = "Entrada de Productos";
             ((System.ComponentModel.ISupportInitialize)(this.IdNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).EndInit();
             this.ResumeLayout(false);

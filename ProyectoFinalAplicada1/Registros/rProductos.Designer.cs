@@ -48,7 +48,7 @@
             this.Eliminarbutton = new System.Windows.Forms.Button();
             this.CategoriacomboBox = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.CategoriaButton = new System.Windows.Forms.Label();
             this.CostotextBox = new System.Windows.Forms.TextBox();
             this.PreciotextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.IdnumericUpDown)).BeginInit();
@@ -217,15 +217,16 @@
             this.label8.TabIndex = 19;
             this.label8.Text = "Categoria";
             // 
-            // label9
+            // CategoriaButton
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(221, 102);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(16, 17);
-            this.label9.TabIndex = 20;
-            this.label9.Text = "+";
+            this.CategoriaButton.AutoSize = true;
+            this.CategoriaButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CategoriaButton.Location = new System.Drawing.Point(221, 102);
+            this.CategoriaButton.Name = "CategoriaButton";
+            this.CategoriaButton.Size = new System.Drawing.Size(16, 17);
+            this.CategoriaButton.TabIndex = 20;
+            this.CategoriaButton.Text = "+";
+            this.CategoriaButton.Click += new System.EventHandler(this.CategoriaButton_Click);
             // 
             // CostotextBox
             // 
@@ -250,7 +251,7 @@
             this.ClientSize = new System.Drawing.Size(294, 326);
             this.Controls.Add(this.PreciotextBox);
             this.Controls.Add(this.CostotextBox);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.CategoriaButton);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.CategoriacomboBox);
             this.Controls.Add(this.Eliminarbutton);
@@ -294,7 +295,7 @@
         private System.Windows.Forms.DateTimePicker FechadateTimePicker;
         private System.Windows.Forms.TextBox GananciatextBox;
         private System.Windows.Forms.ErrorProvider MyErrorProvider;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label CategoriaButton;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox CategoriacomboBox;
         private System.Windows.Forms.Button Eliminarbutton;

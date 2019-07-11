@@ -17,6 +17,7 @@ namespace ProyectoFinalAplicada1.Registros
         public rProductos()
         {
             InitializeComponent();
+            LlenarCategoria();
         }
 
         private void Limpiar()
@@ -27,7 +28,7 @@ namespace ProyectoFinalAplicada1.Registros
             PreciotextBox.Text = string.Empty;
             GananciatextBox.Text = string.Empty;
             InventariotextBox.Text = string.Empty;
-           // CategoriacomboBox.SelectedIndex = 0;
+            CategoriacomboBox.SelectedIndex = 0;
             FechadateTimePicker.Value = DateTime.Now;
         }
 
@@ -37,6 +38,7 @@ namespace ProyectoFinalAplicada1.Registros
             
             producto.ProductoId = (int)IdnumericUpDown.Value;
             producto.Descripcion = DescripciontextBox.Text;
+            producto.Categoria = Convert.ToInt32(CategoriacomboBox.SelectedValue);
             producto.Costo = Convert.ToDecimal(CostotextBox.Text);
             producto.Precio = Convert.ToDecimal(PreciotextBox.Text);
             producto.Ganancia = Convert.ToDecimal(GananciatextBox.Text);
@@ -50,6 +52,7 @@ namespace ProyectoFinalAplicada1.Registros
         {
             IdnumericUpDown.Value = producto.ProductoId;
             DescripciontextBox.Text = producto.Descripcion;
+            CategoriacomboBox.SelectedValue = producto.Categoria;
             CostotextBox.Text = producto.Costo.ToString();
             PreciotextBox.Text = producto.Precio.ToString();
             GananciatextBox.Text = producto.Ganancia.ToString();
@@ -62,6 +65,16 @@ namespace ProyectoFinalAplicada1.Registros
             RepositorioBase<Productos> repositorio = new RepositorioBase<Productos>();
             Productos producto = repositorio.Buscar((int)IdnumericUpDown.Value);
             return (producto != null);
+        }
+
+
+        private void LlenarCategoria()
+        {
+            RepositorioBase<Categorias> repositorio = new RepositorioBase<Categorias>();
+
+            CategoriacomboBox.DataSource = repositorio.GetList(p => true);
+            CategoriacomboBox.ValueMember = "CategoriaId";
+            CategoriacomboBox.DisplayMember = "Nombre";
         }
 
         private void Buscarbutton_Click(object sender, EventArgs e)
@@ -177,6 +190,12 @@ namespace ProyectoFinalAplicada1.Registros
             {
                 CalcularGanancia();
             }
+        }
+
+        private void CategoriaButton_Click(object sender, EventArgs e)
+        {
+            rCategorias cr = new rCategorias();
+            cr.Show();
         }
     }
 }

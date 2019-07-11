@@ -16,6 +16,7 @@ namespace Entidades
         public decimal Precio { get; set; }
         public decimal Ganancia { get; set; }
         public DateTime FechaCreacion { get; set; }
+        public int Categoria { get; set; }
         public int Inventario { get; set; }
 
         public Productos()
@@ -27,6 +28,7 @@ namespace Entidades
             Ganancia = 0;
             FechaCreacion = DateTime.Now;
             Inventario = 0;
+            Categoria = 0;
         }
     }
 }
