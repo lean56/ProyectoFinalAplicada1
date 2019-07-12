@@ -23,7 +23,7 @@ namespace BLL.Tests
                 Nombre = "Prueba",
                 NivelUsuario = "Admin",
                 Usuario = "p1",
-                Clave = "123",
+                Contraseña = "123",
                 FechaIngreso = DateTime.Now
             };
 
@@ -41,7 +41,7 @@ namespace BLL.Tests
                 Nombre = "Prueba",
                 NivelUsuario = "user",
                 Usuario = "p1",
-                Clave = "123",
+                Contraseña = "123",
                 FechaIngreso = DateTime.Now
             };
 
@@ -83,7 +83,7 @@ namespace BLL.Tests
                 Nombre = "Prueba",
                 NivelUsuario = "user",
                 Usuario = "p1",
-                Clave = "123",
+                Contraseña = "123",
                 FechaIngreso = DateTime.Now
             };
 

@@ -66,6 +66,7 @@
     <Compile Include="CategoriasTest.cs" />
     <Compile Include="ClientesTest.cs" />
     <Compile Include="EntradaProductosTest.cs" />
+    <Compile Include="FacturasTest.cs" />
     <Compile Include="ProductoTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UsuarioTest.cs" />
