@@ -34,31 +34,63 @@ namespace BLL.Tests
         [TestMethod()]
         public void ModificarTest()
         {
-            Assert.Fail();
+            RepositorioBase<Facturas> db = new RepositorioBase<Facturas>();
+
+            Facturas factura = new Facturas()
+            {
+                FacturaId = 1,
+                ClienteId = 1,
+                UsuarioId = 1,
+                ProductoId = 2,
+                Cantidad = 30,
+                Total = 120,
+                Fecha = DateTime.Now
+            };
+
+            Assert.IsTrue(db.Modificar(factura));
         }
 
         [TestMethod()]
         public void EliminarTest()
         {
-            Assert.Fail();
+            RepositorioBase<Facturas> db = new RepositorioBase<Facturas>();
+
+            Assert.IsTrue(db.Eliminar(1));
         }
 
         [TestMethod()]
         public void BuscarTest()
         {
-            Assert.Fail();
+            RepositorioBase<Facturas> db = new RepositorioBase<Facturas>();
+
+            Assert.IsNotNull(db.Buscar(1));
         }
 
         [TestMethod()]
         public void GetListTest()
         {
-            Assert.Fail();
+            RepositorioBase<Facturas> db = new RepositorioBase<Facturas>();
+
+            Assert.IsNotNull(db.GetList(t => true));
         }
 
         [TestMethod()]
         public void DuplicadoTest()
         {
-            Assert.Fail();
+            RepositorioBase<Facturas> db = new RepositorioBase<Facturas>();
+
+            Facturas factura = new Facturas()
+            {
+                FacturaId = 1,
+                ClienteId = 1,
+                UsuarioId = 1,
+                ProductoId = 2,
+                Cantidad = 30,
+                Total = 120,
+                Fecha = DateTime.Now
+            };
+
+            Assert.IsTrue(db.Duplicado(p => true));
         }
 
     }
