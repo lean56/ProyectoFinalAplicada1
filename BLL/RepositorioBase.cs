@@ -137,5 +137,15 @@ namespace BLL
 
             return PctGanancia;
         }
+
+        public virtual decimal CalcularImporte(decimal cantidad, decimal precio)
+        {
+            decimal Importe;
+
+            Importe = cantidad * precio;
+          
+
+            return Importe;
+        }
     }
 }

@@ -16,6 +16,18 @@ namespace BLL.Tests
         public void GuardarTest()
         {
             RepositorioBase<Facturas> db = new RepositorioBase<Facturas>();
+            List<FacturaDetalle> lista = new List<FacturaDetalle>();
+
+            lista.Add(new FacturaDetalle()
+            {
+                FacturaDetalleId = 0,
+                FacturaId = 0,
+                ProductoId = 0,
+                Descripcion = "prueb",
+                Cantidad = 0,
+                Precio = 0,
+                Importe = 0
+        });
 
             Facturas factura = new Facturas()
             {
@@ -23,9 +35,9 @@ namespace BLL.Tests
                 ClienteId = 1,
                 UsuarioId = 1,
                 ProductoId = 1,
-                Cantidad = 5,
                 Total = 100,
                 Fecha = DateTime.Now
+               
             };
 
             Assert.IsTrue(db.Guardar(factura));
@@ -42,7 +54,6 @@ namespace BLL.Tests
                 ClienteId = 1,
                 UsuarioId = 1,
                 ProductoId = 2,
-                Cantidad = 30,
                 Total = 120,
                 Fecha = DateTime.Now
             };
@@ -85,7 +96,6 @@ namespace BLL.Tests
                 ClienteId = 1,
                 UsuarioId = 1,
                 ProductoId = 2,
-                Cantidad = 30,
                 Total = 120,
                 Fecha = DateTime.Now
             };

@@ -48,5 +48,11 @@ namespace ProyectoFinalAplicada1
             rClientes rc = new rClientes();
             rc.Show();
         }
+
+        private void registroDeFacturasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rFacturas rf = new rFacturas();
+            rf.Show();
+        }
     }
 }

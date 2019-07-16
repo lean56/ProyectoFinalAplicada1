@@ -27,6 +27,7 @@ namespace ProyectoFinalAplicada1.Registros
             ProductoComboBox.SelectedIndex = 0;
             CantidadtextBox.Text = string.Empty;
             FechadateTimePicker.Value = DateTime.Now;
+            MyErrorProvider.Clear();
         }
 
         private EntradaProductos LlenaClase()

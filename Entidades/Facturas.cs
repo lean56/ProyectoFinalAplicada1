@@ -14,14 +14,21 @@ namespace Entidades
         public int ClienteId { get; set; }
         public int UsuarioId { get; set; }
         public int ProductoId { get; set; }
-        public int Cantidad { get; set; }
         public decimal Total { get; set; }
         public DateTime Fecha { get; set; }
 
 
-        //public virtual List<FacturaDetalle> Detalle { get; set; }
+        public virtual List<FacturaDetalle> Detalle { get; set; }
 
-
-
+        public Facturas()
+        {
+            FacturaId = 0;
+            ClienteId = 0;
+            UsuarioId = 0;
+            ProductoId = 0;
+            Total = 0;
+            Fecha = DateTime.Now;
+            this.Detalle = new List<FacturaDetalle>();
+        }
     }
 }
