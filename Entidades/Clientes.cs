@@ -18,6 +18,7 @@ namespace Entidades
         public string Celular { get; set; }
         public string Email { get; set; }
         public DateTime Fecha { get; set; }
+        public decimal Deuda { get; set; }
 
         public Clientes()
         {
@@ -29,6 +30,7 @@ namespace Entidades
             Celular = string.Empty;
             Email = string.Empty;
             Fecha = DateTime.Now;
+            Deuda = 0;
         }
     }
 }

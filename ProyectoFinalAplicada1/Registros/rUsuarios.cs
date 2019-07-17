@@ -23,10 +23,10 @@ namespace ProyectoFinalAplicada1.Registros
         {
             IdnumericUpDown.Value = 0;
             NombretextBox.Text = string.Empty;
-            UsuarioradioButton.Checked = false;
-            AdminradioButton.Checked = false;
+            NivelUsercomboBox.SelectedItem = null;
             UsuariotextBox.Text = string.Empty;
             ClavemaskedTextBox.Text = string.Empty;
+            Clave2maskedTextBox.Text = string.Empty;
             FechadateTimePicker.Value = DateTime.Now;
             MyErrorProvider.Clear();
         }
@@ -37,10 +37,11 @@ namespace ProyectoFinalAplicada1.Registros
 
             usuario.UsuarioId = (int)IdnumericUpDown.Value;
             usuario.Nombre = NombretextBox.Text;
-            if (UsuarioradioButton.Checked == true)
-                usuario.NivelUsuario = "Usuario";
-            else
-                usuario.NivelUsuario = "Administrador";
+            usuario.NivelUsuario = NivelUsercomboBox.Text;
+            //if (UsuarioradioButton.Checked == true)
+            //    usuario.NivelUsuario = "Usuario";
+            //else
+            //    usuario.NivelUsuario = "Administrador";
             usuario.Usuario = UsuariotextBox.Text;
             usuario.Contraseña = ClavemaskedTextBox.Text;
             usuario.FechaIngreso = FechadateTimePicker.Value;
@@ -59,11 +60,12 @@ namespace ProyectoFinalAplicada1.Registros
         {
             IdnumericUpDown.Value = usuario.UsuarioId;
             NombretextBox.Text = usuario.Nombre;
-            if (usuario.NivelUsuario == "Usuario")
-                UsuarioradioButton.Checked = true;
-            else
-                if (usuario.NivelUsuario == "Administrador")
-                AdminradioButton.Checked = true;
+            //if (usuario.NivelUsuario == "Usuario")
+            //    UsuarioradioButton.Checked = true;
+            //else
+            //    if (usuario.NivelUsuario == "Administrador")
+            //    AdminradioButton.Checked = true;
+            NivelUsercomboBox.Text = usuario.NivelUsuario;
             UsuariotextBox.Text = usuario.Usuario;
             ClavemaskedTextBox.Text = usuario.Contraseña;
             FechadateTimePicker.Value = usuario.FechaIngreso;
@@ -93,12 +95,24 @@ namespace ProyectoFinalAplicada1.Registros
                 paso = false;
             }
 
-            if (UsuarioradioButton.Checked == false && AdminradioButton.Checked == false)
+            if (NivelUsercomboBox.Text == string.Empty)
             {
-                MyErrorProvider.SetError(NivelgroupBox, "Debe elegir un tipo de usuario");
-                NivelgroupBox.Focus();
+                MyErrorProvider.SetError(NivelUsercomboBox, "Debe elegir un tipo de usuario");
+                NivelUsercomboBox.Focus();
                 paso = false;
             }
+            if (Clave2maskedTextBox.Text == string.Empty)
+            {
+                MyErrorProvider.SetError(Clave2maskedTextBox, "Debe Confirmar la Contraseña");
+                paso = false;
+            }
+
+            if (ClavemaskedTextBox.Text != Clave2maskedTextBox.Text)
+            {
+                MyErrorProvider.SetError(Clave2maskedTextBox, "La Contraseña no son Iguales");
+                paso = false;
+            }
+
             return paso;
         }
 

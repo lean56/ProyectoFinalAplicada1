@@ -73,7 +73,9 @@ namespace ProyectoFinalAplicada1.Registros
             TotaltextBox.Text = factura.Total.ToString();
             FechadateTimePicker.Value = factura.Fecha;
             detalle = new List<FacturaDetalle>();
+         
             this.detalle = factura.Detalle;
+            TotaltextBox.Text = Convert.ToString(factura.Total.ToString());
             CargarGrid();
         }
 
@@ -91,9 +93,10 @@ namespace ProyectoFinalAplicada1.Registros
 
         private void Guardarbutton_Click(object sender, EventArgs e)
         {
+            RepositorioFactura db = new RepositorioFactura();
             RepositorioBase<Facturas> repositorio = new RepositorioBase<Facturas>();
 
-            Facturas factura = new Facturas();
+            Facturas factura = LlenaClase();
             bool paso = false;
 
             //if (!Validar())
@@ -103,7 +106,7 @@ namespace ProyectoFinalAplicada1.Registros
 
             if (IdFacturanumericUpDown.Value == 0)
             {
-                paso = repositorio.Guardar(factura);
+                paso = db.Guardar(factura);
             }
             else
             {
@@ -130,7 +133,24 @@ namespace ProyectoFinalAplicada1.Registros
 
         private void Eliminarbutton_Click(object sender, EventArgs e)
         {
+            RepositorioFactura db = new RepositorioFactura();
 
+            RepositorioBase<Facturas> repositorio = new RepositorioBase<Facturas>();
+
+
+            MyErrorProvider.Clear();
+            int.TryParse(IdFacturanumericUpDown.Text, out int id);
+
+            if (!ExisteEnLaBaseDeDatos())
+            {
+                MyErrorProvider.SetError(IdFacturanumericUpDown, "Factura no existe!!!");
+                return;
+            }
+            if (db.Eliminar(id))
+            {
+                Limpiar();
+                MessageBox.Show("Factura Eliminada!!", "Exito!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private Productos BuscarProductos(int id)
@@ -147,6 +167,24 @@ namespace ProyectoFinalAplicada1.Registros
             }
 
             return producto;
+        }
+
+        private void LlenarValores()
+        {
+            List<FacturaDetalle> detalle = new List<FacturaDetalle>();
+
+            if (DetalledataGridView.DataSource != null)
+            {
+                detalle = (List<FacturaDetalle>)DetalledataGridView.DataSource;
+            }
+            decimal Total = 0;
+            
+            foreach (var item in detalle)
+            {
+                Total += item.Importe;
+            }
+
+            TotaltextBox.Text = Total.ToString();
         }
 
         private void Addbutton_Click(object sender, EventArgs e)
@@ -178,7 +216,10 @@ namespace ProyectoFinalAplicada1.Registros
                   importe: Convert.ToDecimal(ImportetextBox.Text)
                   ));
             }
+
+          
             CargarGrid();
+            LlenarValores();
             //InscripcionDetalle inscripcionD = new InscripcionDetalle();
             //TotaltextBox.Text = inscripcionD.SubTotal.ToString();
 
