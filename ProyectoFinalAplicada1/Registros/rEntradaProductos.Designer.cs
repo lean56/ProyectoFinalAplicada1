@@ -64,6 +64,7 @@
             // 
             // ProductoComboBox
             // 
+            this.ProductoComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ProductoComboBox.FormattingEnabled = true;
             this.ProductoComboBox.Location = new System.Drawing.Point(73, 70);
             this.ProductoComboBox.Name = "ProductoComboBox";
@@ -72,7 +73,8 @@
             // 
             // FechadateTimePicker
             // 
-            this.FechadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.FechadateTimePicker.CustomFormat = "dd/MM/yyyy";
+            this.FechadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.FechadateTimePicker.Location = new System.Drawing.Point(73, 162);
             this.FechadateTimePicker.Name = "FechadateTimePicker";
             this.FechadateTimePicker.Size = new System.Drawing.Size(107, 20);

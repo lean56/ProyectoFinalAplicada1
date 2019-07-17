@@ -34,9 +34,11 @@
             this.registroProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.entradaDeProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registroDeClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registroDeFacturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultaUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registroDeFacturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.loginsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,7 +46,8 @@
             // 
             this.MenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.registroToolStripMenuItem,
-            this.consultaToolStripMenuItem});
+            this.consultaToolStripMenuItem,
+            this.loginToolStripMenuItem});
             this.MenuStrip.Location = new System.Drawing.Point(0, 0);
             this.MenuStrip.Name = "MenuStrip";
             this.MenuStrip.Size = new System.Drawing.Size(800, 24);
@@ -91,6 +94,13 @@
             this.registroDeClientesToolStripMenuItem.Text = "Registro de Clientes";
             this.registroDeClientesToolStripMenuItem.Click += new System.EventHandler(this.registroDeClientesToolStripMenuItem_Click);
             // 
+            // registroDeFacturasToolStripMenuItem
+            // 
+            this.registroDeFacturasToolStripMenuItem.Name = "registroDeFacturasToolStripMenuItem";
+            this.registroDeFacturasToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.registroDeFacturasToolStripMenuItem.Text = "Registro de Facturas";
+            this.registroDeFacturasToolStripMenuItem.Click += new System.EventHandler(this.registroDeFacturasToolStripMenuItem_Click);
+            // 
             // consultaToolStripMenuItem
             // 
             this.consultaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -102,16 +112,24 @@
             // consultaUsuariosToolStripMenuItem
             // 
             this.consultaUsuariosToolStripMenuItem.Name = "consultaUsuariosToolStripMenuItem";
-            this.consultaUsuariosToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.consultaUsuariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.consultaUsuariosToolStripMenuItem.Text = "Consulta Usuarios";
             this.consultaUsuariosToolStripMenuItem.Click += new System.EventHandler(this.consultaUsuariosToolStripMenuItem_Click);
             // 
-            // registroDeFacturasToolStripMenuItem
+            // loginToolStripMenuItem
             // 
-            this.registroDeFacturasToolStripMenuItem.Name = "registroDeFacturasToolStripMenuItem";
-            this.registroDeFacturasToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
-            this.registroDeFacturasToolStripMenuItem.Text = "Registro de Facturas";
-            this.registroDeFacturasToolStripMenuItem.Click += new System.EventHandler(this.registroDeFacturasToolStripMenuItem_Click);
+            this.loginToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.loginsToolStripMenuItem});
+            this.loginToolStripMenuItem.Name = "loginToolStripMenuItem";
+            this.loginToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
+            this.loginToolStripMenuItem.Text = "login";
+            // 
+            // loginsToolStripMenuItem
+            // 
+            this.loginsToolStripMenuItem.Name = "loginsToolStripMenuItem";
+            this.loginsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.loginsToolStripMenuItem.Text = "logins";
+            this.loginsToolStripMenuItem.Click += new System.EventHandler(this.loginsToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -140,6 +158,8 @@
         private System.Windows.Forms.ToolStripMenuItem entradaDeProductosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registroDeClientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registroDeFacturasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem loginsToolStripMenuItem;
     }
 }
 

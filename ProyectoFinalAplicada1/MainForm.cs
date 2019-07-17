@@ -54,5 +54,12 @@ namespace ProyectoFinalAplicada1
             rFacturas rf = new rFacturas();
             rf.Show();
         }
+
+        private void loginsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Login l = new Login();
+            l.Show();
+         
+        }
     }
 }
