@@ -71,6 +71,7 @@
             this.ClavetextBox.PasswordChar = '*';
             this.ClavetextBox.Size = new System.Drawing.Size(129, 20);
             this.ClavetextBox.TabIndex = 16;
+            this.ClavetextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ClavetextBox_KeyDown);
             // 
             // UsuariotextBox
             // 
@@ -109,6 +110,7 @@
             this.Controls.Add(this.ClavetextBox);
             this.Controls.Add(this.UsuariotextBox);
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.ResumeLayout(false);
             this.PerformLayout();

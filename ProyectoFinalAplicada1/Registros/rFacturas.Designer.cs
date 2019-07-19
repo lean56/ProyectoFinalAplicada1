@@ -38,6 +38,7 @@
             this.NombretextBox = new System.Windows.Forms.TextBox();
             this.BuscarClientebutton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.CantidadtextBox = new System.Windows.Forms.TextBox();
             this.DetalledataGridView = new System.Windows.Forms.DataGridView();
             this.Addbutton = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
@@ -57,7 +58,9 @@
             this.Eliminarbutton = new System.Windows.Forms.Button();
             this.FechadateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.MyErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.CantidadtextBox = new System.Windows.Forms.TextBox();
+            this.UsuarioTextBox = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.EliminarDetalle = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.IdFacturanumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IdClientenumericUpDown)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -155,6 +158,15 @@
             this.groupBox1.Size = new System.Drawing.Size(500, 240);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
+            // 
+            // CantidadtextBox
+            // 
+            this.CantidadtextBox.Location = new System.Drawing.Point(215, 24);
+            this.CantidadtextBox.Name = "CantidadtextBox";
+            this.CantidadtextBox.Size = new System.Drawing.Size(58, 20);
+            this.CantidadtextBox.TabIndex = 21;
+            this.CantidadtextBox.TextChanged += new System.EventHandler(this.CantidadtextBox_TextChanged);
+            this.CantidadtextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CantidadtextBox_KeyPress);
             // 
             // DetalledataGridView
             // 
@@ -322,20 +334,41 @@
             // 
             this.MyErrorProvider.ContainerControl = this;
             // 
-            // CantidadtextBox
+            // UsuarioTextBox
             // 
-            this.CantidadtextBox.Location = new System.Drawing.Point(215, 24);
-            this.CantidadtextBox.Name = "CantidadtextBox";
-            this.CantidadtextBox.Size = new System.Drawing.Size(58, 20);
-            this.CantidadtextBox.TabIndex = 21;
-            this.CantidadtextBox.TextChanged += new System.EventHandler(this.CantidadtextBox_TextChanged);
-            this.CantidadtextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CantidadtextBox_KeyPress);
+            this.UsuarioTextBox.Location = new System.Drawing.Point(256, 22);
+            this.UsuarioTextBox.Name = "UsuarioTextBox";
+            this.UsuarioTextBox.ReadOnly = true;
+            this.UsuarioTextBox.Size = new System.Drawing.Size(146, 20);
+            this.UsuarioTextBox.TabIndex = 97;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(253, 9);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(43, 13);
+            this.label10.TabIndex = 96;
+            this.label10.Text = "Usuario";
+            // 
+            // EliminarDetalle
+            // 
+            this.EliminarDetalle.Location = new System.Drawing.Point(16, 374);
+            this.EliminarDetalle.Name = "EliminarDetalle";
+            this.EliminarDetalle.Size = new System.Drawing.Size(90, 27);
+            this.EliminarDetalle.TabIndex = 98;
+            this.EliminarDetalle.Text = "Eliminar Detalle";
+            this.EliminarDetalle.UseVisualStyleBackColor = true;
+            this.EliminarDetalle.Click += new System.EventHandler(this.EliminarDetalle_Click);
             // 
             // rFacturas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(537, 468);
+            this.Controls.Add(this.EliminarDetalle);
+            this.Controls.Add(this.UsuarioTextBox);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.FechadateTimePicker);
             this.Controls.Add(this.Eliminarbutton);
             this.Controls.Add(this.Guardarbutton);
@@ -396,5 +429,8 @@
         private System.Windows.Forms.DateTimePicker FechadateTimePicker;
         private System.Windows.Forms.ErrorProvider MyErrorProvider;
         private System.Windows.Forms.TextBox CantidadtextBox;
+        private System.Windows.Forms.TextBox UsuarioTextBox;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button EliminarDetalle;
     }
 }

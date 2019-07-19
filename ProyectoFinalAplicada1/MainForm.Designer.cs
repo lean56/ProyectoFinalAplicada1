@@ -39,6 +39,8 @@
             this.consultaUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loginsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,7 +49,8 @@
             this.MenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.registroToolStripMenuItem,
             this.consultaToolStripMenuItem,
-            this.loginToolStripMenuItem});
+            this.loginToolStripMenuItem,
+            this.dToolStripMenuItem});
             this.MenuStrip.Location = new System.Drawing.Point(0, 0);
             this.MenuStrip.Name = "MenuStrip";
             this.MenuStrip.Size = new System.Drawing.Size(800, 24);
@@ -112,7 +115,7 @@
             // consultaUsuariosToolStripMenuItem
             // 
             this.consultaUsuariosToolStripMenuItem.Name = "consultaUsuariosToolStripMenuItem";
-            this.consultaUsuariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultaUsuariosToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.consultaUsuariosToolStripMenuItem.Text = "Consulta Usuarios";
             this.consultaUsuariosToolStripMenuItem.Click += new System.EventHandler(this.consultaUsuariosToolStripMenuItem_Click);
             // 
@@ -127,9 +130,24 @@
             // loginsToolStripMenuItem
             // 
             this.loginsToolStripMenuItem.Name = "loginsToolStripMenuItem";
-            this.loginsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.loginsToolStripMenuItem.Size = new System.Drawing.Size(106, 22);
             this.loginsToolStripMenuItem.Text = "logins";
             this.loginsToolStripMenuItem.Click += new System.EventHandler(this.loginsToolStripMenuItem_Click);
+            // 
+            // dToolStripMenuItem
+            // 
+            this.dToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cToolStripMenuItem});
+            this.dToolStripMenuItem.Name = "dToolStripMenuItem";
+            this.dToolStripMenuItem.Size = new System.Drawing.Size(26, 20);
+            this.dToolStripMenuItem.Text = "d";
+            // 
+            // cToolStripMenuItem
+            // 
+            this.cToolStripMenuItem.Name = "cToolStripMenuItem";
+            this.cToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cToolStripMenuItem.Text = "Cerrar Sesion";
+            this.cToolStripMenuItem.Click += new System.EventHandler(this.cToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -160,6 +178,8 @@
         private System.Windows.Forms.ToolStripMenuItem registroDeFacturasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem loginsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cToolStripMenuItem;
     }
 }
 

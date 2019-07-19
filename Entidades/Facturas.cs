@@ -12,7 +12,7 @@ namespace Entidades
         [Key]
         public int FacturaId { get; set; }
         public int ClienteId { get; set; }
-        public int UsuarioId { get; set; }
+        public string Usuario { get; set; }
         public int ProductoId { get; set; }
         public decimal Total { get; set; }
         public DateTime Fecha { get; set; }
@@ -24,7 +24,7 @@ namespace Entidades
         {
             FacturaId = 0;
             ClienteId = 0;
-            UsuarioId = 0;
+            Usuario = string.Empty;
             ProductoId = 0;
             Total = 0;
             Fecha = DateTime.Now;

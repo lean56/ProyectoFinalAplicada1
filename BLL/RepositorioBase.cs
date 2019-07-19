@@ -1,4 +1,5 @@
 ﻿using DAL;
+using Entidades;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -11,6 +12,7 @@ namespace BLL
 {
     public class RepositorioBase<T> : IDisposable, IRepository<T> where T : class
     {
+
         internal Contexto _contexto;
 
         public RepositorioBase()
@@ -131,8 +133,8 @@ namespace BLL
         {
             decimal PctGanancia;
 
-            PctGanancia = precio - costo;
-            PctGanancia = PctGanancia / costo;
+            PctGanancia = ((precio-costo)/costo);
+           // PctGanancia = PctGanancia / costo;
             PctGanancia *= 100;
 
             return PctGanancia;
@@ -146,6 +148,18 @@ namespace BLL
           
 
             return Importe;
+        }
+
+        private static Usuarios usuario = new Usuarios();
+
+        public virtual void NombreLogin(string Usuario, string tipodeusuario)
+        {
+            usuario.Usuario = Usuario;
+            usuario.NivelUsuario = tipodeusuario;
+        }
+        public virtual Usuarios ReturnUsuario()
+        {
+            return usuario;
         }
     }
 }

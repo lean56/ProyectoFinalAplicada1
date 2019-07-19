@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL;
+using Entidades;
 using ProyectoFinalAplicada1.Consultas;
 using ProyectoFinalAplicada1.Registros;
 
@@ -21,8 +23,14 @@ namespace ProyectoFinalAplicada1
 
         private void registroUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            RepositorioBase<Usuarios> repositorio = new RepositorioBase<Usuarios>();
+
             rUsuarios ru = new rUsuarios();
-            ru.Show();
+            if (repositorio.ReturnUsuario().NivelUsuario == "Administrador")
+                ru.Show();
+            else
+                MessageBox.Show("Solo los administradores pueden registrar usuarios", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            ;
         }
 
         private void consultaUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -60,6 +68,13 @@ namespace ProyectoFinalAplicada1
             Login l = new Login();
             l.Show();
          
+        }
+
+        private void cToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login login = new Login();
+            login.Show();
         }
     }
 }

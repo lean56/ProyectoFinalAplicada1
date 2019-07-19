@@ -1,4 +1,5 @@
 ﻿using BLL;
+using DAL;
 using Entidades;
 using System;
 using System.Collections.Generic;
@@ -15,15 +16,18 @@ namespace ProyectoFinalAplicada1.Registros
     public partial class rFacturas : Form
     {
         public List<FacturaDetalle> detalle;
-
+        public List<Productos> productoInvent;
+        RepositorioBase<Usuarios> repositorio = new RepositorioBase<Usuarios>();
 
         public rFacturas()
         {
             InitializeComponent();
             detalle = new List<FacturaDetalle>();
             TotaltextBox.Text = "0.00";
-
+            UsuarioTextBox.Text = repositorio.ReturnUsuario().Usuario;
         }
+
+
 
         private void Limpiar()
         {
@@ -60,7 +64,9 @@ namespace ProyectoFinalAplicada1.Registros
             factura.ProductoId = (int)IdProductnumericUpDown.Value;
             factura.Total = Convert.ToDecimal(TotaltextBox.Text);
             factura.Fecha = FechadateTimePicker.Value;
+            factura.Usuario = repositorio.ReturnUsuario().Usuario;
             factura.Detalle = this.detalle;
+
 
             return factura;
         }
@@ -84,6 +90,49 @@ namespace ProyectoFinalAplicada1.Registros
             RepositorioBase<Facturas> repositorio = new RepositorioBase<Facturas>();
             Facturas factura = repositorio.Buscar((int)IdFacturanumericUpDown.Value);
             return (factura != null);
+        }
+
+        private bool CantidadInventario()
+        {
+            List<FacturaDetalle> detalle = new List<FacturaDetalle>();
+
+            if (DetalledataGridView.DataSource != null)
+            {
+                detalle = (List<FacturaDetalle>)DetalledataGridView.DataSource;
+            }
+
+            RepositorioBase<Productos> repositorio = new RepositorioBase<Productos>();
+
+            Productos producto = BuscarProductos(Convert.ToInt32(IdProductnumericUpDown.Value));
+
+            int CantidadCotizada = 0;
+            foreach (var item in detalle)
+            {
+                CantidadCotizada += item.Cantidad;
+            }
+
+            int CantidadProducto = producto.Inventario;
+
+            bool paso = false;
+
+            if (Convert.ToInt32(CantidadtextBox.Text) > producto.Inventario)
+            {
+                MyErrorProvider.SetError(CantidadtextBox, "Error");
+                MessageBox.Show("Cantidad mayor a la existente en inventario!!", "Falló!!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                paso = true;
+            }
+
+            CantidadProducto -= CantidadCotizada;
+
+            //if (CantidadProducto < CantidadCotizada)
+            //{
+            //    MessageBox.Show($"Solo quedan {CantidadProducto} del articulo deseado!!", "Articulo Agotado!!",
+            //        MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    paso = true;
+            //}
+
+            return paso;
         }
 
         private void Nuevobutton_Click(object sender, EventArgs e)
@@ -112,7 +161,7 @@ namespace ProyectoFinalAplicada1.Registros
             {
                 if (!ExisteEnLaBaseDeDatos())
                 {
-                    MessageBox.Show("No se puede modificar un Usuario que no existe", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("No se puede modificar una Factura que no existe", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 //if (repositorio.Duplicado(p => p.Usuario == UsuariotextBox.Text))
@@ -120,15 +169,15 @@ namespace ProyectoFinalAplicada1.Registros
                 //    MyErrorProvider.SetError(UsuariotextBox, "Este Usuario Ya existe!!!");
                 //    return;
                 //}
-                paso = repositorio.Modificar(factura);
+                paso = db.Modificar(factura);
             }
             if (paso)
             {
-                MessageBox.Show("Usuario Guardado!!", "Exito!!!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Factura Guardada!!", "Exito!!!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Limpiar();
             }
             else
-                MessageBox.Show("No Se Pudo Guardar!!", "Fallo!!!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error al Guardar!!", "Fallo!!!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void Eliminarbutton_Click(object sender, EventArgs e)
@@ -190,6 +239,7 @@ namespace ProyectoFinalAplicada1.Registros
         private void Addbutton_Click(object sender, EventArgs e)
         {
             List<FacturaDetalle> detalle = new List<FacturaDetalle>();
+            RepositorioBase<Productos> repositorio = new RepositorioBase<Productos>();
 
             if (DetalledataGridView.DataSource != null)
             {
@@ -197,7 +247,14 @@ namespace ProyectoFinalAplicada1.Registros
             }
             if (DetalledataGridView.DataSource != null)
                 detalle = (List<FacturaDetalle>)DetalledataGridView.DataSource;
+            if(CantidadInventario())
+            {
+             //   MessageBox.Show($"Solo quedan del articulo deseado!!", "Articulo Agotado!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             Productos producto = BuscarProductos((int)IdProductnumericUpDown.Value);
+            
             if (CantidadtextBox.Text == string.Empty)
             {
                 MyErrorProvider.SetError(CantidadtextBox, "La Cantidad no puede ser cero");
@@ -216,12 +273,9 @@ namespace ProyectoFinalAplicada1.Registros
                   importe: Convert.ToDecimal(ImportetextBox.Text)
                   ));
             }
-
-          
+  
             CargarGrid();
             LlenarValores();
-            //InscripcionDetalle inscripcionD = new InscripcionDetalle();
-            //TotaltextBox.Text = inscripcionD.SubTotal.ToString();
 
         }
         //llenar producto
@@ -290,9 +344,7 @@ namespace ProyectoFinalAplicada1.Registros
         //llenar Cliente
         private void LlenarCliente(Clientes cliente)
         {
-          
-                NombretextBox.Text = cliente.Nombres;
-            
+           NombretextBox.Text = cliente.Nombres;   
         }
         //Buscar Cliente
         private void BuscarClientebutton_Click(object sender, EventArgs e)
@@ -368,6 +420,30 @@ namespace ProyectoFinalAplicada1.Registros
             }
             else
                 MyErrorProvider.SetError(IdFacturanumericUpDown, "Factura  no encontrada");
+        }
+
+        private void EliminarDetalle_Click(object sender, EventArgs e)
+        {
+            if (DetalledataGridView.Rows.Count > 0 && DetalledataGridView.CurrentRow != null)
+            {
+                List<FacturaDetalle> detalle = (List<FacturaDetalle>)DetalledataGridView.DataSource;
+
+                detalle.RemoveAt(DetalledataGridView.CurrentRow.Index);
+
+                DetalledataGridView.DataSource = null;
+                DetalledataGridView.DataSource = detalle;
+
+                decimal Total = 0;
+
+                foreach (var item in detalle)
+                {
+                    Total -= item.Importe;
+                }
+
+                Total *= (-1);
+                TotaltextBox.Text = Total.ToString();
+
+            }
         }
     }
 }

@@ -2,6 +2,7 @@
 using Entidades;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,6 +11,7 @@ namespace BLL
 {
     public class RepositorioFactura : RepositorioBase<Facturas>
     {
+
         public override bool Guardar(Facturas entity)
         {
             bool paso = false;
@@ -36,6 +38,54 @@ namespace BLL
             {
                 throw;
             }
+            return paso;
+        }
+
+
+        public override bool Modificar(Facturas factura)
+        {
+            bool paso = false;
+            Contexto db = new Contexto();
+
+            RepositorioBase<Facturas> repositorio = new RepositorioBase<Facturas>();
+
+            try
+            {
+                var Anterior = repositorio.Buscar(factura.FacturaId);
+
+                foreach (var item in Anterior.Detalle)
+                {
+                    if (!factura.Detalle.Any(d => d.FacturaDetalleId == item.FacturaDetalleId))
+                    {
+                        db.Producto.Find(item.ProductoId).Inventario += item.Cantidad;
+
+                        db.Entry(item).State = EntityState.Deleted;
+                    }
+                }
+
+                foreach(var item in factura.Detalle)
+                {
+                    if (item.FacturaDetalleId == 0)
+                    {
+                        db.Producto.Find(item.ProductoId).Inventario -= item.Cantidad;
+
+                        db.Entry(item).State = EntityState.Added;
+                    }
+                    else
+                        db.Entry(item).State = EntityState.Modified;
+                }
+
+                db.Entry(factura).State = EntityState.Modified;
+
+                paso = db.SaveChanges() > 0;
+               
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+
             return paso;
         }
 
@@ -70,6 +120,8 @@ namespace BLL
             }
             return paso;
         }
+
+   
 
     }
 }

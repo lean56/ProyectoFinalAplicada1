@@ -28,8 +28,9 @@ namespace ProyectoFinalAplicada1.Registros
             PreciotextBox.Text = string.Empty;
             GananciatextBox.Text = string.Empty;
             InventariotextBox.Text = string.Empty;
-            CategoriacomboBox.SelectedIndex = 0;
+            CategoriacomboBox.SelectedItem = null;
             FechadateTimePicker.Value = DateTime.Now;
+            MyErrorProvider.Clear();
         }
 
         private Productos LlenaClase()
@@ -59,7 +60,7 @@ namespace ProyectoFinalAplicada1.Registros
             InventariotextBox.Text = producto.Inventario.ToString();
             FechadateTimePicker.Value = producto.FechaCreacion;
         }
-
+        //*= (-1);
         private bool ExisteEnLaBaseDeDatos()
         {
             RepositorioBase<Productos> repositorio = new RepositorioBase<Productos>();
@@ -90,7 +91,7 @@ namespace ProyectoFinalAplicada1.Registros
             {
                 MyErrorProvider.Clear();
                 LlenaCampo(producto);
-                InventariotextBox.Text = producto.Inventario.ToString();
+                InventariotextBox.Text  = producto.Inventario.ToString();
             }
             else
                 MyErrorProvider.SetError(IdnumericUpDown, "Producto no Encontrado");
