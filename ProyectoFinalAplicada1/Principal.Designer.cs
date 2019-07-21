@@ -29,12 +29,7 @@
         private void InitializeComponent()
         {
             this.BarraTitulo = new System.Windows.Forms.Panel();
-            this.min = new System.Windows.Forms.PictureBox();
-            this.Max = new System.Windows.Forms.PictureBox();
-            this.Salir = new System.Windows.Forms.PictureBox();
-            this.HideButton = new System.Windows.Forms.PictureBox();
             this.PanelContenedor = new System.Windows.Forms.Panel();
-            this.restaurar = new System.Windows.Forms.PictureBox();
             this.MenuVertical = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.cEstudiantesbutton = new System.Windows.Forms.Button();
@@ -42,13 +37,18 @@
             this.RegistroAsignatura = new System.Windows.Forms.Button();
             this.RegistroInscripcion = new System.Windows.Forms.Button();
             this.RegistroEstudiante = new System.Windows.Forms.Button();
+            this.restaurar = new System.Windows.Forms.PictureBox();
+            this.min = new System.Windows.Forms.PictureBox();
+            this.Max = new System.Windows.Forms.PictureBox();
+            this.Salir = new System.Windows.Forms.PictureBox();
+            this.HideButton = new System.Windows.Forms.PictureBox();
             this.BarraTitulo.SuspendLayout();
+            this.MenuVertical.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.restaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Max)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Salir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HideButton)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.restaurar)).BeginInit();
-            this.MenuVertical.SuspendLayout();
             this.SuspendLayout();
             // 
             // BarraTitulo
@@ -59,59 +59,12 @@
             this.BarraTitulo.Controls.Add(this.Max);
             this.BarraTitulo.Controls.Add(this.Salir);
             this.BarraTitulo.Controls.Add(this.HideButton);
+            this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.BarraTitulo.Location = new System.Drawing.Point(176, 0);
             this.BarraTitulo.Name = "BarraTitulo";
             this.BarraTitulo.Size = new System.Drawing.Size(774, 50);
             this.BarraTitulo.TabIndex = 4;
             this.BarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
-            // 
-            // min
-            // 
-            this.min.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.min.Image = global::ProyectoFinalAplicada1.Properties.Resources.icon_minimizar;
-            this.min.Location = new System.Drawing.Point(666, 9);
-            this.min.Name = "min";
-            this.min.Size = new System.Drawing.Size(30, 30);
-            this.min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.min.TabIndex = 6;
-            this.min.TabStop = false;
-            this.min.Click += new System.EventHandler(this.min_Click);
-            // 
-            // Max
-            // 
-            this.Max.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Max.Image = global::ProyectoFinalAplicada1.Properties.Resources.icon_maximizar;
-            this.Max.Location = new System.Drawing.Point(702, 9);
-            this.Max.Name = "Max";
-            this.Max.Size = new System.Drawing.Size(30, 30);
-            this.Max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Max.TabIndex = 4;
-            this.Max.TabStop = false;
-            this.Max.Click += new System.EventHandler(this.Max_Click);
-            // 
-            // Salir
-            // 
-            this.Salir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Salir.Image = global::ProyectoFinalAplicada1.Properties.Resources.icon_cerrar2;
-            this.Salir.Location = new System.Drawing.Point(738, 9);
-            this.Salir.Name = "Salir";
-            this.Salir.Size = new System.Drawing.Size(30, 30);
-            this.Salir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Salir.TabIndex = 5;
-            this.Salir.TabStop = false;
-            this.Salir.Click += new System.EventHandler(this.Salir_Click);
-            // 
-            // HideButton
-            // 
-            this.HideButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.HideButton.Image = global::ProyectoFinalAplicada1.Properties.Resources.ic_menu_128_28650;
-            this.HideButton.Location = new System.Drawing.Point(6, 9);
-            this.HideButton.Name = "HideButton";
-            this.HideButton.Size = new System.Drawing.Size(35, 35);
-            this.HideButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.HideButton.TabIndex = 0;
-            this.HideButton.TabStop = false;
-            this.HideButton.Click += new System.EventHandler(this.HideButton_Click);
             // 
             // PanelContenedor
             // 
@@ -121,18 +74,6 @@
             this.PanelContenedor.Name = "PanelContenedor";
             this.PanelContenedor.Size = new System.Drawing.Size(774, 600);
             this.PanelContenedor.TabIndex = 5;
-            // 
-            // restaurar
-            // 
-            this.restaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.restaurar.Image = global::ProyectoFinalAplicada1.Properties.Resources.icon_restaurar;
-            this.restaurar.Location = new System.Drawing.Point(702, 9);
-            this.restaurar.Name = "restaurar";
-            this.restaurar.Size = new System.Drawing.Size(30, 30);
-            this.restaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.restaurar.TabIndex = 7;
-            this.restaurar.TabStop = false;
-            this.restaurar.Click += new System.EventHandler(this.restaurar_Click);
             // 
             // MenuVertical
             // 
@@ -209,7 +150,7 @@
             this.RegistroAsignatura.Name = "RegistroAsignatura";
             this.RegistroAsignatura.Size = new System.Drawing.Size(164, 47);
             this.RegistroAsignatura.TabIndex = 7;
-            this.RegistroAsignatura.Text = "Registro Asignatura";
+            this.RegistroAsignatura.Text = "Registro de Usuarios";
             this.RegistroAsignatura.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.RegistroAsignatura.UseVisualStyleBackColor = false;
             this.RegistroAsignatura.Click += new System.EventHandler(this.RegistroAsignatura_Click);
@@ -246,6 +187,66 @@
             this.RegistroEstudiante.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.RegistroEstudiante.UseVisualStyleBackColor = false;
             // 
+            // restaurar
+            // 
+            this.restaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.restaurar.Image = global::ProyectoFinalAplicada1.Properties.Resources.icon_restaurar;
+            this.restaurar.Location = new System.Drawing.Point(702, 9);
+            this.restaurar.Name = "restaurar";
+            this.restaurar.Size = new System.Drawing.Size(30, 30);
+            this.restaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.restaurar.TabIndex = 7;
+            this.restaurar.TabStop = false;
+            this.restaurar.Click += new System.EventHandler(this.restaurar_Click);
+            // 
+            // min
+            // 
+            this.min.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.min.Image = global::ProyectoFinalAplicada1.Properties.Resources.icon_minimizar;
+            this.min.Location = new System.Drawing.Point(666, 9);
+            this.min.Name = "min";
+            this.min.Size = new System.Drawing.Size(30, 30);
+            this.min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.min.TabIndex = 6;
+            this.min.TabStop = false;
+            this.min.Click += new System.EventHandler(this.min_Click);
+            // 
+            // Max
+            // 
+            this.Max.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Max.Image = global::ProyectoFinalAplicada1.Properties.Resources.icon_maximizar;
+            this.Max.Location = new System.Drawing.Point(702, 9);
+            this.Max.Name = "Max";
+            this.Max.Size = new System.Drawing.Size(30, 30);
+            this.Max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Max.TabIndex = 4;
+            this.Max.TabStop = false;
+            this.Max.Click += new System.EventHandler(this.Max_Click);
+            // 
+            // Salir
+            // 
+            this.Salir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Salir.Image = global::ProyectoFinalAplicada1.Properties.Resources.icon_cerrar2;
+            this.Salir.Location = new System.Drawing.Point(738, 9);
+            this.Salir.Name = "Salir";
+            this.Salir.Size = new System.Drawing.Size(30, 30);
+            this.Salir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Salir.TabIndex = 5;
+            this.Salir.TabStop = false;
+            this.Salir.Click += new System.EventHandler(this.Salir_Click);
+            // 
+            // HideButton
+            // 
+            this.HideButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.HideButton.Image = global::ProyectoFinalAplicada1.Properties.Resources.ic_menu_128_28650;
+            this.HideButton.Location = new System.Drawing.Point(6, 9);
+            this.HideButton.Name = "HideButton";
+            this.HideButton.Size = new System.Drawing.Size(35, 35);
+            this.HideButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.HideButton.TabIndex = 0;
+            this.HideButton.TabStop = false;
+            this.HideButton.Click += new System.EventHandler(this.HideButton_Click);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -259,12 +260,12 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principal";
             this.BarraTitulo.ResumeLayout(false);
+            this.MenuVertical.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.restaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.min)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Max)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Salir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HideButton)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.restaurar)).EndInit();
-            this.MenuVertical.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

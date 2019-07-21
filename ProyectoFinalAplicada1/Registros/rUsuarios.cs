@@ -22,11 +22,17 @@ namespace ProyectoFinalAplicada1.Registros
         private void Limpiar()
         {
             IdnumericUpDown.Value = 0;
-            NombretextBox.Text = string.Empty;
+            NombretextBox.Text = "Nombres";
+            NombretextBox.ForeColor = Color.Silver;
             NivelUsercomboBox.SelectedItem = null;
-            UsuariotextBox.Text = string.Empty;
-            ClavemaskedTextBox.Text = string.Empty;
-            Clave2maskedTextBox.Text = string.Empty;
+            UsuariotextBox.Text = "Usuario";
+            UsuariotextBox.ForeColor = Color.Silver;
+            ClavemaskedTextBox.Text = "Contraseña";
+            ClavemaskedTextBox.ForeColor = Color.Silver;
+            ClavemaskedTextBox.UseSystemPasswordChar = false;
+            Clave2maskedTextBox.Text = "Confirmar";
+            Clave2maskedTextBox.ForeColor = Color.Silver;
+            Clave2maskedTextBox.UseSystemPasswordChar = false;
             FechadateTimePicker.Value = DateTime.Now;
             MyErrorProvider.Clear();
         }
@@ -37,11 +43,7 @@ namespace ProyectoFinalAplicada1.Registros
 
             usuario.UsuarioId = (int)IdnumericUpDown.Value;
             usuario.Nombre = NombretextBox.Text;
-            usuario.NivelUsuario = NivelUsercomboBox.Text;
-            //if (UsuarioradioButton.Checked == true)
-            //    usuario.NivelUsuario = "Usuario";
-            //else
-            //    usuario.NivelUsuario = "Administrador";
+            usuario.NivelUsuario = NivelUsercomboBox.Text;          
             usuario.Usuario = UsuariotextBox.Text;
             usuario.Contraseña = ClavemaskedTextBox.Text;
             usuario.FechaIngreso = FechadateTimePicker.Value;
@@ -59,37 +61,36 @@ namespace ProyectoFinalAplicada1.Registros
         private void LlenaCampo(Usuarios usuario)
         {
             IdnumericUpDown.Value = usuario.UsuarioId;
-            NombretextBox.Text = usuario.Nombre;
-            //if (usuario.NivelUsuario == "Usuario")
-            //    UsuarioradioButton.Checked = true;
-            //else
-            //    if (usuario.NivelUsuario == "Administrador")
-            //    AdminradioButton.Checked = true;
+            NombretextBox.Text = usuario.Nombre;           
             NivelUsercomboBox.Text = usuario.NivelUsuario;
             UsuariotextBox.Text = usuario.Usuario;
-            ClavemaskedTextBox.Text = usuario.Contraseña;
             FechadateTimePicker.Value = usuario.FechaIngreso;
+
+            NombretextBox.ForeColor = Color.Black;
+            UsuariotextBox.ForeColor = Color.Black;
+            ClavemaskedTextBox.Text = "Contraseña";
+            ClavemaskedTextBox.UseSystemPasswordChar = false;
+            Clave2maskedTextBox.Text = "Confirmar";
+            Clave2maskedTextBox.UseSystemPasswordChar = false;
         }
 
         private bool Validar()
         {
-
             bool paso = true;
-
-
-            if (NombretextBox.Text == string.Empty)
+     
+            if (NombretextBox.Text == "Nombres")
             {
                 MyErrorProvider.SetError(NombretextBox, "Este Campo Esta Vacio");
                 paso = false;
             }
 
-            if (UsuariotextBox.Text == string.Empty)
+            if (UsuariotextBox.Text == "Usuario")
             {
                 MyErrorProvider.SetError(UsuariotextBox, "Este Campo Esta Vacio");
                 paso = false;
             }
 
-            if (ClavemaskedTextBox.Text == string.Empty)
+            if (ClavemaskedTextBox.Text == "Contraseña")
             {
                 MyErrorProvider.SetError(ClavemaskedTextBox, "Este campo no puede estar vacio");
                 paso = false;
@@ -101,7 +102,7 @@ namespace ProyectoFinalAplicada1.Registros
                 NivelUsercomboBox.Focus();
                 paso = false;
             }
-            if (Clave2maskedTextBox.Text == string.Empty)
+            if (Clave2maskedTextBox.Text == "Confirmar")
             {
                 MyErrorProvider.SetError(Clave2maskedTextBox, "Debe Confirmar la Contraseña");
                 paso = false;
@@ -171,7 +172,6 @@ namespace ProyectoFinalAplicada1.Registros
             }
             else
                 MessageBox.Show("No Se Pudo Guardar!!", "Fallo!!!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
         }
 
         private void Nuevobutton_Click(object sender, EventArgs e)
@@ -196,5 +196,99 @@ namespace ProyectoFinalAplicada1.Registros
                 MessageBox.Show("Usuario Eliminado!!", "Exito!!!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        //Todo: Eventos de textBox
+
+        private void NombretextBox_Enter(object sender, EventArgs e)
+        {
+            if (NombretextBox.Text == "Nombres")
+            {
+                NombretextBox.Text = "";
+                NombretextBox.ForeColor = Color.Black;
+            }
+            MyErrorProvider.Clear();
+        }
+
+        private void NombretextBox_Leave(object sender, EventArgs e)
+        {
+            if (NombretextBox.Text == "")
+            {
+                NombretextBox.Text = "Nombres";
+                NombretextBox.ForeColor = Color.Silver;
+            }
+        }
+
+        private void UsuariotextBox_Enter(object sender, EventArgs e)
+        {
+            if (UsuariotextBox.Text == "Usuario")
+            {
+                UsuariotextBox.Text = "";
+                UsuariotextBox.ForeColor = Color.Black;
+            }
+            MyErrorProvider.Clear();
+        }
+
+        private void UsuariotextBox_Leave(object sender, EventArgs e)
+        {
+            if (UsuariotextBox.Text == "")
+            {
+                UsuariotextBox.Text = "Usuario";
+                UsuariotextBox.ForeColor = Color.Silver;
+            }
+        }
+
+        private void ClavemaskedTextBox_Enter(object sender, EventArgs e)
+        {
+            if (ClavemaskedTextBox.Text == "Contraseña")
+            {
+                ClavemaskedTextBox.Text = "";
+                ClavemaskedTextBox.ForeColor = Color.Black;
+                ClavemaskedTextBox.UseSystemPasswordChar = true;
+            }
+            MyErrorProvider.Clear();
+        }
+
+        private void ClavemaskedTextBox_Leave(object sender, EventArgs e)
+        {
+            if (ClavemaskedTextBox.Text == "")
+            {
+                ClavemaskedTextBox.Text = "Contraseña";
+                ClavemaskedTextBox.ForeColor = Color.Silver;
+                ClavemaskedTextBox.UseSystemPasswordChar = false;
+
+            }
+        }
+
+        private void Clave2maskedTextBox_Leave(object sender, EventArgs e)
+        {
+            if (Clave2maskedTextBox.Text == "")
+            {
+                Clave2maskedTextBox.Text = "Confirmar";
+                Clave2maskedTextBox.ForeColor = Color.Silver;
+                Clave2maskedTextBox.UseSystemPasswordChar = false;
+            }
+        }
+
+        private void Clave2maskedTextBox_Enter(object sender, EventArgs e)
+        {
+            if (Clave2maskedTextBox.Text == "Confirmar")
+            {
+                Clave2maskedTextBox.Text = "";
+                Clave2maskedTextBox.ForeColor = Color.Black;
+                Clave2maskedTextBox.UseSystemPasswordChar = true;
+            }
+            MyErrorProvider.Clear();
+        }
+
+        private void CerrarButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void rUsuarios1_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
+    
 }

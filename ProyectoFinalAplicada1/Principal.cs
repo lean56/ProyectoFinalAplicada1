@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoFinalAplicada1.Registros;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -79,7 +80,7 @@ namespace ProyectoFinalAplicada1
 
         private void RegistroAsignatura_Click(object sender, EventArgs e)
         {
-           // AbrirFormInPanel(new cInscripciones());
+            AbrirFormInPanel(new rUsuarios());
         }
     }
 }

@@ -245,5 +245,17 @@
   <ItemGroup>
     <None Include="Resources\ic_menu_128_28650.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seo-social-web-network-internet_340_icon-icons.com_61497.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_21411.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file_new_22051.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\action_exit_close_remove_13915.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
