@@ -57,7 +57,7 @@ namespace ProyectoFinalAplicada1
         }
 
 
-        private void Login()
+        private void Logins()
         {
             RepositorioBase<Usuarios> repositorio = new RepositorioBase<Usuarios>();
 
@@ -81,7 +81,7 @@ namespace ProyectoFinalAplicada1
                     this.Hide();
                     lo.ShowDialog(this);
 
-                    new MainForm().Show();
+                    new Principal().Show();
                 }
             }
             else
@@ -105,7 +105,7 @@ namespace ProyectoFinalAplicada1
         {
             if (!Validar())
                 return;
-            Login();
+            Logins();
         }
 
         private void UsuariotextBox_Leave(object sender, EventArgs e)
@@ -153,7 +153,7 @@ namespace ProyectoFinalAplicada1
         {
             if (e.KeyCode == Keys.Enter)
             {
-                Login();        
+                Logins();        
             }
         }
 
