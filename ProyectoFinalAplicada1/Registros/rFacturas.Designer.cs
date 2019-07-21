@@ -173,6 +173,7 @@
             this.DetalledataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DetalledataGridView.Location = new System.Drawing.Point(7, 62);
             this.DetalledataGridView.Name = "DetalledataGridView";
+            this.DetalledataGridView.ReadOnly = true;
             this.DetalledataGridView.Size = new System.Drawing.Size(476, 167);
             this.DetalledataGridView.TabIndex = 18;
             // 

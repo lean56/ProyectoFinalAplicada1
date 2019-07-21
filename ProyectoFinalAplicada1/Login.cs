@@ -11,6 +11,8 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
+
 
 namespace ProyectoFinalAplicada1
 {
@@ -21,15 +23,41 @@ namespace ProyectoFinalAplicada1
             InitializeComponent();
         }
 
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
+
         void Loading()
         {
-            for(int i=0; i<=500;i++)
+            for (int i = 0; i <= 500; i++)
             {
                 Thread.Sleep(8);
             }
         }
 
-        private void Logins()
+
+        private bool Validar()
+        {
+            bool paso = true;
+            MyErrorProvider.Clear();
+            if (UsuariotextBox.Text == "Usuario")
+            {
+                MyErrorProvider.SetError(UsuariotextBox, "Este Campo No puede Estar Vacio!!");
+                paso = false;
+            }
+     
+            if (ClavetextBox.Text == "Contraseña")
+            {
+                MyErrorProvider.SetError(ClavetextBox, "Este Campo No puede Estar Vacio!!");
+                paso = false;
+            }
+     
+            return paso;
+        }
+
+
+        private void Login()
         {
             RepositorioBase<Usuarios> repositorio = new RepositorioBase<Usuarios>();
 
@@ -48,59 +76,108 @@ namespace ProyectoFinalAplicada1
                     repositorio.NombreLogin(item.Usuario, item.NivelUsuario);
                 }
 
-                using (loading main = new loading(Loading))
+                using (loading lo = new loading(Loading))
                 {
                     this.Hide();
-                    main.ShowDialog(this);
+                    lo.ShowDialog(this);
 
                     new MainForm().Show();
                 }
-
-            } //string usuario = UsuariotextBox.Text;
-              //string contraseña = ClavetextBox.Text;
-              // List<Usuarios> lista = repositorio.GetList(x => true);
-              //foreach (var item in lista)
-              //{
-              //    if (usuario.(x => x.NombreUsuario == UsuariologtextBox.Text) && usuario.Exists(x => x.Clave == ClavetextBox.Text))
-
-            //        // if (usuario == item.Usuario && contraseña == item.Contraseña)
-            //        {
-            //        repositorio.NombreLogin(item.Usuario, item.NivelUsuario);
-            //        this.Hide();
-            //        new MainForm().Show();
-            //   }
-
-            //if (Lista != null)
-            //{
-            //    foreach (var item in repositorio.GetList(x => x.Usuario == UsuariotextBox.Text))
-            //    {
-            //        repositorio.NombreLogin(item.Usuario, item.NivelUsuario);
-            //    }
-            //    this.Hide();
-            //    Thread hilo = new Thread(InterfazUsuario);
-            //    hilo.Start();
-
-            //    return;
-            //}
+            }
             else
             {
                 MessageBox.Show("Contraseña y/o Usuario Incorrectos", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                ClavetextBox.Clear();
+                Limpiar(); 
             }
         }
 
-        private void Accederbutton_Click(object sender, EventArgs e)
+        private void Limpiar()
         {
-            Logins();
+            UsuariotextBox.Text = "Usuario";
+            UsuariotextBox.ForeColor = Color.Silver;
+            ClavetextBox.Text = "Contraseña";
+            ClavetextBox.ForeColor = Color.Silver;
+            ClavetextBox.UseSystemPasswordChar = false;
+            MyErrorProvider.Clear();
         }
 
- 
+        private void accederbutton_Click(object sender, EventArgs e)
+        {
+            if (!Validar())
+                return;
+            Login();
+        }
+
+        private void UsuariotextBox_Leave(object sender, EventArgs e)
+        {
+            if (UsuariotextBox.Text == "")
+            {
+                UsuariotextBox.Text = "Usuario";
+                UsuariotextBox.ForeColor = Color.Silver;
+            }
+        }
+
+
+        private void UsuariotextBox_Enter(object sender, EventArgs e)
+        {
+            if (UsuariotextBox.Text == "Usuario")
+            {
+                UsuariotextBox.Text = "";
+                UsuariotextBox.ForeColor = Color.LightGray;
+            }
+            MyErrorProvider.Clear();
+        }
+
+        private void ClavetextBox_Leave(object sender, EventArgs e)
+        {
+            if (ClavetextBox.Text == "")
+            {
+                ClavetextBox.Text = "Contraseña";
+                ClavetextBox.ForeColor = Color.Silver;
+                ClavetextBox.UseSystemPasswordChar = false;
+            }
+        }
+
+        private void ClavetextBox_Enter(object sender, EventArgs e)
+        {
+            if (ClavetextBox.Text == "Contraseña")
+            {
+                ClavetextBox.Text = "";
+                ClavetextBox.ForeColor = Color.LightGray;
+                ClavetextBox.UseSystemPasswordChar = true;
+            }
+            MyErrorProvider.Clear();
+        }
+
         private void ClavetextBox_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                Logins();
+                Login();        
             }
         }
+
+        private void btncerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnminimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void Logins_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
     }
 }

@@ -12,6 +12,7 @@ namespace ProyectoFinalAplicada1
 {
     public partial class loading : Form
     {
+     
         public Action Worker { get; set; }
 
         public loading(Action worker)
@@ -27,5 +28,6 @@ namespace ProyectoFinalAplicada1
             base.OnLoad(e);
             Task.Factory.StartNew(Worker).ContinueWith(t => { this.Close(); }, TaskScheduler.FromCurrentSynchronizationContext());
         }
+
     }
 }
