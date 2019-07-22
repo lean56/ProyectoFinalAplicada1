@@ -255,5 +255,10 @@ namespace ProyectoFinalAplicada1.Registros
                 EmailtextBox.ForeColor = Color.Silver;
             }
         }
+
+        private void CerrarButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -272,5 +272,20 @@
   <ItemGroup>
     <None Include="Resources\explorer_folders_18871.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\analysis256_24853.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\preview_search_find_locate_1551.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loupe_78347.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete-file256_25240.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_icon-icons.com_52393.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

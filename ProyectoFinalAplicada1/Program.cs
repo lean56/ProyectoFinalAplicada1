@@ -17,7 +17,7 @@ namespace ProyectoFinalAplicada1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new rClientes());
+            Application.Run(new Login());
         }
     }
 }

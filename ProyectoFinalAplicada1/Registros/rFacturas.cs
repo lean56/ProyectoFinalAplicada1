@@ -36,7 +36,8 @@ namespace ProyectoFinalAplicada1.Registros
             NombretextBox.Text = string.Empty;
             IdProductnumericUpDown.Value = 0;
             DescripciontextBox.Text = string.Empty;
-            CantidadtextBox.Text = string.Empty;
+            CantidadtextBox.Text = "Cantidad";
+            CantidadtextBox.ForeColor = Color.Silver;
             PreciotextBox.Text = string.Empty;
             ImportetextBox.Text = string.Empty;
             TotaltextBox.Text = string.Empty;
@@ -78,6 +79,7 @@ namespace ProyectoFinalAplicada1.Registros
             IdProductnumericUpDown.Value = factura.ProductoId;
             TotaltextBox.Text = factura.Total.ToString();
             FechadateTimePicker.Value = factura.Fecha;
+            CantidadtextBox.ForeColor = Color.Black;
             detalle = new List<FacturaDetalle>();
          
             this.detalle = factura.Detalle;
@@ -111,11 +113,22 @@ namespace ProyectoFinalAplicada1.Registros
                 CantidadCotizada += item.Cantidad;
             }
 
-            int CantidadProducto = producto.Inventario;
+            if(CantidadtextBox.Text == "Cantidad" && Convert.ToInt32(CantidadtextBox.Text) == 0)
+            {
+                MyErrorProvider.SetError(CantidadtextBox, "La Cantidad no puede ser Cero");
+            }
+           
+            int CantidadProducto=0;
+            if(CantidadProducto==0)
+            {
+                
+            }
+            else
+            CantidadProducto = producto.Inventario; 
 
             bool paso = false;
 
-            if (Convert.ToInt32(CantidadtextBox.Text) > producto.Inventario)
+            if (CantidadtextBox.Text == "Cantidad" && Convert.ToInt32(CantidadtextBox.Text) > producto.Inventario)
             {
                 MyErrorProvider.SetError(CantidadtextBox, "Error");
                 MessageBox.Show("Cantidad mayor a la existente en inventario!!", "Falló!!",
@@ -125,22 +138,74 @@ namespace ProyectoFinalAplicada1.Registros
 
             CantidadProducto -= CantidadCotizada;
 
-            //if (CantidadProducto < CantidadCotizada)
+            return paso;
+        }
+
+        private bool Validar()
+        {
+            bool paso = true;
+
+            if (CantidadtextBox.Text == "Cantidad")
+            {
+                MyErrorProvider.SetError(NombretextBox, "Este Campo Esta Vacio");
+                paso = false;
+            }
+
+            if (CantidadtextBox.Text != "Cantidad" && Convert.ToInt32(CantidadtextBox.Text) == 0)
+            {
+                MyErrorProvider.SetError(CantidadtextBox, "La cantidad no puede ser cero");
+                paso = false;
+            }
+            if(DescripciontextBox.Text == string.Empty)
+            {
+                MyErrorProvider.SetError(CantidadtextBox, "Debe de Buscar un producto");
+                paso = false;
+            }
+            if(NombretextBox.Text == string.Empty)
+            {
+                MyErrorProvider.SetError(NombretextBox, "Debe de Buscar un Cliente");
+                paso = false;
+            }
+
+            //if (Id.Text == "Dirección")
             //{
-            //    MessageBox.Show($"Solo quedan {CantidadProducto} del articulo deseado!!", "Articulo Agotado!!",
-            //        MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    paso = true;
+            //    MyErrorProvider.SetError(DirecciontextBox, "Este Campo Esta Vacio");
+            //    paso = false;
+            //}
+
+            //if (EmailtextBox.Text == "Email")
+            //{
+            //    MyErrorProvider.SetError(EmailtextBox, "Este campo no puede estar vacio");
+            //    paso = false;
+            //}
+
+            //if (CedulamaskedTextBox.Text == string.Empty)
+            //{
+            //    MyErrorProvider.SetError(CedulamaskedTextBox, "Este campo no puede estar vacio");
+            //    CedulamaskedTextBox.Focus();
+            //    paso = false;
+            //}
+            //if (TelefonomaskedTextBox.Text == string.Empty)
+            //{
+            //    MyErrorProvider.SetError(TelefonomaskedTextBox, "Este campo no puede estar vacio");
+            //    paso = false;
+            //}
+
+            //if (CelularmaskedTextBox.Text == string.Empty)
+            //{
+            //    MyErrorProvider.SetError(CelularmaskedTextBox, "Este campo no puede estar vacio");
+            //    paso = false;
             //}
 
             return paso;
         }
 
-        private void Nuevobutton_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             Limpiar();
         }
 
-        private void Guardarbutton_Click(object sender, EventArgs e)
+        private void Guardarbutton_Click_1(object sender, EventArgs e)
         {
             RepositorioFactura db = new RepositorioFactura();
             RepositorioBase<Facturas> repositorio = new RepositorioBase<Facturas>();
@@ -148,8 +213,8 @@ namespace ProyectoFinalAplicada1.Registros
             Facturas factura = LlenaClase();
             bool paso = false;
 
-            //if (!Validar())
-            //    return;
+            if (!Validar())
+                return;
 
             factura = LlenaClase();
 
@@ -178,28 +243,6 @@ namespace ProyectoFinalAplicada1.Registros
             }
             else
                 MessageBox.Show("Error al Guardar!!", "Fallo!!!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
-
-        private void Eliminarbutton_Click(object sender, EventArgs e)
-        {
-            RepositorioFactura db = new RepositorioFactura();
-
-            RepositorioBase<Facturas> repositorio = new RepositorioBase<Facturas>();
-
-
-            MyErrorProvider.Clear();
-            int.TryParse(IdFacturanumericUpDown.Text, out int id);
-
-            if (!ExisteEnLaBaseDeDatos())
-            {
-                MyErrorProvider.SetError(IdFacturanumericUpDown, "Factura no existe!!!");
-                return;
-            }
-            if (db.Eliminar(id))
-            {
-                Limpiar();
-                MessageBox.Show("Factura Eliminada!!", "Exito!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
         }
 
         private Productos BuscarProductos(int id)
@@ -255,7 +298,7 @@ namespace ProyectoFinalAplicada1.Registros
 
             Productos producto = BuscarProductos((int)IdProductnumericUpDown.Value);
             
-            if (CantidadtextBox.Text == string.Empty)
+            if (CantidadtextBox.Text == "Cantidad" && Convert.ToInt32(CantidadtextBox.Text) == 0)
             {
                 MyErrorProvider.SetError(CantidadtextBox, "La Cantidad no puede ser cero");
             }
@@ -333,7 +376,7 @@ namespace ProyectoFinalAplicada1.Registros
             }
         }
 
-        private void CantidadtextBox_TextChanged(object sender, EventArgs e)
+        private void CantidadtextBox_TextChanged_1(object sender, EventArgs e)
         {
             if (CantidadtextBox.Text != string.Empty)
             {
@@ -451,6 +494,47 @@ namespace ProyectoFinalAplicada1.Registros
                 Total *= (-1);
                 TotaltextBox.Text = Total.ToString();
 
+            }
+        }
+
+        private void CantidadtextBox_Enter(object sender, EventArgs e)
+        {
+            if (CantidadtextBox.Text == "Cantidad")
+            {
+                CantidadtextBox.Text = "";
+                CantidadtextBox.ForeColor = Color.Black;
+            }
+            MyErrorProvider.Clear();
+        }
+
+        private void CantidadtextBox_Leave(object sender, EventArgs e)
+        {
+            if (CantidadtextBox.Text == "")
+            {
+                CantidadtextBox.Text = "Cantidad";
+                CantidadtextBox.ForeColor = Color.Silver;
+            }
+        }
+
+        private void Eliminarbutton_Click(object sender, EventArgs e)
+        {
+            RepositorioFactura db = new RepositorioFactura();
+
+            RepositorioBase<Facturas> repositorio = new RepositorioBase<Facturas>();
+
+
+            MyErrorProvider.Clear();
+            int.TryParse(IdFacturanumericUpDown.Text, out int id);
+
+            if (!ExisteEnLaBaseDeDatos())
+            {
+                MyErrorProvider.SetError(IdFacturanumericUpDown, "Factura no existe!!!");
+                return;
+            }
+            if (db.Eliminar(id))
+            {
+                Limpiar();
+                MessageBox.Show("Factura Eliminada!!", "Exito!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

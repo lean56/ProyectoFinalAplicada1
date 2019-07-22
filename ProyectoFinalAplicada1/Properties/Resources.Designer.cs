@@ -73,6 +73,26 @@ namespace ProyectoFinalAplicada1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_icon_icons_com_52393 {
+            get {
+                object obj = ResourceManager.GetObject("add_icon-icons.com_52393", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap analysis256_24853 {
+            get {
+                object obj = ResourceManager.GetObject("analysis256_24853", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap businessapplication_distributor_report_document_negocio_2319 {
             get {
                 object obj = ResourceManager.GetObject("businessapplication_distributor_report_document_negocio_2319", resourceCulture);
@@ -106,6 +126,16 @@ namespace ProyectoFinalAplicada1.Properties {
         internal static System.Drawing.Bitmap Cargo_1_35517 {
             get {
                 object obj = ResourceManager.GetObject("Cargo_1_35517", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap delete_file256_25240 {
+            get {
+                object obj = ResourceManager.GetObject("delete-file256_25240", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -186,6 +216,26 @@ namespace ProyectoFinalAplicada1.Properties {
         internal static System.Drawing.Bitmap icon_restaurar {
             get {
                 object obj = ResourceManager.GetObject("icon restaurar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap loupe_78347 {
+            get {
+                object obj = ResourceManager.GetObject("loupe_78347", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap preview_search_find_locate_1551 {
+            get {
+                object obj = ResourceManager.GetObject("preview_search_find_locate_1551", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

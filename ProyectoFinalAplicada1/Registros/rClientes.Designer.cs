@@ -189,6 +189,7 @@
             this.CerrarButton.Size = new System.Drawing.Size(17, 17);
             this.CerrarButton.TabIndex = 62;
             this.CerrarButton.Text = "X";
+            this.CerrarButton.Click += new System.EventHandler(this.CerrarButton_Click);
             // 
             // label9
             // 
