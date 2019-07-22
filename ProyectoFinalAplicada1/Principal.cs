@@ -87,5 +87,10 @@ namespace ProyectoFinalAplicada1
         {
             AbrirFormInPanel(new rProductos());
         }
+
+        private void EntradadeProductos_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new rEntradaProductos());
+        }
     }
 }

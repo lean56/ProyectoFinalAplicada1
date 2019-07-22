@@ -34,14 +34,14 @@
             this.button1 = new System.Windows.Forms.Button();
             this.cEstudiantesbutton = new System.Windows.Forms.Button();
             this.ConsultaAbutton = new System.Windows.Forms.Button();
-            this.RegistroInscripcion = new System.Windows.Forms.Button();
-            this.RegistroEstudiante = new System.Windows.Forms.Button();
             this.restaurar = new System.Windows.Forms.PictureBox();
             this.min = new System.Windows.Forms.PictureBox();
             this.Max = new System.Windows.Forms.PictureBox();
             this.Salir = new System.Windows.Forms.PictureBox();
             this.HideButton = new System.Windows.Forms.PictureBox();
             this.RegistroAsignatura = new System.Windows.Forms.Button();
+            this.EntradadeProductos = new System.Windows.Forms.Button();
+            this.RegistroEstudiante = new System.Windows.Forms.Button();
             this.BarraTitulo.SuspendLayout();
             this.MenuVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.restaurar)).BeginInit();
@@ -82,7 +82,7 @@
             this.MenuVertical.Controls.Add(this.cEstudiantesbutton);
             this.MenuVertical.Controls.Add(this.ConsultaAbutton);
             this.MenuVertical.Controls.Add(this.RegistroAsignatura);
-            this.MenuVertical.Controls.Add(this.RegistroInscripcion);
+            this.MenuVertical.Controls.Add(this.EntradadeProductos);
             this.MenuVertical.Controls.Add(this.RegistroEstudiante);
             this.MenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuVertical.Location = new System.Drawing.Point(0, 0);
@@ -137,39 +137,6 @@
             this.ConsultaAbutton.Text = "Consulta Asignatura";
             this.ConsultaAbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ConsultaAbutton.UseVisualStyleBackColor = false;
-            // 
-            // RegistroInscripcion
-            // 
-            this.RegistroInscripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
-            this.RegistroInscripcion.FlatAppearance.BorderSize = 0;
-            this.RegistroInscripcion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.RegistroInscripcion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RegistroInscripcion.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.RegistroInscripcion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.RegistroInscripcion.Location = new System.Drawing.Point(3, 258);
-            this.RegistroInscripcion.Name = "RegistroInscripcion";
-            this.RegistroInscripcion.Size = new System.Drawing.Size(164, 47);
-            this.RegistroInscripcion.TabIndex = 6;
-            this.RegistroInscripcion.Text = "Registro Inscripcion";
-            this.RegistroInscripcion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.RegistroInscripcion.UseVisualStyleBackColor = false;
-            // 
-            // RegistroEstudiante
-            // 
-            this.RegistroEstudiante.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
-            this.RegistroEstudiante.FlatAppearance.BorderSize = 0;
-            this.RegistroEstudiante.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.RegistroEstudiante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RegistroEstudiante.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.RegistroEstudiante.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.RegistroEstudiante.Location = new System.Drawing.Point(3, 182);
-            this.RegistroEstudiante.Name = "RegistroEstudiante";
-            this.RegistroEstudiante.Size = new System.Drawing.Size(164, 48);
-            this.RegistroEstudiante.TabIndex = 5;
-            this.RegistroEstudiante.Text = "Registro de Productos";
-            this.RegistroEstudiante.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.RegistroEstudiante.UseVisualStyleBackColor = false;
-            this.RegistroEstudiante.Click += new System.EventHandler(this.RegistroEstudiante_Click);
             // 
             // restaurar
             // 
@@ -249,6 +216,42 @@
             this.RegistroAsignatura.UseVisualStyleBackColor = false;
             this.RegistroAsignatura.Click += new System.EventHandler(this.RegistroAsignatura_Click);
             // 
+            // EntradadeProductos
+            // 
+            this.EntradadeProductos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
+            this.EntradadeProductos.FlatAppearance.BorderSize = 0;
+            this.EntradadeProductos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.EntradadeProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EntradadeProductos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.EntradadeProductos.Image = global::ProyectoFinalAplicada1.Properties.Resources.businesssettings_thebox_theproduct_negocio_2327;
+            this.EntradadeProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.EntradadeProductos.Location = new System.Drawing.Point(3, 258);
+            this.EntradadeProductos.Name = "EntradadeProductos";
+            this.EntradadeProductos.Size = new System.Drawing.Size(173, 47);
+            this.EntradadeProductos.TabIndex = 6;
+            this.EntradadeProductos.Text = "Entrada de Productos";
+            this.EntradadeProductos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.EntradadeProductos.UseVisualStyleBackColor = false;
+            this.EntradadeProductos.Click += new System.EventHandler(this.EntradadeProductos_Click);
+            // 
+            // RegistroEstudiante
+            // 
+            this.RegistroEstudiante.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
+            this.RegistroEstudiante.FlatAppearance.BorderSize = 0;
+            this.RegistroEstudiante.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.RegistroEstudiante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RegistroEstudiante.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.RegistroEstudiante.Image = global::ProyectoFinalAplicada1.Properties.Resources.Cargo_1_35517;
+            this.RegistroEstudiante.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.RegistroEstudiante.Location = new System.Drawing.Point(3, 182);
+            this.RegistroEstudiante.Name = "RegistroEstudiante";
+            this.RegistroEstudiante.Size = new System.Drawing.Size(173, 48);
+            this.RegistroEstudiante.TabIndex = 5;
+            this.RegistroEstudiante.Text = "       Registro de Productos";
+            this.RegistroEstudiante.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.RegistroEstudiante.UseVisualStyleBackColor = false;
+            this.RegistroEstudiante.Click += new System.EventHandler(this.RegistroEstudiante_Click);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -285,7 +288,7 @@
         private System.Windows.Forms.Button cEstudiantesbutton;
         private System.Windows.Forms.Button ConsultaAbutton;
         private System.Windows.Forms.Button RegistroAsignatura;
-        private System.Windows.Forms.Button RegistroInscripcion;
+        private System.Windows.Forms.Button EntradadeProductos;
         private System.Windows.Forms.Button RegistroEstudiante;
         public System.Windows.Forms.Panel PanelContenedor;
     }

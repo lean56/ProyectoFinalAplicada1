@@ -93,6 +93,26 @@ namespace ProyectoFinalAplicada1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap businesssettings_thebox_theproduct_negocio_2327 {
+            get {
+                object obj = ResourceManager.GetObject("businesssettings_thebox_theproduct_negocio_2327", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cargo_1_35517 {
+            get {
+                object obj = ResourceManager.GetObject("Cargo_1_35517", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap descarga {
             get {
                 object obj = ResourceManager.GetObject("descarga", resourceCulture);

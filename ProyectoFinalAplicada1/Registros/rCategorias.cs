@@ -22,7 +22,9 @@ namespace ProyectoFinalAplicada1.Registros
         private void Limpiar()
         {
             IdnumericUpDown.Value = 0;
-            DescripciontextBox.Clear();
+            DescripciontextBox.Text = "Categoría";
+            DescripciontextBox.ForeColor = Color.Silver;
+            MyErrorProvider.Clear();
         }
 
         private Categorias LlenaClase()
@@ -39,6 +41,8 @@ namespace ProyectoFinalAplicada1.Registros
         {
             IdnumericUpDown.Value = categoria.CategoriaId;
             DescripciontextBox.Text = categoria.Nombre;
+            DescripciontextBox.ForeColor = Color.Black;
+
         }
 
         private bool ExisteEnLaBaseDeDatos()
@@ -48,7 +52,7 @@ namespace ProyectoFinalAplicada1.Registros
             return (categoria != null);
         }
 
-        private void Buscarbutton_Click(object sender, EventArgs e)
+        private void Buscarbutton_Click_1(object sender, EventArgs e)
         {
             RepositorioBase<Categorias> repositorio = new RepositorioBase<Categorias>();
             Categorias categorias = new Categorias();
@@ -64,18 +68,31 @@ namespace ProyectoFinalAplicada1.Registros
                 
             }
             else
-                MyErrorProvider.SetError(IdnumericUpDown, "Producto no Encontrado");
+                MyErrorProvider.SetError(IdnumericUpDown, "Categoría no Encontrado");
         }
 
-        private void Guardarbutton_Click(object sender, EventArgs e)
+        private bool Validar()
+        {
+            bool paso = true;
+
+            if (DescripciontextBox.Text == "Categoría")
+            {
+                MyErrorProvider.SetError(DescripciontextBox, "Este Campo Esta Vacio");
+                paso = false;
+            }
+
+            return paso;
+        }
+
+        private void Guardarbutton_Click_1(object sender, EventArgs e)
         {
             RepositorioBase<Categorias> repositorio = new RepositorioBase<Categorias>();
 
             Categorias categoria = new Categorias();
             bool paso = false;
 
-            //if (!Validar())
-            //  return;
+            if (!Validar())
+              return;
 
             categoria = LlenaClase();
 
@@ -87,26 +104,26 @@ namespace ProyectoFinalAplicada1.Registros
             {
                 if (!ExisteEnLaBaseDeDatos())
                 {
-                    MessageBox.Show("No se puede modificar una Categoria que no existe", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("No se puede modificar una Categoría que no existe", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                //  if (repositorio.Duplicado(p => p.Usuario == UsuariotextBox.Text))
-                //   {
-                //MyErrorProvider.SetError(UsuariotextBox, "Este Usuario Ya existe!!!");
-                // return;
-                //  }
+                  if (repositorio.Duplicado(p => p.Nombre == DescripciontextBox.Text))
+                   {
+                        MyErrorProvider.SetError(DescripciontextBox, "Esta Categoría Ya existe!!!");
+                        return;
+                 }
                 paso = repositorio.Modificar(categoria);
             }
             if (paso)
             {
-                MessageBox.Show("Categoria Guardada!!", "Exito!!!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Categoría Guardada!!", "Exito!!!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Limpiar();
             }
             else
                 MessageBox.Show("No Se Pudo Guardar!!", "Fallo!!!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-        private void Eliminarbutton_Click(object sender, EventArgs e)
+        private void Eliminarbutton_Click_1(object sender, EventArgs e)
         {
             RepositorioBase<Categorias> repositorio = new RepositorioBase<Categorias>();
             MyErrorProvider.Clear();
@@ -114,14 +131,43 @@ namespace ProyectoFinalAplicada1.Registros
 
             if (!ExisteEnLaBaseDeDatos())
             {
-                MyErrorProvider.SetError(IdnumericUpDown, "Categoria No Existe!!!");
+                MyErrorProvider.SetError(IdnumericUpDown, "Categoría No Existe!!!");
                 return;
             }
             if (repositorio.Eliminar(id))
             {
                 Limpiar();
-                MessageBox.Show("Categoria Eliminada!!", "Exito!!!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Categoría Eliminada!!", "Exito!!!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void CerrarButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void DescripciontextBox_Enter(object sender, EventArgs e)
+        {
+            if (DescripciontextBox.Text == "Categoría")
+            {
+                DescripciontextBox.Text = "";
+                DescripciontextBox.ForeColor = Color.Black;
+            }
+            MyErrorProvider.Clear();
+        }
+
+        private void DescripciontextBox_Leave(object sender, EventArgs e)
+        {
+            if (DescripciontextBox.Text == "")
+            {
+                DescripciontextBox.Text = "Categoría";
+                DescripciontextBox.ForeColor = Color.Silver;
+            }
+        }
+
+        private void Nuevobutton_Click(object sender, EventArgs e)
+        {
+            Limpiar();
         }
     }
 }

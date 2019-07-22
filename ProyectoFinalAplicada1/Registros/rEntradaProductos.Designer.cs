@@ -53,7 +53,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(301, 171);
+            this.label1.Location = new System.Drawing.Point(290, 210);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(18, 13);
             this.label1.TabIndex = 0;
@@ -61,7 +61,7 @@
             // 
             // IdNumericUpDown
             // 
-            this.IdNumericUpDown.Location = new System.Drawing.Point(362, 166);
+            this.IdNumericUpDown.Location = new System.Drawing.Point(351, 205);
             this.IdNumericUpDown.Name = "IdNumericUpDown";
             this.IdNumericUpDown.Size = new System.Drawing.Size(45, 20);
             this.IdNumericUpDown.TabIndex = 1;
@@ -70,7 +70,7 @@
             // 
             this.ProductoComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ProductoComboBox.FormattingEnabled = true;
-            this.ProductoComboBox.Location = new System.Drawing.Point(362, 206);
+            this.ProductoComboBox.Location = new System.Drawing.Point(351, 245);
             this.ProductoComboBox.Name = "ProductoComboBox";
             this.ProductoComboBox.Size = new System.Drawing.Size(107, 21);
             this.ProductoComboBox.TabIndex = 2;
@@ -79,7 +79,7 @@
             // 
             this.FechadateTimePicker.CustomFormat = "dd/MM/yyyy";
             this.FechadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.FechadateTimePicker.Location = new System.Drawing.Point(362, 298);
+            this.FechadateTimePicker.Location = new System.Drawing.Point(351, 337);
             this.FechadateTimePicker.Name = "FechadateTimePicker";
             this.FechadateTimePicker.Size = new System.Drawing.Size(107, 20);
             this.FechadateTimePicker.TabIndex = 4;
@@ -87,7 +87,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(301, 209);
+            this.label2.Location = new System.Drawing.Point(290, 248);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 13);
             this.label2.TabIndex = 9;
@@ -96,7 +96,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(301, 255);
+            this.label3.Location = new System.Drawing.Point(290, 294);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 13);
             this.label3.TabIndex = 10;
@@ -105,7 +105,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(301, 305);
+            this.label4.Location = new System.Drawing.Point(290, 344);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(37, 13);
             this.label4.TabIndex = 11;
@@ -120,7 +120,7 @@
             this.CerrarButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.CerrarButton.AutoSize = true;
             this.CerrarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CerrarButton.Location = new System.Drawing.Point(699, 62);
+            this.CerrarButton.Location = new System.Drawing.Point(688, 101);
             this.CerrarButton.Name = "CerrarButton";
             this.CerrarButton.Size = new System.Drawing.Size(17, 17);
             this.CerrarButton.TabIndex = 62;
@@ -131,7 +131,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Monotype Corsiva", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(283, 85);
+            this.label5.Location = new System.Drawing.Point(272, 124);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(258, 37);
             this.label5.TabIndex = 61;
@@ -143,7 +143,7 @@
             this.CantidadtextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CantidadtextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CantidadtextBox.ForeColor = System.Drawing.Color.Silver;
-            this.CantidadtextBox.Location = new System.Drawing.Point(362, 247);
+            this.CantidadtextBox.Location = new System.Drawing.Point(351, 286);
             this.CantidadtextBox.Name = "CantidadtextBox";
             this.CantidadtextBox.Size = new System.Drawing.Size(107, 27);
             this.CantidadtextBox.TabIndex = 63;
@@ -157,7 +157,7 @@
             this.groupBox1.Controls.Add(this.Nuevobutton);
             this.groupBox1.Controls.Add(this.Guardarbutton);
             this.groupBox1.Controls.Add(this.Eliminarbutton);
-            this.groupBox1.Location = new System.Drawing.Point(262, 349);
+            this.groupBox1.Location = new System.Drawing.Point(251, 388);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(279, 80);
             this.groupBox1.TabIndex = 65;
@@ -197,7 +197,7 @@
             // BuscarButton
             // 
             this.BuscarButton.Image = global::ProyectoFinalAplicada1.Properties.Resources.seo_social_web_network_internet_340_icon_icons_com_61497;
-            this.BuscarButton.Location = new System.Drawing.Point(430, 157);
+            this.BuscarButton.Location = new System.Drawing.Point(419, 196);
             this.BuscarButton.Name = "BuscarButton";
             this.BuscarButton.Size = new System.Drawing.Size(39, 35);
             this.BuscarButton.TabIndex = 64;

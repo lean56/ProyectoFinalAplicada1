@@ -263,5 +263,11 @@
   <ItemGroup>
     <None Include="Resources\businessregistration_signpen_negocio_inscripcio_2358.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cargo_1_35517.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\businesssettings_thebox_theproduct_negocio_2327.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

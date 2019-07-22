@@ -62,7 +62,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(265, 125);
+            this.label1.Location = new System.Drawing.Point(259, 174);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(18, 13);
             this.label1.TabIndex = 0;
@@ -71,7 +71,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(265, 167);
+            this.label2.Location = new System.Drawing.Point(259, 216);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 13);
             this.label2.TabIndex = 1;
@@ -80,7 +80,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(265, 255);
+            this.label3.Location = new System.Drawing.Point(259, 304);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(34, 13);
             this.label3.TabIndex = 2;
@@ -89,7 +89,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(265, 290);
+            this.label4.Location = new System.Drawing.Point(259, 339);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(37, 13);
             this.label4.TabIndex = 3;
@@ -98,7 +98,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(367, 255);
+            this.label5.Location = new System.Drawing.Point(361, 304);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(67, 13);
             this.label5.TabIndex = 4;
@@ -107,7 +107,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(367, 290);
+            this.label6.Location = new System.Drawing.Point(361, 339);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(54, 13);
             this.label6.TabIndex = 5;
@@ -116,7 +116,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(265, 336);
+            this.label7.Location = new System.Drawing.Point(259, 385);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(82, 13);
             this.label7.TabIndex = 6;
@@ -124,7 +124,7 @@
             // 
             // IdnumericUpDown
             // 
-            this.IdnumericUpDown.Location = new System.Drawing.Point(334, 123);
+            this.IdnumericUpDown.Location = new System.Drawing.Point(328, 172);
             this.IdnumericUpDown.Name = "IdnumericUpDown";
             this.IdnumericUpDown.Size = new System.Drawing.Size(74, 20);
             this.IdnumericUpDown.TabIndex = 7;
@@ -133,7 +133,7 @@
             // 
             this.FechadateTimePicker.CustomFormat = "dd/MM/yyyy";
             this.FechadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.FechadateTimePicker.Location = new System.Drawing.Point(348, 330);
+            this.FechadateTimePicker.Location = new System.Drawing.Point(342, 379);
             this.FechadateTimePicker.Name = "FechadateTimePicker";
             this.FechadateTimePicker.Size = new System.Drawing.Size(120, 20);
             this.FechadateTimePicker.TabIndex = 13;
@@ -146,7 +146,7 @@
             // 
             this.CategoriacomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CategoriacomboBox.FormattingEnabled = true;
-            this.CategoriacomboBox.Location = new System.Drawing.Point(334, 205);
+            this.CategoriacomboBox.Location = new System.Drawing.Point(328, 254);
             this.CategoriacomboBox.Name = "CategoriacomboBox";
             this.CategoriacomboBox.Size = new System.Drawing.Size(134, 21);
             this.CategoriacomboBox.TabIndex = 18;
@@ -154,7 +154,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(265, 207);
+            this.label8.Location = new System.Drawing.Point(259, 256);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(52, 13);
             this.label8.TabIndex = 19;
@@ -164,7 +164,7 @@
             // 
             this.CategoriaButton.AutoSize = true;
             this.CategoriaButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CategoriaButton.Location = new System.Drawing.Point(474, 205);
+            this.CategoriaButton.Location = new System.Drawing.Point(468, 254);
             this.CategoriaButton.Name = "CategoriaButton";
             this.CategoriaButton.Size = new System.Drawing.Size(16, 17);
             this.CategoriaButton.TabIndex = 20;
@@ -175,7 +175,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Monotype Corsiva", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(279, 54);
+            this.label9.Location = new System.Drawing.Point(273, 103);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(248, 37);
             this.label9.TabIndex = 26;
@@ -186,7 +186,7 @@
             this.CerrarButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.CerrarButton.AutoSize = true;
             this.CerrarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CerrarButton.Location = new System.Drawing.Point(638, 54);
+            this.CerrarButton.Location = new System.Drawing.Point(632, 103);
             this.CerrarButton.Name = "CerrarButton";
             this.CerrarButton.Size = new System.Drawing.Size(17, 17);
             this.CerrarButton.TabIndex = 61;
@@ -199,7 +199,7 @@
             this.DescripciontextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.DescripciontextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DescripciontextBox.ForeColor = System.Drawing.Color.Silver;
-            this.DescripciontextBox.Location = new System.Drawing.Point(334, 159);
+            this.DescripciontextBox.Location = new System.Drawing.Point(328, 208);
             this.DescripciontextBox.Name = "DescripciontextBox";
             this.DescripciontextBox.Size = new System.Drawing.Size(171, 27);
             this.DescripciontextBox.TabIndex = 62;
@@ -213,7 +213,7 @@
             this.CostotextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CostotextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CostotextBox.ForeColor = System.Drawing.Color.Silver;
-            this.CostotextBox.Location = new System.Drawing.Point(305, 252);
+            this.CostotextBox.Location = new System.Drawing.Point(299, 301);
             this.CostotextBox.Name = "CostotextBox";
             this.CostotextBox.Size = new System.Drawing.Size(56, 27);
             this.CostotextBox.TabIndex = 45;
@@ -229,7 +229,7 @@
             this.PreciotextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PreciotextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PreciotextBox.ForeColor = System.Drawing.Color.Silver;
-            this.PreciotextBox.Location = new System.Drawing.Point(305, 285);
+            this.PreciotextBox.Location = new System.Drawing.Point(299, 334);
             this.PreciotextBox.Name = "PreciotextBox";
             this.PreciotextBox.Size = new System.Drawing.Size(56, 27);
             this.PreciotextBox.TabIndex = 63;
@@ -245,7 +245,7 @@
             this.GananciatextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.GananciatextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GananciatextBox.ForeColor = System.Drawing.Color.Silver;
-            this.GananciatextBox.Location = new System.Drawing.Point(434, 252);
+            this.GananciatextBox.Location = new System.Drawing.Point(428, 301);
             this.GananciatextBox.Name = "GananciatextBox";
             this.GananciatextBox.ReadOnly = true;
             this.GananciatextBox.Size = new System.Drawing.Size(56, 27);
@@ -257,7 +257,7 @@
             this.InventariotextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.InventariotextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InventariotextBox.ForeColor = System.Drawing.Color.Silver;
-            this.InventariotextBox.Location = new System.Drawing.Point(434, 285);
+            this.InventariotextBox.Location = new System.Drawing.Point(428, 334);
             this.InventariotextBox.Name = "InventariotextBox";
             this.InventariotextBox.ReadOnly = true;
             this.InventariotextBox.Size = new System.Drawing.Size(56, 27);
@@ -266,7 +266,7 @@
             // Buscarbutton
             // 
             this.Buscarbutton.Image = global::ProyectoFinalAplicada1.Properties.Resources.seo_social_web_network_internet_340_icon_icons_com_61497;
-            this.Buscarbutton.Location = new System.Drawing.Point(429, 114);
+            this.Buscarbutton.Location = new System.Drawing.Point(423, 163);
             this.Buscarbutton.Name = "Buscarbutton";
             this.Buscarbutton.Size = new System.Drawing.Size(39, 35);
             this.Buscarbutton.TabIndex = 66;
@@ -278,7 +278,7 @@
             this.groupBox1.Controls.Add(this.Nuevobutton);
             this.groupBox1.Controls.Add(this.Guardarbutton);
             this.groupBox1.Controls.Add(this.Eliminarbutton);
-            this.groupBox1.Location = new System.Drawing.Point(268, 367);
+            this.groupBox1.Location = new System.Drawing.Point(262, 416);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(279, 80);
             this.groupBox1.TabIndex = 67;
