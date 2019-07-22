@@ -82,5 +82,10 @@ namespace ProyectoFinalAplicada1
         {
             AbrirFormInPanel(new rUsuarios());
         }
+
+        private void RegistroEstudiante_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new rProductos());
+        }
     }
 }

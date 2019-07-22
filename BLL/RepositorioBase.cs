@@ -131,13 +131,19 @@ namespace BLL
 
         public virtual decimal PorcientoGanancia(decimal costo, decimal precio)
         {
-            decimal PctGanancia;
+            decimal ProcientoGanancia;
 
-            PctGanancia = ((precio-costo)/costo);
-           // PctGanancia = PctGanancia / costo;
-            PctGanancia *= 100;
-
-            return PctGanancia;
+            try
+            {
+                ProcientoGanancia = ((precio - costo) / costo);
+                ProcientoGanancia *= 100;
+                        
+            }catch(Exception)
+            {
+                throw;
+            }
+                return ProcientoGanancia;
+            
         }
 
         public virtual decimal CalcularImporte(decimal cantidad, decimal precio)

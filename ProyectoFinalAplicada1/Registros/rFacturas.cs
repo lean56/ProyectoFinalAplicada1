@@ -398,6 +398,14 @@ namespace ProyectoFinalAplicada1.Registros
             {
                 e.Handled = true;
             }
+            if (Char.IsPunctuation(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (Char.IsSymbol(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
         private void BuscarFacturabutton_Click(object sender, EventArgs e)

@@ -257,5 +257,11 @@
   <ItemGroup>
     <None Include="Resources\action_exit_close_remove_13915.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\businessapplication_distributor_report_document_negocio_2319.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\businessregistration_signpen_negocio_inscripcio_2358.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

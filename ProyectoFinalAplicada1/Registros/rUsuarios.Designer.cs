@@ -42,7 +42,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.NombretextBox = new System.Windows.Forms.TextBox();
-            this.UsuariotextBox = new System.Windows.Forms.TextBox();
             this.ClavemaskedTextBox = new System.Windows.Forms.TextBox();
             this.MyErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.Clave2maskedTextBox = new System.Windows.Forms.TextBox();
@@ -51,6 +50,7 @@
             this.Nuevobutton = new System.Windows.Forms.Button();
             this.Buscarbutton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.UsuariotextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.IdnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -181,20 +181,6 @@
             this.NombretextBox.Enter += new System.EventHandler(this.NombretextBox_Enter);
             this.NombretextBox.Leave += new System.EventHandler(this.NombretextBox_Leave);
             // 
-            // UsuariotextBox
-            // 
-            this.UsuariotextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.UsuariotextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.UsuariotextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsuariotextBox.ForeColor = System.Drawing.Color.Silver;
-            this.UsuariotextBox.Location = new System.Drawing.Point(353, 307);
-            this.UsuariotextBox.Name = "UsuariotextBox";
-            this.UsuariotextBox.Size = new System.Drawing.Size(171, 27);
-            this.UsuariotextBox.TabIndex = 45;
-            this.UsuariotextBox.Text = "Usuario";
-            this.UsuariotextBox.Enter += new System.EventHandler(this.UsuariotextBox_Enter);
-            this.UsuariotextBox.Leave += new System.EventHandler(this.UsuariotextBox_Leave);
-            // 
             // ClavemaskedTextBox
             // 
             this.ClavemaskedTextBox.BackColor = System.Drawing.SystemColors.Window;
@@ -281,7 +267,21 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Botones";
             // 
-            // rUsuarios1
+            // UsuariotextBox
+            // 
+            this.UsuariotextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.UsuariotextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.UsuariotextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsuariotextBox.ForeColor = System.Drawing.Color.Silver;
+            this.UsuariotextBox.Location = new System.Drawing.Point(353, 307);
+            this.UsuariotextBox.Name = "UsuariotextBox";
+            this.UsuariotextBox.Size = new System.Drawing.Size(171, 27);
+            this.UsuariotextBox.TabIndex = 45;
+            this.UsuariotextBox.Text = "Usuario";
+            this.UsuariotextBox.Enter += new System.EventHandler(this.UsuariotextBox_Enter);
+            this.UsuariotextBox.Leave += new System.EventHandler(this.UsuariotextBox_Leave);
+            // 
+            // rUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -305,9 +305,8 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "rUsuarios1";
+            this.Name = "rUsuarios";
             this.Text = "rUsuarios1";
-            this.Load += new System.EventHandler(this.rUsuarios1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.IdnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -334,11 +333,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox NombretextBox;
-        private System.Windows.Forms.TextBox UsuariotextBox;
         private System.Windows.Forms.TextBox ClavemaskedTextBox;
         private System.Windows.Forms.ErrorProvider MyErrorProvider;
         private System.Windows.Forms.TextBox Clave2maskedTextBox;
         private System.Windows.Forms.Label CerrarButton;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox UsuariotextBox;
     }
 }

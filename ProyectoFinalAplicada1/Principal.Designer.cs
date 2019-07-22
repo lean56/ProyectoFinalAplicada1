@@ -34,7 +34,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.cEstudiantesbutton = new System.Windows.Forms.Button();
             this.ConsultaAbutton = new System.Windows.Forms.Button();
-            this.RegistroAsignatura = new System.Windows.Forms.Button();
             this.RegistroInscripcion = new System.Windows.Forms.Button();
             this.RegistroEstudiante = new System.Windows.Forms.Button();
             this.restaurar = new System.Windows.Forms.PictureBox();
@@ -42,6 +41,7 @@
             this.Max = new System.Windows.Forms.PictureBox();
             this.Salir = new System.Windows.Forms.PictureBox();
             this.HideButton = new System.Windows.Forms.PictureBox();
+            this.RegistroAsignatura = new System.Windows.Forms.Button();
             this.BarraTitulo.SuspendLayout();
             this.MenuVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.restaurar)).BeginInit();
@@ -138,23 +138,6 @@
             this.ConsultaAbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ConsultaAbutton.UseVisualStyleBackColor = false;
             // 
-            // RegistroAsignatura
-            // 
-            this.RegistroAsignatura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
-            this.RegistroAsignatura.FlatAppearance.BorderSize = 0;
-            this.RegistroAsignatura.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.RegistroAsignatura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RegistroAsignatura.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.RegistroAsignatura.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.RegistroAsignatura.Location = new System.Drawing.Point(6, 114);
-            this.RegistroAsignatura.Name = "RegistroAsignatura";
-            this.RegistroAsignatura.Size = new System.Drawing.Size(164, 47);
-            this.RegistroAsignatura.TabIndex = 7;
-            this.RegistroAsignatura.Text = "Registro de Usuarios";
-            this.RegistroAsignatura.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.RegistroAsignatura.UseVisualStyleBackColor = false;
-            this.RegistroAsignatura.Click += new System.EventHandler(this.RegistroAsignatura_Click);
-            // 
             // RegistroInscripcion
             // 
             this.RegistroInscripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
@@ -183,9 +166,10 @@
             this.RegistroEstudiante.Name = "RegistroEstudiante";
             this.RegistroEstudiante.Size = new System.Drawing.Size(164, 48);
             this.RegistroEstudiante.TabIndex = 5;
-            this.RegistroEstudiante.Text = "Registro Estudiante";
+            this.RegistroEstudiante.Text = "Registro de Productos";
             this.RegistroEstudiante.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.RegistroEstudiante.UseVisualStyleBackColor = false;
+            this.RegistroEstudiante.Click += new System.EventHandler(this.RegistroEstudiante_Click);
             // 
             // restaurar
             // 
@@ -246,6 +230,24 @@
             this.HideButton.TabIndex = 0;
             this.HideButton.TabStop = false;
             this.HideButton.Click += new System.EventHandler(this.HideButton_Click);
+            // 
+            // RegistroAsignatura
+            // 
+            this.RegistroAsignatura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
+            this.RegistroAsignatura.FlatAppearance.BorderSize = 0;
+            this.RegistroAsignatura.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.RegistroAsignatura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RegistroAsignatura.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.RegistroAsignatura.Image = global::ProyectoFinalAplicada1.Properties.Resources.businessregistration_signpen_negocio_inscripcio_2358;
+            this.RegistroAsignatura.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.RegistroAsignatura.Location = new System.Drawing.Point(6, 114);
+            this.RegistroAsignatura.Name = "RegistroAsignatura";
+            this.RegistroAsignatura.Size = new System.Drawing.Size(164, 47);
+            this.RegistroAsignatura.TabIndex = 7;
+            this.RegistroAsignatura.Text = "Registro de Usuarios";
+            this.RegistroAsignatura.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.RegistroAsignatura.UseVisualStyleBackColor = false;
+            this.RegistroAsignatura.Click += new System.EventHandler(this.RegistroAsignatura_Click);
             // 
             // Principal
             // 

@@ -285,10 +285,6 @@ namespace ProyectoFinalAplicada1.Registros
             this.Close();
         }
 
-        private void rUsuarios1_Load(object sender, EventArgs e)
-        {
-            
-        }
     }
     
 }

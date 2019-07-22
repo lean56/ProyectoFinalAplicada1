@@ -23,9 +23,12 @@ namespace ProyectoFinalAplicada1.Registros
         private void Limpiar()
         {
             IdnumericUpDown.Value = 0;
-            DescripciontextBox.Text = string.Empty;
-            CostotextBox.Text = string.Empty;
-            PreciotextBox.Text = string.Empty;
+            DescripciontextBox.Text = "Descripción";
+            DescripciontextBox.ForeColor = Color.Silver;
+            CostotextBox.Text = "Costo";
+            CostotextBox.ForeColor = Color.Silver;
+            PreciotextBox.Text = "Precio";
+            PreciotextBox.ForeColor = Color.Silver;
             GananciatextBox.Text = string.Empty;
             InventariotextBox.Text = string.Empty;
             CategoriacomboBox.SelectedItem = null;
@@ -59,8 +62,12 @@ namespace ProyectoFinalAplicada1.Registros
             GananciatextBox.Text = producto.Ganancia.ToString();
             InventariotextBox.Text = producto.Inventario.ToString();
             FechadateTimePicker.Value = producto.FechaCreacion;
+            DescripciontextBox.ForeColor = Color.Black;
+            PreciotextBox.ForeColor = Color.Black;
+            CostotextBox.ForeColor = Color.Black;
+            GananciatextBox.ForeColor = Color.Black;
+            InventariotextBox.ForeColor = Color.Black;
         }
-        //*= (-1);
         private bool ExisteEnLaBaseDeDatos()
         {
             RepositorioBase<Productos> repositorio = new RepositorioBase<Productos>();
@@ -77,8 +84,8 @@ namespace ProyectoFinalAplicada1.Registros
             CategoriacomboBox.ValueMember = "CategoriaId";
             CategoriacomboBox.DisplayMember = "Nombre";
         }
-
-        private void Buscarbutton_Click(object sender, EventArgs e)
+        //buscar producto
+        private void Buscarbutton_Click_1(object sender, EventArgs e)
         {
             RepositorioBase<Productos> repositorio = new RepositorioBase<Productos>();
             Productos producto = new Productos();
@@ -102,15 +109,58 @@ namespace ProyectoFinalAplicada1.Registros
             Limpiar();
         }
 
-        private void Guardarbutton_Click(object sender, EventArgs e)
+        private bool Validar()
+        {
+            bool paso = true;
+
+            if (DescripciontextBox.Text == "Descripción")
+            {
+                MyErrorProvider.SetError(DescripciontextBox, "Este Campo Esta Vacio");
+                paso = false;
+            }
+
+            if (CategoriacomboBox.SelectedValue == null)
+            {
+                MyErrorProvider.SetError(CategoriacomboBox, "Tiene que seleccionar una categoria");
+                paso = false;
+            }
+
+            if (CostotextBox.Text == "Costo"|| CostotextBox.Text == 0.ToString())
+            {
+                MyErrorProvider.SetError(CostotextBox, "Este Campo Esta Vacio");
+                paso = false;    
+            }
+            if (CostotextBox.Text!="Costo" && Convert.ToDecimal(CostotextBox.Text) > Convert.ToDecimal(PreciotextBox.Text))
+            {
+                MyErrorProvider.SetError(PreciotextBox, "El Precio no puede ser Menor y/o igual al precio");
+                paso = false;
+            }
+
+            if (PreciotextBox.Text == "Precio"|| PreciotextBox.Text == 0.ToString())
+            {
+                MyErrorProvider.SetError(PreciotextBox, "Este campo no puede estar vacio");
+                paso = false;        
+            }
+            if (PreciotextBox.Text != "Precio" && Convert.ToDecimal(CostotextBox.Text) >= Convert.ToDecimal(PreciotextBox.Text))
+            {
+                MyErrorProvider.SetError(PreciotextBox, "El Precio no puede ser Menor y/o igual al precio");
+                paso = false;
+            }
+
+            return paso;
+        }
+
+
+        //guardar producto
+        private void Guardarbutton_Click_1(object sender, EventArgs e)
         {
             RepositorioBase<Productos> repositorio = new RepositorioBase<Productos>();
 
             Productos producto = new Productos();
             bool paso = false;
 
-            //if (!Validar())
-              //  return;
+            if (!Validar())
+               return;
 
             producto = LlenaClase();
 
@@ -140,8 +190,8 @@ namespace ProyectoFinalAplicada1.Registros
             else
                 MessageBox.Show("No Se Pudo Guardar!!", "Fallo!!!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
-
-        private void Eliminarbutton_Click(object sender, EventArgs e)
+        //eliminar producto
+        private void Eliminarbutton_Click_1(object sender, EventArgs e)
         {
             RepositorioBase<Productos> repositorio = new RepositorioBase<Productos>();
             MyErrorProvider.Clear();
@@ -172,12 +222,18 @@ namespace ProyectoFinalAplicada1.Registros
             RepositorioBase<Productos> repositorio = new RepositorioBase<Productos>();
 
             decimal costo, precio;
+ 
             costo = ToDecimal(CostotextBox.Text);
             precio = ToDecimal(PreciotextBox.Text);
-            GananciatextBox.Text = repositorio.PorcientoGanancia(costo, precio).ToString("0.##");
+            if (costo == 0 || precio == 0)
+                return;
+            else
+                GananciatextBox.Text = repositorio.PorcientoGanancia(costo, precio).ToString("0.##");
+            
+
         }
 
-        private void CostotextBox_TextChanged(object sender, EventArgs e)
+        private void CostotextBox_TextChanged_1(object sender, EventArgs e)
         {
             if (CostotextBox.Text != string.Empty)
             {
@@ -185,7 +241,7 @@ namespace ProyectoFinalAplicada1.Registros
             }
         }
 
-        private void PreciotextBox_TextChanged(object sender, EventArgs e)
+        private void PreciotextBox_TextChanged_1(object sender, EventArgs e)
         {
             if (PreciotextBox.Text != string.Empty)
             {
@@ -197,6 +253,110 @@ namespace ProyectoFinalAplicada1.Registros
         {
             rCategorias cr = new rCategorias();
             cr.Show();
+        }
+
+        private void CerrarButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void DescripciontextBox_Enter(object sender, EventArgs e)
+        {
+            if (DescripciontextBox.Text == "Descripción")
+            {
+                DescripciontextBox.Text = "";
+                DescripciontextBox.ForeColor = Color.Black;
+            }
+            MyErrorProvider.Clear();
+        }
+
+        private void DescripciontextBox_Leave(object sender, EventArgs e)
+        {
+            if (DescripciontextBox.Text == "")
+            {
+                DescripciontextBox.Text = "Descripción";
+                DescripciontextBox.ForeColor = Color.Silver;
+            }
+        }
+
+        private void CostotextBox_Enter(object sender, EventArgs e)
+        {
+            if (CostotextBox.Text == "Costo")
+            {
+                CostotextBox.Text = "";
+                CostotextBox.ForeColor = Color.Black;
+            }
+            MyErrorProvider.Clear();
+        }
+
+        private void CostotextBox_Leave(object sender, EventArgs e)
+        {
+            if (CostotextBox.Text == "")
+            {
+                CostotextBox.Text = "Costo";
+                CostotextBox.ForeColor = Color.Silver;
+            }
+        }
+
+        private void PreciotextBox_Enter(object sender, EventArgs e)
+        {
+            if (PreciotextBox.Text == "Precio")
+            {
+                PreciotextBox.Text = "";
+                PreciotextBox.ForeColor = Color.Black;
+            }
+            MyErrorProvider.Clear();
+        }
+
+        private void PreciotextBox_Leave(object sender, EventArgs e)
+        {
+            if (PreciotextBox.Text == "")
+            {
+                PreciotextBox.Text = "Precio";
+                PreciotextBox.ForeColor = Color.Silver;
+            }
+        }
+
+        private void CostotextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+
+            if (Char.IsNumber(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            if (Char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void PreciotextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+
+            if (Char.IsNumber(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            if (Char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (Char.IsPunctuation(e.KeyChar))
+            { 
+                e.Handled = true; 
+            }
+            if (Char.IsSymbol(e.KeyChar)) 
+            {
+                e.Handled = true;
+            }
         }
     }
 }
