@@ -22,13 +22,17 @@ namespace ProyectoFinalAplicada1.Registros
         private void Limpiar()
         {
             IdnumericUpDown.Value = 0;
-            NombretextBox.Clear();
+            NombretextBox.Text = "Nombres";
+            NombretextBox.ForeColor = Color.Silver;
+            DirecciontextBox.Text = "Dirección";
+            DirecciontextBox.ForeColor = Color.Silver;
+            EmailtextBox.Text = "Email";
+            EmailtextBox.ForeColor = Color.Silver;
             CedulamaskedTextBox.Clear();
-            DirecciontextBox.Clear();
             TelefonomaskedTextBox.Clear();
             CelularmaskedTextBox.Clear();
-            EmailtextBox.Clear();
             FechadateTimePicker.Value = DateTime.Now;
+            MyErrorProvider.Clear();
         }
 
         private Clientes LlenaClase()
@@ -57,6 +61,10 @@ namespace ProyectoFinalAplicada1.Registros
             TelefonomaskedTextBox.Text = cliente.Telefono;
             CelularmaskedTextBox.Text = cliente.Cedula;
             FechadateTimePicker.Value = cliente.Fecha;
+
+            NombretextBox.ForeColor = Color.Black;
+            DirecciontextBox.ForeColor = Color.Black;
+            EmailtextBox.ForeColor = Color.Black;
         }
 
         private bool ExisteEnLaBaseDeDatos()
@@ -66,7 +74,8 @@ namespace ProyectoFinalAplicada1.Registros
             return (cliente != null);
         }
 
-        private void Buscarbutton_Click(object sender, EventArgs e)
+
+        private void Buscarbutton_Click_1(object sender, EventArgs e)
         {
             RepositorioBase<Clientes> repositorio = new RepositorioBase<Clientes>();
             Clientes cliente = new Clientes();
@@ -84,20 +93,63 @@ namespace ProyectoFinalAplicada1.Registros
                 MyErrorProvider.SetError(IdnumericUpDown, "Cliente no Encontrado");
         }
 
-        private void Nuevobutton_Click(object sender, EventArgs e)
+        private void Nuevobutton_Click_1(object sender, EventArgs e)
         {
             Limpiar();
         }
 
-        private void Guardarbutton_Click(object sender, EventArgs e)
+        private bool Validar()
+        {
+            bool paso = true;
+
+            if (NombretextBox.Text == "Nombres")
+            {
+                MyErrorProvider.SetError(NombretextBox, "Este Campo Esta Vacio");
+                paso = false;
+            }
+
+            if (DirecciontextBox.Text == "Dirección")
+            {
+                MyErrorProvider.SetError(DirecciontextBox, "Este Campo Esta Vacio");
+                paso = false;
+            }
+
+            if (EmailtextBox.Text == "Email")
+            {
+                MyErrorProvider.SetError(EmailtextBox, "Este campo no puede estar vacio");
+                paso = false;
+            }
+
+            if (CedulamaskedTextBox.Text == string.Empty)
+            {
+                MyErrorProvider.SetError(CedulamaskedTextBox, "Este campo no puede estar vacio");
+                CedulamaskedTextBox.Focus();
+                paso = false;
+            }
+            if (TelefonomaskedTextBox.Text == string.Empty)
+            {
+                MyErrorProvider.SetError(TelefonomaskedTextBox, "Este campo no puede estar vacio");
+                paso = false;
+            }
+
+            if (CelularmaskedTextBox.Text == string.Empty)
+            {
+                MyErrorProvider.SetError(CelularmaskedTextBox, "Este campo no puede estar vacio");
+                paso = false;
+            }
+
+            return paso;
+        }
+
+        private void Guardarbutton_Click_1(object sender, EventArgs e)
         {
             RepositorioBase<Clientes> repositorio = new RepositorioBase<Clientes>();
 
             Clientes cliente = new Clientes();
             bool paso = false;
 
-            //if (!Validar())
-            //    return;
+            if (!Validar())
+                return;
 
             cliente = LlenaClase();
 
@@ -128,7 +180,7 @@ namespace ProyectoFinalAplicada1.Registros
                 MessageBox.Show("No Se Pudo Guardar!!", "Fallo!!!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-        private void Eliminarbutton_Click(object sender, EventArgs e)
+        private void Eliminarbutton_Click_1(object sender, EventArgs e)
         {
             RepositorioBase<Clientes> repositorio = new RepositorioBase<Clientes>();
             MyErrorProvider.Clear();
@@ -143,6 +195,64 @@ namespace ProyectoFinalAplicada1.Registros
             {
                 Limpiar();
                 MessageBox.Show("Cliente Eliminado!!", "Exito!!!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        //Todo: Eventos de TextBox
+        private void NombretextBox_Enter(object sender, EventArgs e)
+        {
+            if (NombretextBox.Text == "Nombres")
+            {
+                NombretextBox.Text = "";
+                NombretextBox.ForeColor = Color.Black;
+            }
+            MyErrorProvider.Clear();
+        }
+
+        private void NombretextBox_Leave(object sender, EventArgs e)
+        {
+            if (NombretextBox.Text == "")
+            {
+                NombretextBox.Text = "Nombres";
+                NombretextBox.ForeColor = Color.Silver;
+            }
+        }
+
+        private void DirecciontextBox_Enter(object sender, EventArgs e)
+        {
+            if (DirecciontextBox.Text == "Dirección")
+            {
+                DirecciontextBox.Text = "";
+                DirecciontextBox.ForeColor = Color.Black;
+            }
+            MyErrorProvider.Clear();
+        }
+
+        private void DirecciontextBox_Leave(object sender, EventArgs e)
+        {
+            if (DirecciontextBox.Text == "")
+            {
+                DirecciontextBox.Text = "Dirección";
+                DirecciontextBox.ForeColor = Color.Silver;
+            }
+        }
+
+        private void EmailtextBox_Enter(object sender, EventArgs e)
+        {
+            if (EmailtextBox.Text == "Email")
+            {
+                EmailtextBox.Text = "";
+                EmailtextBox.ForeColor = Color.Black;
+            }
+            MyErrorProvider.Clear();
+        }
+
+        private void EmailtextBox_Leave(object sender, EventArgs e)
+        {
+            if (EmailtextBox.Text == "")
+            {
+                EmailtextBox.Text = "Email";
+                EmailtextBox.ForeColor = Color.Silver;
             }
         }
     }

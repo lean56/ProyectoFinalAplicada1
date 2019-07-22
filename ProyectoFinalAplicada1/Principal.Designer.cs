@@ -29,26 +29,26 @@
         private void InitializeComponent()
         {
             this.BarraTitulo = new System.Windows.Forms.Panel();
-            this.PanelContenedor = new System.Windows.Forms.Panel();
-            this.MenuVertical = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.cEstudiantesbutton = new System.Windows.Forms.Button();
-            this.ConsultaAbutton = new System.Windows.Forms.Button();
             this.restaurar = new System.Windows.Forms.PictureBox();
             this.min = new System.Windows.Forms.PictureBox();
             this.Max = new System.Windows.Forms.PictureBox();
             this.Salir = new System.Windows.Forms.PictureBox();
             this.HideButton = new System.Windows.Forms.PictureBox();
+            this.PanelContenedor = new System.Windows.Forms.Panel();
+            this.MenuVertical = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.cEstudiantesbutton = new System.Windows.Forms.Button();
+            this.CategoriaAbutton = new System.Windows.Forms.Button();
             this.RegistroAsignatura = new System.Windows.Forms.Button();
             this.EntradadeProductos = new System.Windows.Forms.Button();
             this.RegistroEstudiante = new System.Windows.Forms.Button();
             this.BarraTitulo.SuspendLayout();
-            this.MenuVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.restaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Max)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Salir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HideButton)).BeginInit();
+            this.MenuVertical.SuspendLayout();
             this.SuspendLayout();
             // 
             // BarraTitulo
@@ -65,78 +65,6 @@
             this.BarraTitulo.Size = new System.Drawing.Size(774, 50);
             this.BarraTitulo.TabIndex = 4;
             this.BarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
-            // 
-            // PanelContenedor
-            // 
-            this.PanelContenedor.BackColor = System.Drawing.SystemColors.Control;
-            this.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelContenedor.Location = new System.Drawing.Point(176, 0);
-            this.PanelContenedor.Name = "PanelContenedor";
-            this.PanelContenedor.Size = new System.Drawing.Size(774, 600);
-            this.PanelContenedor.TabIndex = 5;
-            // 
-            // MenuVertical
-            // 
-            this.MenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
-            this.MenuVertical.Controls.Add(this.button1);
-            this.MenuVertical.Controls.Add(this.cEstudiantesbutton);
-            this.MenuVertical.Controls.Add(this.ConsultaAbutton);
-            this.MenuVertical.Controls.Add(this.RegistroAsignatura);
-            this.MenuVertical.Controls.Add(this.EntradadeProductos);
-            this.MenuVertical.Controls.Add(this.RegistroEstudiante);
-            this.MenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
-            this.MenuVertical.Location = new System.Drawing.Point(0, 0);
-            this.MenuVertical.Name = "MenuVertical";
-            this.MenuVertical.Size = new System.Drawing.Size(176, 600);
-            this.MenuVertical.TabIndex = 3;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(6, 469);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(164, 47);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Consulta Inscripcion";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // cEstudiantesbutton
-            // 
-            this.cEstudiantesbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
-            this.cEstudiantesbutton.FlatAppearance.BorderSize = 0;
-            this.cEstudiantesbutton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.cEstudiantesbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cEstudiantesbutton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.cEstudiantesbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cEstudiantesbutton.Location = new System.Drawing.Point(0, 403);
-            this.cEstudiantesbutton.Name = "cEstudiantesbutton";
-            this.cEstudiantesbutton.Size = new System.Drawing.Size(164, 47);
-            this.cEstudiantesbutton.TabIndex = 9;
-            this.cEstudiantesbutton.Text = "Consulta Estudiante";
-            this.cEstudiantesbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.cEstudiantesbutton.UseVisualStyleBackColor = false;
-            // 
-            // ConsultaAbutton
-            // 
-            this.ConsultaAbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
-            this.ConsultaAbutton.FlatAppearance.BorderSize = 0;
-            this.ConsultaAbutton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.ConsultaAbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ConsultaAbutton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ConsultaAbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ConsultaAbutton.Location = new System.Drawing.Point(3, 333);
-            this.ConsultaAbutton.Name = "ConsultaAbutton";
-            this.ConsultaAbutton.Size = new System.Drawing.Size(164, 47);
-            this.ConsultaAbutton.TabIndex = 8;
-            this.ConsultaAbutton.Text = "Consulta Asignatura";
-            this.ConsultaAbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ConsultaAbutton.UseVisualStyleBackColor = false;
             // 
             // restaurar
             // 
@@ -197,6 +125,79 @@
             this.HideButton.TabIndex = 0;
             this.HideButton.TabStop = false;
             this.HideButton.Click += new System.EventHandler(this.HideButton_Click);
+            // 
+            // PanelContenedor
+            // 
+            this.PanelContenedor.BackColor = System.Drawing.SystemColors.Control;
+            this.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelContenedor.Location = new System.Drawing.Point(176, 0);
+            this.PanelContenedor.Name = "PanelContenedor";
+            this.PanelContenedor.Size = new System.Drawing.Size(774, 600);
+            this.PanelContenedor.TabIndex = 5;
+            // 
+            // MenuVertical
+            // 
+            this.MenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
+            this.MenuVertical.Controls.Add(this.button1);
+            this.MenuVertical.Controls.Add(this.cEstudiantesbutton);
+            this.MenuVertical.Controls.Add(this.CategoriaAbutton);
+            this.MenuVertical.Controls.Add(this.RegistroAsignatura);
+            this.MenuVertical.Controls.Add(this.EntradadeProductos);
+            this.MenuVertical.Controls.Add(this.RegistroEstudiante);
+            this.MenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
+            this.MenuVertical.Location = new System.Drawing.Point(0, 0);
+            this.MenuVertical.Name = "MenuVertical";
+            this.MenuVertical.Size = new System.Drawing.Size(176, 600);
+            this.MenuVertical.TabIndex = 3;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(6, 469);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(164, 47);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Consulta Inscripcion";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // cEstudiantesbutton
+            // 
+            this.cEstudiantesbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
+            this.cEstudiantesbutton.FlatAppearance.BorderSize = 0;
+            this.cEstudiantesbutton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.cEstudiantesbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cEstudiantesbutton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.cEstudiantesbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cEstudiantesbutton.Location = new System.Drawing.Point(0, 403);
+            this.cEstudiantesbutton.Name = "cEstudiantesbutton";
+            this.cEstudiantesbutton.Size = new System.Drawing.Size(164, 47);
+            this.cEstudiantesbutton.TabIndex = 9;
+            this.cEstudiantesbutton.Text = "Consulta Estudiante";
+            this.cEstudiantesbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cEstudiantesbutton.UseVisualStyleBackColor = false;
+            // 
+            // CategoriaAbutton
+            // 
+            this.CategoriaAbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
+            this.CategoriaAbutton.FlatAppearance.BorderSize = 0;
+            this.CategoriaAbutton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.CategoriaAbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CategoriaAbutton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.CategoriaAbutton.Image = global::ProyectoFinalAplicada1.Properties.Resources.explorer_folders_18871;
+            this.CategoriaAbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CategoriaAbutton.Location = new System.Drawing.Point(3, 333);
+            this.CategoriaAbutton.Name = "CategoriaAbutton";
+            this.CategoriaAbutton.Size = new System.Drawing.Size(164, 47);
+            this.CategoriaAbutton.TabIndex = 8;
+            this.CategoriaAbutton.Text = "Categoria";
+            this.CategoriaAbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.CategoriaAbutton.UseVisualStyleBackColor = false;
             // 
             // RegistroAsignatura
             // 
@@ -265,12 +266,12 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principal";
             this.BarraTitulo.ResumeLayout(false);
-            this.MenuVertical.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.restaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.min)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Max)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Salir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HideButton)).EndInit();
+            this.MenuVertical.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -286,7 +287,7 @@
         private System.Windows.Forms.Panel MenuVertical;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button cEstudiantesbutton;
-        private System.Windows.Forms.Button ConsultaAbutton;
+        private System.Windows.Forms.Button CategoriaAbutton;
         private System.Windows.Forms.Button RegistroAsignatura;
         private System.Windows.Forms.Button EntradadeProductos;
         private System.Windows.Forms.Button RegistroEstudiante;

@@ -269,5 +269,8 @@
   <ItemGroup>
     <None Include="Resources\businesssettings_thebox_theproduct_negocio_2327.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\explorer_folders_18871.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

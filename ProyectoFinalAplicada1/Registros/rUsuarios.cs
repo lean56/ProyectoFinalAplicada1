@@ -65,7 +65,6 @@ namespace ProyectoFinalAplicada1.Registros
             NivelUsercomboBox.Text = usuario.NivelUsuario;
             UsuariotextBox.Text = usuario.Usuario;
             FechadateTimePicker.Value = usuario.FechaIngreso;
-
             NombretextBox.ForeColor = Color.Black;
             UsuariotextBox.ForeColor = Color.Black;
             ClavemaskedTextBox.Text = "Contraseña";

@@ -95,7 +95,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(244, 37);
             this.label5.TabIndex = 61;
-            this.label5.Text = "Registro de Categoria";
+            this.label5.Text = "Registro de Categoría";
             // 
             // DescripciontextBox
             // 
