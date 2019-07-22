@@ -36,8 +36,7 @@ namespace ProyectoFinalAplicada1.Registros
             NombretextBox.Text = string.Empty;
             IdProductnumericUpDown.Value = 0;
             DescripciontextBox.Text = string.Empty;
-            CantidadtextBox.Text = "Cantidad";
-            CantidadtextBox.ForeColor = Color.Silver;
+            CantidadtextBox.Text = string.Empty;
             PreciotextBox.Text = string.Empty;
             ImportetextBox.Text = string.Empty;
             TotaltextBox.Text = string.Empty;
@@ -79,7 +78,6 @@ namespace ProyectoFinalAplicada1.Registros
             IdProductnumericUpDown.Value = factura.ProductoId;
             TotaltextBox.Text = factura.Total.ToString();
             FechadateTimePicker.Value = factura.Fecha;
-            CantidadtextBox.ForeColor = Color.Black;
             detalle = new List<FacturaDetalle>();
          
             this.detalle = factura.Detalle;
@@ -102,6 +100,7 @@ namespace ProyectoFinalAplicada1.Registros
             {
                 detalle = (List<FacturaDetalle>)DetalledataGridView.DataSource;
             }
+            bool paso = false;
 
             RepositorioBase<Productos> repositorio = new RepositorioBase<Productos>();
 
@@ -113,23 +112,26 @@ namespace ProyectoFinalAplicada1.Registros
                 CantidadCotizada += item.Cantidad;
             }
 
-            if(CantidadtextBox.Text == "Cantidad" && Convert.ToInt32(CantidadtextBox.Text) == 0)
+            if(CantidadtextBox.Text == string.Empty)
             {
-                MyErrorProvider.SetError(CantidadtextBox, "La Cantidad no puede ser Cero");
+                MyErrorProvider.SetError(CantidadtextBox, "Digite la Cantidad");
+                paso = true;
             }
            
-            int CantidadProducto=0;
-            if(CantidadProducto==0)
+            int CantidadProducto = producto.Inventario;
+
+            if(CantidadProducto == 0 )
             {
-                
+                MyErrorProvider.SetError(CantidadtextBox, "La cantidad no puede ser Cero");
+                paso = true;
             }
             else
-            CantidadProducto = producto.Inventario; 
 
-            bool paso = false;
 
-            if (CantidadtextBox.Text == "Cantidad" && Convert.ToInt32(CantidadtextBox.Text) > producto.Inventario)
+            if (Convert.ToInt32(CantidadtextBox.Text) > producto.Inventario)
             {
+                CantidadProducto = producto.Inventario;
+
                 MyErrorProvider.SetError(CantidadtextBox, "Error");
                 MessageBox.Show("Cantidad mayor a la existente en inventario!!", "Falló!!",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -145,17 +147,12 @@ namespace ProyectoFinalAplicada1.Registros
         {
             bool paso = true;
 
-            if (CantidadtextBox.Text == "Cantidad")
+            if (CantidadtextBox.Text == string.Empty)
             {
                 MyErrorProvider.SetError(NombretextBox, "Este Campo Esta Vacio");
                 paso = false;
             }
 
-            if (CantidadtextBox.Text != "Cantidad" && Convert.ToInt32(CantidadtextBox.Text) == 0)
-            {
-                MyErrorProvider.SetError(CantidadtextBox, "La cantidad no puede ser cero");
-                paso = false;
-            }
             if(DescripciontextBox.Text == string.Empty)
             {
                 MyErrorProvider.SetError(CantidadtextBox, "Debe de Buscar un producto");
@@ -298,7 +295,7 @@ namespace ProyectoFinalAplicada1.Registros
 
             Productos producto = BuscarProductos((int)IdProductnumericUpDown.Value);
             
-            if (CantidadtextBox.Text == "Cantidad" && Convert.ToInt32(CantidadtextBox.Text) == 0)
+            if (Convert.ToInt32(CantidadtextBox.Text) == 0)
             {
                 MyErrorProvider.SetError(CantidadtextBox, "La Cantidad no puede ser cero");
             }
@@ -428,27 +425,7 @@ namespace ProyectoFinalAplicada1.Registros
 
         private void CantidadtextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsWhiteSpace(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-
-            if (Char.IsNumber(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            if (Char.IsLetter(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            if (Char.IsPunctuation(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            if (Char.IsSymbol(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+            
         }
 
         private void BuscarFacturabutton_Click(object sender, EventArgs e)
@@ -497,24 +474,6 @@ namespace ProyectoFinalAplicada1.Registros
             }
         }
 
-        private void CantidadtextBox_Enter(object sender, EventArgs e)
-        {
-            if (CantidadtextBox.Text == "Cantidad")
-            {
-                CantidadtextBox.Text = "";
-                CantidadtextBox.ForeColor = Color.Black;
-            }
-            MyErrorProvider.Clear();
-        }
-
-        private void CantidadtextBox_Leave(object sender, EventArgs e)
-        {
-            if (CantidadtextBox.Text == "")
-            {
-                CantidadtextBox.Text = "Cantidad";
-                CantidadtextBox.ForeColor = Color.Silver;
-            }
-        }
 
         private void Eliminarbutton_Click(object sender, EventArgs e)
         {
@@ -536,6 +495,44 @@ namespace ProyectoFinalAplicada1.Registros
                 Limpiar();
                 MessageBox.Show("Factura Eliminada!!", "Exito!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void CantidadtextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (CantidadtextBox.Text != string.Empty)
+            {
+                CalcularImporte();
+            }
+        }
+
+        private void CantidadtextBox_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+
+            if (Char.IsNumber(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            if (Char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (Char.IsPunctuation(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (Char.IsSymbol(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void CerrarButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

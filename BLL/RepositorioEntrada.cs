@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BLL
 {
-   public class EntradaBLL : RepositorioBase<EntradaProductos>
+   public class RepositorioEntrada : RepositorioBase<EntradaProductos>
     {
         public override bool Guardar(EntradaProductos entrada)
         {

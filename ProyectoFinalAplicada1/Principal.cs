@@ -1,4 +1,6 @@
-﻿using ProyectoFinalAplicada1.Registros;
+﻿using BLL;
+using Entidades;
+using ProyectoFinalAplicada1.Registros;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -80,7 +82,13 @@ namespace ProyectoFinalAplicada1
 
         private void RegistroAsignatura_Click(object sender, EventArgs e)
         {
-            AbrirFormInPanel(new rUsuarios());
+            RepositorioBase<Usuarios> repositorio = new RepositorioBase<Usuarios>();
+
+            if (repositorio.ReturnUsuario().NivelUsuario == "Administrador")
+                AbrirFormInPanel(new rUsuarios());
+            else
+                MessageBox.Show("No tiene Acceso a registrar Usuarios", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            
         }
 
         private void RegistroEstudiante_Click(object sender, EventArgs e)
@@ -91,6 +99,48 @@ namespace ProyectoFinalAplicada1
         private void EntradadeProductos_Click(object sender, EventArgs e)
         {
             AbrirFormInPanel(new rEntradaProductos());
+        }
+
+        private void CategoriaAbutton_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new rCategorias());
+        }
+
+        private void Facturabutton_Click(object sender, EventArgs e)
+        { 
+            AbrirFormInPanel(new rFacturas());
+        }
+
+        private void ClienteAdd_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new rClientes());
+        }
+
+        private void CerrarSeccionbutton_Click(object sender, EventArgs e)
+        {
+
+            var result = MessageBox.Show("Desea Salir?", "Cerrar Seccion",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                this.Hide();
+                Login login = new Login();
+                login.Show();   
+            }
+            else
+            if (result == DialogResult.No)
+            {
+                Principal p = new Principal();
+                p.Show();
+            }
+        }
+
+        private void MenuVertical_Paint(object sender, PaintEventArgs e)
+        {
+            RepositorioBase<Usuarios> repositorio = new RepositorioBase<Usuarios>();
+
+            Userlabel.Text = repositorio.ReturnUsuario().Usuario;
         }
     }
 }

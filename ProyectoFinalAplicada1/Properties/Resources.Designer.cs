@@ -93,6 +93,16 @@ namespace ProyectoFinalAplicada1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap business_application_addmale_useradd_insert_add_user_client_2312 {
+            get {
+                object obj = ResourceManager.GetObject("business_application_addmale_useradd_insert_add_user_client_2312", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap businessapplication_distributor_report_document_negocio_2319 {
             get {
                 object obj = ResourceManager.GetObject("businessapplication_distributor_report_document_negocio_2319", resourceCulture);
@@ -166,6 +176,16 @@ namespace ProyectoFinalAplicada1.Properties {
         internal static System.Drawing.Bitmap file_new_22051 {
             get {
                 object obj = ResourceManager.GetObject("file_new_22051", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_add_shopping_cart_128_28122 {
+            get {
+                object obj = ResourceManager.GetObject("ic_add_shopping_cart_128_28122", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -256,6 +276,56 @@ namespace ProyectoFinalAplicada1.Properties {
         internal static System.Drawing.Bitmap seo_social_web_network_internet_340_icon_icons_com_61497 {
             get {
                 object obj = ResourceManager.GetObject("seo-social-web-network-internet_340_icon-icons.com_61497", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SignOut_icon_icons_com_74704 {
+            get {
+                object obj = ResourceManager.GetObject("SignOut_icon-icons.com_74704", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sin_título_1 {
+            get {
+                object obj = ResourceManager.GetObject("Sin título-1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap softBusiness {
+            get {
+                object obj = ResourceManager.GetObject("softBusiness", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap softBusiness1 {
+            get {
+                object obj = ResourceManager.GetObject("softBusiness1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_accounts_15362 {
+            get {
+                object obj = ResourceManager.GetObject("user_accounts_15362", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -121,7 +121,7 @@ namespace ProyectoFinalAplicada1.Registros
         {
             bool paso = false;
 
-            EntradaBLL db = new EntradaBLL();
+            RepositorioEntrada db = new RepositorioEntrada();
 
              RepositorioBase<EntradaProductos> repositorio = new RepositorioBase<EntradaProductos>();
             if (!Validar())
@@ -161,7 +161,7 @@ namespace ProyectoFinalAplicada1.Registros
 
         private void Eliminarbutton_Click_1(object sender, EventArgs e)
         {
-            EntradaBLL db = new EntradaBLL();
+            RepositorioEntrada db = new RepositorioEntrada();
 
             RepositorioBase<EntradaProductos> repositorio = new RepositorioBase<EntradaProductos>();
             MyErrorProvider.Clear();

@@ -36,8 +36,8 @@
             this.IdClientenumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.NombretextBox = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.DetalledataGridView = new System.Windows.Forms.DataGridView();
             this.CantidadtextBox = new System.Windows.Forms.TextBox();
+            this.DetalledataGridView = new System.Windows.Forms.DataGridView();
             this.Addbutton = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -76,7 +76,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(123, 81);
+            this.label1.Location = new System.Drawing.Point(123, 143);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(18, 13);
             this.label1.TabIndex = 0;
@@ -84,7 +84,7 @@
             // 
             // IdFacturanumericUpDown
             // 
-            this.IdFacturanumericUpDown.Location = new System.Drawing.Point(173, 79);
+            this.IdFacturanumericUpDown.Location = new System.Drawing.Point(173, 141);
             this.IdFacturanumericUpDown.Name = "IdFacturanumericUpDown";
             this.IdFacturanumericUpDown.Size = new System.Drawing.Size(80, 20);
             this.IdFacturanumericUpDown.TabIndex = 1;
@@ -92,7 +92,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(122, 125);
+            this.label2.Location = new System.Drawing.Point(123, 180);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(39, 13);
             this.label2.TabIndex = 3;
@@ -101,7 +101,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(123, 160);
+            this.label3.Location = new System.Drawing.Point(123, 216);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 13);
             this.label3.TabIndex = 4;
@@ -109,14 +109,14 @@
             // 
             // IdClientenumericUpDown
             // 
-            this.IdClientenumericUpDown.Location = new System.Drawing.Point(173, 118);
+            this.IdClientenumericUpDown.Location = new System.Drawing.Point(173, 180);
             this.IdClientenumericUpDown.Name = "IdClientenumericUpDown";
             this.IdClientenumericUpDown.Size = new System.Drawing.Size(80, 20);
             this.IdClientenumericUpDown.TabIndex = 5;
             // 
             // NombretextBox
             // 
-            this.NombretextBox.Location = new System.Drawing.Point(174, 157);
+            this.NombretextBox.Location = new System.Drawing.Point(173, 216);
             this.NombretextBox.Name = "NombretextBox";
             this.NombretextBox.ReadOnly = true;
             this.NombretextBox.Size = new System.Drawing.Size(162, 20);
@@ -124,8 +124,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.DetalledataGridView);
             this.groupBox1.Controls.Add(this.CantidadtextBox);
+            this.groupBox1.Controls.Add(this.DetalledataGridView);
             this.groupBox1.Controls.Add(this.Addbutton);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
@@ -137,11 +137,20 @@
             this.groupBox1.Controls.Add(this.BuscarProductbutton);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.IdProductnumericUpDown);
-            this.groupBox1.Location = new System.Drawing.Point(122, 183);
+            this.groupBox1.Location = new System.Drawing.Point(122, 245);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(509, 240);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
+            // 
+            // CantidadtextBox
+            // 
+            this.CantidadtextBox.Location = new System.Drawing.Point(213, 23);
+            this.CantidadtextBox.Name = "CantidadtextBox";
+            this.CantidadtextBox.Size = new System.Drawing.Size(69, 20);
+            this.CantidadtextBox.TabIndex = 102;
+            this.CantidadtextBox.TextChanged += new System.EventHandler(this.CantidadtextBox_TextChanged);
+            this.CantidadtextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CantidadtextBox_KeyPress_1);
             // 
             // DetalledataGridView
             // 
@@ -151,21 +160,6 @@
             this.DetalledataGridView.ReadOnly = true;
             this.DetalledataGridView.Size = new System.Drawing.Size(476, 167);
             this.DetalledataGridView.TabIndex = 18;
-            // 
-            // CantidadtextBox
-            // 
-            this.CantidadtextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.CantidadtextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.CantidadtextBox.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CantidadtextBox.ForeColor = System.Drawing.Color.Silver;
-            this.CantidadtextBox.Location = new System.Drawing.Point(215, 22);
-            this.CantidadtextBox.Name = "CantidadtextBox";
-            this.CantidadtextBox.Size = new System.Drawing.Size(69, 21);
-            this.CantidadtextBox.TabIndex = 101;
-            this.CantidadtextBox.Text = " Cantidad";
-            this.CantidadtextBox.TextChanged += new System.EventHandler(this.CantidadtextBox_TextChanged_1);
-            this.CantidadtextBox.Enter += new System.EventHandler(this.CantidadtextBox_Enter);
-            this.CantidadtextBox.Leave += new System.EventHandler(this.CantidadtextBox_Leave);
             // 
             // Addbutton
             // 
@@ -267,7 +261,7 @@
             // 
             // TotaltextBox
             // 
-            this.TotaltextBox.Location = new System.Drawing.Point(547, 429);
+            this.TotaltextBox.Location = new System.Drawing.Point(547, 491);
             this.TotaltextBox.Name = "TotaltextBox";
             this.TotaltextBox.ReadOnly = true;
             this.TotaltextBox.Size = new System.Drawing.Size(75, 20);
@@ -276,7 +270,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(510, 432);
+            this.label9.Location = new System.Drawing.Point(510, 494);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(34, 13);
             this.label9.TabIndex = 16;
@@ -286,7 +280,7 @@
             // 
             this.FechadateTimePicker.CustomFormat = "dd/MM/yyyy";
             this.FechadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.FechadateTimePicker.Location = new System.Drawing.Point(527, 79);
+            this.FechadateTimePicker.Location = new System.Drawing.Point(527, 141);
             this.FechadateTimePicker.Name = "FechadateTimePicker";
             this.FechadateTimePicker.Size = new System.Drawing.Size(95, 20);
             this.FechadateTimePicker.TabIndex = 20;
@@ -297,7 +291,7 @@
             // 
             // UsuarioTextBox
             // 
-            this.UsuarioTextBox.Location = new System.Drawing.Point(366, 80);
+            this.UsuarioTextBox.Location = new System.Drawing.Point(366, 142);
             this.UsuarioTextBox.Name = "UsuarioTextBox";
             this.UsuarioTextBox.ReadOnly = true;
             this.UsuarioTextBox.Size = new System.Drawing.Size(146, 20);
@@ -306,7 +300,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(363, 67);
+            this.label10.Location = new System.Drawing.Point(363, 129);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(43, 13);
             this.label10.TabIndex = 96;
@@ -317,17 +311,18 @@
             this.CerrarButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.CerrarButton.AutoSize = true;
             this.CerrarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CerrarButton.Location = new System.Drawing.Point(766, 9);
+            this.CerrarButton.Location = new System.Drawing.Point(786, 71);
             this.CerrarButton.Name = "CerrarButton";
             this.CerrarButton.Size = new System.Drawing.Size(17, 17);
             this.CerrarButton.TabIndex = 100;
             this.CerrarButton.Text = "X";
+            this.CerrarButton.Click += new System.EventHandler(this.CerrarButton_Click);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Monotype Corsiva", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(322, 9);
+            this.label11.Location = new System.Drawing.Point(322, 71);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(103, 37);
             this.label11.TabIndex = 99;
@@ -337,7 +332,7 @@
             // 
             this.EliminarDetalle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.EliminarDetalle.Image = global::ProyectoFinalAplicada1.Properties.Resources.delete_file256_25240;
-            this.EliminarDetalle.Location = new System.Drawing.Point(126, 432);
+            this.EliminarDetalle.Location = new System.Drawing.Point(126, 494);
             this.EliminarDetalle.Name = "EliminarDetalle";
             this.EliminarDetalle.Size = new System.Drawing.Size(41, 38);
             this.EliminarDetalle.TabIndex = 98;
@@ -347,7 +342,7 @@
             // BuscarClientebutton
             // 
             this.BuscarClientebutton.Image = global::ProyectoFinalAplicada1.Properties.Resources.seo_social_web_network_internet_340_icon_icons_com_61497;
-            this.BuscarClientebutton.Location = new System.Drawing.Point(277, 111);
+            this.BuscarClientebutton.Location = new System.Drawing.Point(277, 173);
             this.BuscarClientebutton.Name = "BuscarClientebutton";
             this.BuscarClientebutton.Size = new System.Drawing.Size(35, 30);
             this.BuscarClientebutton.TabIndex = 7;
@@ -358,7 +353,7 @@
             // 
             this.BuscarFacturabutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BuscarFacturabutton.Image = global::ProyectoFinalAplicada1.Properties.Resources.preview_search_find_locate_1551;
-            this.BuscarFacturabutton.Location = new System.Drawing.Point(277, 67);
+            this.BuscarFacturabutton.Location = new System.Drawing.Point(277, 129);
             this.BuscarFacturabutton.Name = "BuscarFacturabutton";
             this.BuscarFacturabutton.Size = new System.Drawing.Size(35, 33);
             this.BuscarFacturabutton.TabIndex = 2;
@@ -370,7 +365,7 @@
             this.groupBox2.Controls.Add(this.Nuevo);
             this.groupBox2.Controls.Add(this.Guardarbutton);
             this.groupBox2.Controls.Add(this.Eliminarbutton);
-            this.groupBox2.Location = new System.Drawing.Point(218, 457);
+            this.groupBox2.Location = new System.Drawing.Point(218, 519);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(279, 80);
             this.groupBox2.TabIndex = 101;
@@ -411,7 +406,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(826, 543);
+            this.ClientSize = new System.Drawing.Size(846, 604);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.CerrarButton);
             this.Controls.Add(this.label11);
@@ -478,10 +473,10 @@
         private System.Windows.Forms.Button EliminarDetalle;
         private System.Windows.Forms.Label CerrarButton;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox CantidadtextBox;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button Nuevo;
         private System.Windows.Forms.Button Guardarbutton;
         private System.Windows.Forms.Button Eliminarbutton;
+        private System.Windows.Forms.TextBox CantidadtextBox;
     }
 }
