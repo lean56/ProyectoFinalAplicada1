@@ -24,8 +24,9 @@ namespace ProyectoFinalAplicada1.Registros
         private void Limpiar()
         {
             IdNumericUpDown.Value = 0;
-            ProductoComboBox.SelectedIndex = 0;
-            CantidadtextBox.Text = string.Empty;
+            ProductoComboBox.SelectedItem = null;
+            CantidadtextBox.Text = "Cantidad";
+            CantidadtextBox.ForeColor = Color.Silver;
             FechadateTimePicker.Value = DateTime.Now;
             MyErrorProvider.Clear();
         }
@@ -48,7 +49,34 @@ namespace ProyectoFinalAplicada1.Registros
             ProductoComboBox.SelectedValue = entrada.ProductoId;
             CantidadtextBox.Text = entrada.Cantidad.ToString() ;
             FechadateTimePicker.Value = entrada.Fecha;
+            CantidadtextBox.ForeColor = Color.Black;
         }
+
+        private bool Validar()
+        {
+            bool paso = true;
+
+            if (CantidadtextBox.Text == "Cantidad")
+            {
+                MyErrorProvider.SetError(CantidadtextBox, "Este Campo Esta Vacio");
+                paso = false;
+            }
+
+            if (ProductoComboBox.SelectedValue == null)
+            {
+                MyErrorProvider.SetError(ProductoComboBox, "Tiene que seleccionar un Producto");
+                paso = false;
+            }
+
+            if (CantidadtextBox.Text != "Cantidad" && Convert.ToInt32(CantidadtextBox.Text) == 0)
+            {
+                MyErrorProvider.SetError(CantidadtextBox, "La cantidad no puede ser cero");
+                paso = false;
+            }
+
+            return paso;
+        }
+
 
         private void LlenarComboBox()
         {
@@ -91,17 +119,18 @@ namespace ProyectoFinalAplicada1.Registros
 
         private void Guardarbutton_Click(object sender, EventArgs e)
         {
-            EntradaBLL db = new EntradaBLL();
-
-            RepositorioBase<EntradaProductos> repositorio = new RepositorioBase<EntradaProductos>();
-
-            EntradaProductos entrada = LlenaClase();
             bool paso = false;
 
-            //if (!Validar())
-            //  return;
+            EntradaBLL db = new EntradaBLL();
 
-          //  entrada = LlenaClase();
+             RepositorioBase<EntradaProductos> repositorio = new RepositorioBase<EntradaProductos>();
+            if (!Validar())
+                return;
+
+            EntradaProductos entrada = LlenaClase();
+        
+            
+             entrada = LlenaClase();
 
             if (IdNumericUpDown.Value == 0)
             {
@@ -130,7 +159,7 @@ namespace ProyectoFinalAplicada1.Registros
                 MessageBox.Show("No Se Pudo Guardar!!", "Fallo!!!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-        private void Eliminarbutton_Click(object sender, EventArgs e)
+        private void Eliminarbutton_Click_1(object sender, EventArgs e)
         {
             EntradaBLL db = new EntradaBLL();
 
@@ -147,6 +176,54 @@ namespace ProyectoFinalAplicada1.Registros
             {
                 Limpiar();
                 MessageBox.Show("Entrada de Producto Eliminado!!", "Exito!!!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void CerrarButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void CantidadtextBox_Enter(object sender, EventArgs e)
+        {
+            if (CantidadtextBox.Text == "Cantidad")
+            {
+                CantidadtextBox.Text = "";
+                CantidadtextBox.ForeColor = Color.Black;
+            }
+            MyErrorProvider.Clear();
+        }
+        private void CantidadtextBox_Leave(object sender, EventArgs e)
+        {
+            if (CantidadtextBox.Text == "")
+            {
+                CantidadtextBox.Text = "Cantidad";
+                CantidadtextBox.ForeColor = Color.Silver;
+            }
+        }
+
+        private void CantidadtextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+
+            if (Char.IsNumber(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            if (Char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (Char.IsPunctuation(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (Char.IsSymbol(e.KeyChar))
+            {
+                e.Handled = false;
             }
         }
     }

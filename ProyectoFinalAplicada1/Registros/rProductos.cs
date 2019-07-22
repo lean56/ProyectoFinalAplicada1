@@ -338,7 +338,7 @@ namespace ProyectoFinalAplicada1.Registros
         {
             if (Char.IsWhiteSpace(e.KeyChar))
             {
-                e.Handled = false;
+                e.Handled = true;
             }
 
             if (Char.IsNumber(e.KeyChar))
@@ -350,12 +350,12 @@ namespace ProyectoFinalAplicada1.Registros
                 e.Handled = true;
             }
             if (Char.IsPunctuation(e.KeyChar))
-            { 
-                e.Handled = true; 
-            }
-            if (Char.IsSymbol(e.KeyChar)) 
             {
                 e.Handled = true;
+            }
+            if (Char.IsSymbol(e.KeyChar))
+            {
+                e.Handled = false;
             }
         }
     }
