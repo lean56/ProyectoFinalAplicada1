@@ -66,6 +66,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Consultas\cClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\cClientes.designer.cs">
+      <DependentUpon>cClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Consultas\cUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,12 @@
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
@@ -140,6 +152,9 @@
     <Compile Include="Ventana Reportes\VentanaRptUsuarios.Designer.cs">
       <DependentUpon>VentanaRptUsuarios.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Consultas\cClientes.resx">
+      <DependentUpon>cClientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Consultas\cUsuarios.resx">
       <DependentUpon>cUsuarios.cs</DependentUpon>
     </EmbeddedResource>
@@ -148,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
@@ -298,6 +316,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\user_accounts_15362.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\business_salesreport_salesreport_negocio_23531.png" />
+    <None Include="Resources\business_sales_payment_paymentcard_card_money_23521.png" />
+    <None Include="Resources\find_1023251.png" />
+    <None Include="Resources\Deep-Crawl_icon-icons.com_537201.png" />
+    <None Include="Resources\businesspackage_additionalpackage_box_add_insert_negoci_23351.png" />
+    <Content Include="Resources\business_salesreport_salesreport_negocio_2353.png" />
+    <Content Include="Resources\find_102325.png" />
+    <None Include="Resources\folder_add_icon-icons.com_744361.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

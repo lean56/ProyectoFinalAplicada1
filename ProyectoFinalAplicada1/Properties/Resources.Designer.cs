@@ -103,9 +103,39 @@ namespace ProyectoFinalAplicada1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap business_sales_payment_paymentcard_card_money_2352 {
+            get {
+                object obj = ResourceManager.GetObject("business_sales_payment_paymentcard_card_money_2352", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap business_salesreport_salesreport_negocio_2353 {
+            get {
+                object obj = ResourceManager.GetObject("business_salesreport_salesreport_negocio_2353", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap businessapplication_distributor_report_document_negocio_2319 {
             get {
                 object obj = ResourceManager.GetObject("businessapplication_distributor_report_document_negocio_2319", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap businesspackage_additionalpackage_box_add_insert_negoci_2335 {
+            get {
+                object obj = ResourceManager.GetObject("businesspackage_additionalpackage_box_add_insert_negoci_2335", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -136,6 +166,16 @@ namespace ProyectoFinalAplicada1.Properties {
         internal static System.Drawing.Bitmap Cargo_1_35517 {
             get {
                 object obj = ResourceManager.GetObject("Cargo_1_35517", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Deep_Crawl_icon_icons_com_53720 {
+            get {
+                object obj = ResourceManager.GetObject("Deep-Crawl_icon-icons.com_53720", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -176,6 +216,26 @@ namespace ProyectoFinalAplicada1.Properties {
         internal static System.Drawing.Bitmap file_new_22051 {
             get {
                 object obj = ResourceManager.GetObject("file_new_22051", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap find_102325 {
+            get {
+                object obj = ResourceManager.GetObject("find_102325", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap folder_add_icon_icons_com_74436 {
+            get {
+                object obj = ResourceManager.GetObject("folder_add_icon-icons.com_74436", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

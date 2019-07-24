@@ -18,6 +18,8 @@ namespace Entidades
         public string Contraseña { get; set; }
         public DateTime FechaIngreso { get; set; }
 
+
+
         public Usuarios()
         {
             UsuarioId = 0;
