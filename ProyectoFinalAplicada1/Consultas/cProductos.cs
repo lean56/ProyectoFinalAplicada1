@@ -16,5 +16,10 @@ namespace ProyectoFinalAplicada1.Consultas
         {
             InitializeComponent();
         }
+
+        private void cProductos_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
