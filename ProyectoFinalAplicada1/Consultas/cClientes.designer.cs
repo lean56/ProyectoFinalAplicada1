@@ -178,6 +178,7 @@
             // 
             // ConsultaUserbutton
             // 
+            this.ConsultaUserbutton.Image = global::ProyectoFinalAplicada1.Properties.Resources.seo_social_web_network_internet_340_icon_icons1;
             this.ConsultaUserbutton.Location = new System.Drawing.Point(350, 28);
             this.ConsultaUserbutton.Name = "ConsultaUserbutton";
             this.ConsultaUserbutton.Size = new System.Drawing.Size(36, 34);
