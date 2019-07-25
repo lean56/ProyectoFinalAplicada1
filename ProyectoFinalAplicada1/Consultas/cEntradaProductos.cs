@@ -12,14 +12,15 @@ using System.Windows.Forms;
 
 namespace ProyectoFinalAplicada1.Consultas
 {
-    public partial class cProductos : Form
+    public partial class cEntradaProductos : Form
     {
-        private List<Productos> listaProductos;
+        private List<EntradaProductos> listaEntradaProductos;
 
-        public cProductos()
+        public cEntradaProductos()
         {
             InitializeComponent();
         }
+
         private bool Validar()
         {
             bool paso = true;
@@ -41,8 +42,8 @@ namespace ProyectoFinalAplicada1.Consultas
 
         private void Buscar()
         {
-            var listado = new List<Productos>();
-            RepositorioBase<Productos> repositorio = new RepositorioBase<Productos>();
+            var listado = new List<EntradaProductos>();
+            RepositorioBase<EntradaProductos> repositorio = new RepositorioBase<EntradaProductos>();
 
             if (!Validar())
                 return;
@@ -55,28 +56,43 @@ namespace ProyectoFinalAplicada1.Consultas
                         listado = repositorio.GetList(p => true);
                         Imprimirbutton.Visible = true;
                         break;
-                    case 1: //Todo: ID
+                    case 1: //Todo: ID Entrada
                         if (CristerioTextBox.Text.Any(x => !char.IsNumber(x)))
                         {
-                            MyErrorProvider.SetError(CristerioTextBox, "No es Un Numero,Digite el ID");
+                            MyErrorProvider.SetError(CristerioTextBox, "No es Un Numero,Digite el IdEntrada");
                         }
                         else
                         {
-                            int id = Convert.ToInt32(CristerioTextBox.Text);
-                            listado = repositorio.GetList(p => p.ProductoId == id);
+                            int idEntrada = Convert.ToInt32(CristerioTextBox.Text);
+                            listado = repositorio.GetList(p => p.EntradaId == idEntrada);
                             Imprimirbutton.Visible = true;
                         }
                         break;
-                    case 2://Todo: Descripcion
-                        listado = repositorio.GetList(p => p.Descripcion.Contains(CristerioTextBox.Text));
-                        Imprimirbutton.Visible = true;
+                    case 2: //Todo: ID
+                        if (CristerioTextBox.Text.Any(x => !char.IsNumber(x)))
+                        {
+                            MyErrorProvider.SetError(CristerioTextBox, "No es Un Numero,Digite el IdProducto");
+                        }
+                        else
+                        {
+                            int idProducto = Convert.ToInt32(CristerioTextBox.Text);
+                            listado = repositorio.GetList(p => p.ProductoId == idProducto);
+                            Imprimirbutton.Visible = true;
+                        }
                         break;
-                    case 3://Usuarios
-                       // listado = repositorio.GetList(p => p.Categoria.Contains(CristerioTextBox.Text));
-                        break;
+                    case 3://Todo: Cantidad
+                        if (CristerioTextBox.Text.Any(x => !char.IsNumber(x)))
+                        {
+                            MyErrorProvider.SetError(CristerioTextBox, "No es Un Numero,Digite la Cantidad");
+                        }
+                        else
+                        {
+                            int cantidad = Convert.ToInt32(CristerioTextBox.Text);
+                            listado = repositorio.GetList(p => p.Cantidad == cantidad);
+                            Imprimirbutton.Visible = true;
+                        }
+                        break;     
                 }
-
-
             }
             else
             {
@@ -85,11 +101,11 @@ namespace ProyectoFinalAplicada1.Consultas
 
             if (FechacheckBox.Checked)
             {
-                listado = listado.Where(c => c.FechaCreacion.Date >= DesdedateTimePicker.Value.Date && c.FechaCreacion.Date <= HastadateTimePicker.Value.Date).ToList();
+                listado = listado.Where(c => c.Fecha.Date >= DesdedateTimePicker.Value.Date && c.Fecha.Date <= HastadateTimePicker.Value.Date).ToList();
             }
             cUsuariosdataGridView.DataSource = null;
 
-            listaProductos = repositorio.GetList(p => true);
+            listaEntradaProductos = repositorio.GetList(p => true);
 
             cUsuariosdataGridView.DataSource = listado;
 
@@ -101,15 +117,23 @@ namespace ProyectoFinalAplicada1.Consultas
             cUsuariosdataGridView.Columns[5].DefaultCellStyle.Format = "dd-MM-yyyy";
         }
 
-        private void Imprimirbutton_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void ConsultaUserbutton_Click(object sender, EventArgs e)
         {
             Buscar();
+        }
 
+        private void Imprimirbutton_Click(object sender, EventArgs e)
+        {
+            if (listaEntradaProductos.Count == 0)
+            {
+                MessageBox.Show("No Hay Datos para imprimir");
+                return;
+            }
+            else
+            {
+             //   VentanaRptUsuarios rptE = new VentanaRptUsuarios(listaUsuario);
+               // rptE.ShowDialog();
+            }
         }
     }
 }

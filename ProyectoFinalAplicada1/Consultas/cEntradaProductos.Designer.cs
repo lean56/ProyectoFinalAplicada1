@@ -1,6 +1,6 @@
 ﻿namespace ProyectoFinalAplicada1.Consultas
 {
-    partial class cProductos
+    partial class cEntradaProductos
     {
         /// <summary>
         /// Required designer variable.
@@ -35,6 +35,7 @@
             this.DesdedateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.HastadateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.FechacheckBox = new System.Windows.Forms.CheckBox();
+            this.Imprimirbutton = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cUsuariosdataGridView = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -43,7 +44,6 @@
             this.ConsultaUserbutton = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.Imprimirbutton = new System.Windows.Forms.Button();
             this.MyErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -59,10 +59,10 @@
             this.groupBox4.Controls.Add(this.DesdedateTimePicker);
             this.groupBox4.Controls.Add(this.HastadateTimePicker);
             this.groupBox4.Controls.Add(this.FechacheckBox);
-            this.groupBox4.Location = new System.Drawing.Point(88, 68);
+            this.groupBox4.Location = new System.Drawing.Point(88, 50);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(213, 73);
-            this.groupBox4.TabIndex = 31;
+            this.groupBox4.TabIndex = 32;
             this.groupBox4.TabStop = false;
             // 
             // label2
@@ -111,10 +111,21 @@
             this.FechacheckBox.Text = "Filtrar por Fecha";
             this.FechacheckBox.UseVisualStyleBackColor = true;
             // 
+            // Imprimirbutton
+            // 
+            this.Imprimirbutton.Location = new System.Drawing.Point(618, 378);
+            this.Imprimirbutton.Name = "Imprimirbutton";
+            this.Imprimirbutton.Size = new System.Drawing.Size(75, 23);
+            this.Imprimirbutton.TabIndex = 31;
+            this.Imprimirbutton.Text = "Imprimir";
+            this.Imprimirbutton.UseVisualStyleBackColor = true;
+            this.Imprimirbutton.Visible = false;
+            this.Imprimirbutton.Click += new System.EventHandler(this.Imprimirbutton_Click);
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.cUsuariosdataGridView);
-            this.groupBox2.Location = new System.Drawing.Point(88, 141);
+            this.groupBox2.Location = new System.Drawing.Point(88, 123);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(625, 241);
             this.groupBox2.TabIndex = 30;
@@ -138,7 +149,7 @@
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.groupBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.groupBox1.Location = new System.Drawing.Point(307, 68);
+            this.groupBox1.Location = new System.Drawing.Point(307, 50);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(406, 73);
             this.groupBox1.TabIndex = 29;
@@ -167,6 +178,7 @@
             // 
             // ConsultaUserbutton
             // 
+            this.ConsultaUserbutton.Image = global::ProyectoFinalAplicada1.Properties.Resources.seo_social_web_network_internet_340_icon_icons1;
             this.ConsultaUserbutton.Location = new System.Drawing.Point(350, 28);
             this.ConsultaUserbutton.Name = "ConsultaUserbutton";
             this.ConsultaUserbutton.Size = new System.Drawing.Size(36, 34);
@@ -192,32 +204,22 @@
             this.label7.TabIndex = 11;
             this.label7.Text = "Filtro";
             // 
-            // Imprimirbutton
-            // 
-            this.Imprimirbutton.Location = new System.Drawing.Point(638, 388);
-            this.Imprimirbutton.Name = "Imprimirbutton";
-            this.Imprimirbutton.Size = new System.Drawing.Size(75, 23);
-            this.Imprimirbutton.TabIndex = 28;
-            this.Imprimirbutton.Text = "Imprimir";
-            this.Imprimirbutton.UseVisualStyleBackColor = true;
-            this.Imprimirbutton.Visible = false;
-            // 
             // MyErrorProvider
             // 
             this.MyErrorProvider.ContainerControl = this;
             // 
-            // cProductos
+            // cEntradaProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.Imprimirbutton);
             this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.Imprimirbutton);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "cProductos";
-            this.Text = "cProductos";
+            this.Name = "cEntradaProductos";
+            this.Text = "cEntradaProductos";
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -237,6 +239,7 @@
         private System.Windows.Forms.DateTimePicker DesdedateTimePicker;
         private System.Windows.Forms.DateTimePicker HastadateTimePicker;
         private System.Windows.Forms.CheckBox FechacheckBox;
+        private System.Windows.Forms.Button Imprimirbutton;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView cUsuariosdataGridView;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -245,7 +248,6 @@
         private System.Windows.Forms.Button ConsultaUserbutton;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button Imprimirbutton;
         private System.Windows.Forms.ErrorProvider MyErrorProvider;
     }
 }

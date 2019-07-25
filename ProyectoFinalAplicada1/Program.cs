@@ -1,4 +1,5 @@
 ﻿using ProyectoFinalAplicada1.Registros;
+using ProyectoFinalAplicada1.Consultas;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -66,11 +66,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Consultas\cCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\cCategorias.Designer.cs">
+      <DependentUpon>cCategorias.cs</DependentUpon>
+    </Compile>
     <Compile Include="Consultas\cClientes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Consultas\cClientes.designer.cs">
       <DependentUpon>cClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\cEntradaProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\cEntradaProductos.Designer.cs">
+      <DependentUpon>cEntradaProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\cFacturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\cFacturas.Designer.cs">
+      <DependentUpon>cFacturas.cs</DependentUpon>
     </Compile>
     <Compile Include="Consultas\cProductos.cs">
       <SubType>Form</SubType>
@@ -152,14 +170,29 @@
       <DependentUpon>ReporteUsuarios.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Ventana Reportes\VentanaRptClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana Reportes\VentanaRptClientes.Designer.cs">
+      <DependentUpon>VentanaRptClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventana Reportes\VentanaRptUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Ventana Reportes\VentanaRptUsuarios.Designer.cs">
       <DependentUpon>VentanaRptUsuarios.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Consultas\cCategorias.resx">
+      <DependentUpon>cCategorias.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Consultas\cClientes.resx">
       <DependentUpon>cClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\cEntradaProductos.resx">
+      <DependentUpon>cEntradaProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\cFacturas.resx">
+      <DependentUpon>cFacturas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Consultas\cProductos.resx">
       <DependentUpon>cProductos.cs</DependentUpon>

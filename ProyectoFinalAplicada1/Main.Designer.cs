@@ -30,34 +30,35 @@
         {
             this.MenuVertical = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Userlabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.CerrarSeccionbutton = new System.Windows.Forms.Button();
             this.Menu2panel = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.Cpanel = new System.Windows.Forms.Panel();
+            this.CButton = new System.Windows.Forms.Button();
             this.Menu1panel = new System.Windows.Forms.Panel();
+            this.EntradadeProductos = new System.Windows.Forms.Button();
+            this.RegistroProductos = new System.Windows.Forms.Button();
+            this.ClienteAdd = new System.Windows.Forms.Button();
+            this.RUsuarioButton = new System.Windows.Forms.Button();
             this.Rpanel = new System.Windows.Forms.Panel();
+            this.Rbutton = new System.Windows.Forms.Button();
             this.BarraTitulo = new System.Windows.Forms.Panel();
-            this.PanelContenedor = new System.Windows.Forms.Panel();
             this.restaurar = new System.Windows.Forms.PictureBox();
             this.Max = new System.Windows.Forms.PictureBox();
             this.min = new System.Windows.Forms.PictureBox();
             this.Salir = new System.Windows.Forms.PictureBox();
             this.HideButton = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.CerrarSeccionbutton = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.CButton = new System.Windows.Forms.Button();
-            this.EntradadeProductos = new System.Windows.Forms.Button();
-            this.RegistroProductos = new System.Windows.Forms.Button();
-            this.ClienteAdd = new System.Windows.Forms.Button();
-            this.RUsuarioButton = new System.Windows.Forms.Button();
-            this.Rbutton = new System.Windows.Forms.Button();
+            this.PanelContenedor = new System.Windows.Forms.Panel();
             this.MenuVertical.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Menu2panel.SuspendLayout();
             this.Cpanel.SuspendLayout();
             this.Menu1panel.SuspendLayout();
@@ -68,7 +69,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Salir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HideButton)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // MenuVertical
@@ -99,6 +99,23 @@
             this.panel2.Size = new System.Drawing.Size(200, 55);
             this.panel2.TabIndex = 17;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Image = global::ProyectoFinalAplicada1.Properties.Resources.business_sales_payment_paymentcard_card_money_2352;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(3, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(190, 49);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "Facturacion";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.button3);
@@ -125,6 +142,16 @@
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button3.UseVisualStyleBackColor = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ProyectoFinalAplicada1.Properties.Resources.user_accounts_15362;
+            this.pictureBox1.Location = new System.Drawing.Point(4, 594);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
+            // 
             // Userlabel
             // 
             this.Userlabel.AutoSize = true;
@@ -147,22 +174,76 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "Usuario:";
             // 
+            // CerrarSeccionbutton
+            // 
+            this.CerrarSeccionbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
+            this.CerrarSeccionbutton.FlatAppearance.BorderSize = 0;
+            this.CerrarSeccionbutton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.CerrarSeccionbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CerrarSeccionbutton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.CerrarSeccionbutton.Image = global::ProyectoFinalAplicada1.Properties.Resources.SignOut_icon_icons_com_74704;
+            this.CerrarSeccionbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CerrarSeccionbutton.Location = new System.Drawing.Point(4, 641);
+            this.CerrarSeccionbutton.Name = "CerrarSeccionbutton";
+            this.CerrarSeccionbutton.Size = new System.Drawing.Size(169, 47);
+            this.CerrarSeccionbutton.TabIndex = 12;
+            this.CerrarSeccionbutton.Text = "Cerrar  sesión";
+            this.CerrarSeccionbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.CerrarSeccionbutton.UseVisualStyleBackColor = false;
+            this.CerrarSeccionbutton.Click += new System.EventHandler(this.CerrarSeccionbutton_Click);
+            // 
             // Menu2panel
             // 
             this.Menu2panel.Controls.Add(this.button2);
-            this.Menu2panel.Location = new System.Drawing.Point(4, 369);
+            this.Menu2panel.Location = new System.Drawing.Point(0, 325);
             this.Menu2panel.Name = "Menu2panel";
-            this.Menu2panel.Size = new System.Drawing.Size(200, 58);
+            this.Menu2panel.Size = new System.Drawing.Size(200, 105);
             this.Menu2panel.TabIndex = 3;
             this.Menu2panel.Visible = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button2.Image = global::ProyectoFinalAplicada1.Properties.Resources.find_102325;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(4, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(191, 47);
+            this.button2.TabIndex = 13;
+            this.button2.Text = "Consulta de Usuarios";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Cpanel
             // 
             this.Cpanel.Controls.Add(this.CButton);
-            this.Cpanel.Location = new System.Drawing.Point(3, 308);
+            this.Cpanel.Location = new System.Drawing.Point(1, 268);
             this.Cpanel.Name = "Cpanel";
             this.Cpanel.Size = new System.Drawing.Size(200, 55);
             this.Cpanel.TabIndex = 2;
+            // 
+            // CButton
+            // 
+            this.CButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
+            this.CButton.FlatAppearance.BorderSize = 0;
+            this.CButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.CButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.CButton.Image = global::ProyectoFinalAplicada1.Properties.Resources.Deep_Crawl_icon_icons_com_53720;
+            this.CButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CButton.Location = new System.Drawing.Point(5, 3);
+            this.CButton.Name = "CButton";
+            this.CButton.Size = new System.Drawing.Size(193, 51);
+            this.CButton.TabIndex = 13;
+            this.CButton.Text = "Consultas";
+            this.CButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.CButton.UseVisualStyleBackColor = false;
+            this.CButton.Click += new System.EventHandler(this.CButton_Click);
             // 
             // Menu1panel
             // 
@@ -172,9 +253,80 @@
             this.Menu1panel.Controls.Add(this.RUsuarioButton);
             this.Menu1panel.Location = new System.Drawing.Point(3, 81);
             this.Menu1panel.Name = "Menu1panel";
-            this.Menu1panel.Size = new System.Drawing.Size(200, 221);
+            this.Menu1panel.Size = new System.Drawing.Size(200, 184);
             this.Menu1panel.TabIndex = 1;
             this.Menu1panel.Visible = false;
+            // 
+            // EntradadeProductos
+            // 
+            this.EntradadeProductos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
+            this.EntradadeProductos.FlatAppearance.BorderSize = 0;
+            this.EntradadeProductos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.EntradadeProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EntradadeProductos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.EntradadeProductos.Image = global::ProyectoFinalAplicada1.Properties.Resources.businesssettings_thebox_theproduct_negocio_2327;
+            this.EntradadeProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.EntradadeProductos.Location = new System.Drawing.Point(3, 91);
+            this.EntradadeProductos.Name = "EntradadeProductos";
+            this.EntradadeProductos.Size = new System.Drawing.Size(194, 40);
+            this.EntradadeProductos.TabIndex = 13;
+            this.EntradadeProductos.Text = "Entrada de Productos";
+            this.EntradadeProductos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.EntradadeProductos.UseVisualStyleBackColor = false;
+            this.EntradadeProductos.Click += new System.EventHandler(this.EntradadeProductos_Click);
+            // 
+            // RegistroProductos
+            // 
+            this.RegistroProductos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
+            this.RegistroProductos.FlatAppearance.BorderSize = 0;
+            this.RegistroProductos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.RegistroProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RegistroProductos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.RegistroProductos.Image = global::ProyectoFinalAplicada1.Properties.Resources.businesspackage_additionalpackage_box_add_insert_negoci_2335;
+            this.RegistroProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.RegistroProductos.Location = new System.Drawing.Point(4, 45);
+            this.RegistroProductos.Name = "RegistroProductos";
+            this.RegistroProductos.Size = new System.Drawing.Size(194, 40);
+            this.RegistroProductos.TabIndex = 11;
+            this.RegistroProductos.Text = "       Registro de Productos";
+            this.RegistroProductos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.RegistroProductos.UseVisualStyleBackColor = false;
+            this.RegistroProductos.Click += new System.EventHandler(this.RegistroProductos_Click);
+            // 
+            // ClienteAdd
+            // 
+            this.ClienteAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
+            this.ClienteAdd.FlatAppearance.BorderSize = 0;
+            this.ClienteAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.ClienteAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ClienteAdd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ClienteAdd.Image = global::ProyectoFinalAplicada1.Properties.Resources.business_application_addmale_useradd_insert_add_user_client_2312;
+            this.ClienteAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ClienteAdd.Location = new System.Drawing.Point(3, 137);
+            this.ClienteAdd.Name = "ClienteAdd";
+            this.ClienteAdd.Size = new System.Drawing.Size(191, 40);
+            this.ClienteAdd.TabIndex = 12;
+            this.ClienteAdd.Text = "Registro de Clientes";
+            this.ClienteAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ClienteAdd.UseVisualStyleBackColor = false;
+            // 
+            // RUsuarioButton
+            // 
+            this.RUsuarioButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
+            this.RUsuarioButton.FlatAppearance.BorderSize = 0;
+            this.RUsuarioButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.RUsuarioButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RUsuarioButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.RUsuarioButton.Image = global::ProyectoFinalAplicada1.Properties.Resources.businessregistration_signpen_negocio_inscripcio_2358;
+            this.RUsuarioButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.RUsuarioButton.Location = new System.Drawing.Point(2, 0);
+            this.RUsuarioButton.Name = "RUsuarioButton";
+            this.RUsuarioButton.Size = new System.Drawing.Size(191, 39);
+            this.RUsuarioButton.TabIndex = 8;
+            this.RUsuarioButton.Text = "Registro de Usuarios";
+            this.RUsuarioButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.RUsuarioButton.UseVisualStyleBackColor = false;
+            this.RUsuarioButton.Click += new System.EventHandler(this.RUsuarioButton_Click);
             // 
             // Rpanel
             // 
@@ -183,6 +335,24 @@
             this.Rpanel.Name = "Rpanel";
             this.Rpanel.Size = new System.Drawing.Size(200, 51);
             this.Rpanel.TabIndex = 0;
+            // 
+            // Rbutton
+            // 
+            this.Rbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
+            this.Rbutton.FlatAppearance.BorderSize = 0;
+            this.Rbutton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.Rbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Rbutton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Rbutton.Image = global::ProyectoFinalAplicada1.Properties.Resources.folder_add_icon_icons_com_74436;
+            this.Rbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Rbutton.Location = new System.Drawing.Point(3, 3);
+            this.Rbutton.Name = "Rbutton";
+            this.Rbutton.Size = new System.Drawing.Size(197, 45);
+            this.Rbutton.TabIndex = 8;
+            this.Rbutton.Text = "Registros";
+            this.Rbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Rbutton.UseVisualStyleBackColor = false;
+            this.Rbutton.Click += new System.EventHandler(this.Rbutton_Click_2);
             // 
             // BarraTitulo
             // 
@@ -199,14 +369,6 @@
             this.BarraTitulo.TabIndex = 1;
             this.BarraTitulo.Click += new System.EventHandler(this.BarraTitulo_Click);
             this.BarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
-            // 
-            // PanelContenedor
-            // 
-            this.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelContenedor.Location = new System.Drawing.Point(200, 42);
-            this.PanelContenedor.Name = "PanelContenedor";
-            this.PanelContenedor.Size = new System.Drawing.Size(850, 658);
-            this.PanelContenedor.TabIndex = 2;
             // 
             // restaurar
             // 
@@ -268,175 +430,13 @@
             this.HideButton.TabStop = false;
             this.HideButton.Click += new System.EventHandler(this.HideButton_Click);
             // 
-            // button1
+            // PanelContenedor
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Image = global::ProyectoFinalAplicada1.Properties.Resources.business_sales_payment_paymentcard_card_money_2352;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(3, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(190, 49);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Facturacion";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ProyectoFinalAplicada1.Properties.Resources.user_accounts_15362;
-            this.pictureBox1.Location = new System.Drawing.Point(4, 594);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
-            // 
-            // CerrarSeccionbutton
-            // 
-            this.CerrarSeccionbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
-            this.CerrarSeccionbutton.FlatAppearance.BorderSize = 0;
-            this.CerrarSeccionbutton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.CerrarSeccionbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CerrarSeccionbutton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.CerrarSeccionbutton.Image = global::ProyectoFinalAplicada1.Properties.Resources.SignOut_icon_icons_com_74704;
-            this.CerrarSeccionbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CerrarSeccionbutton.Location = new System.Drawing.Point(0, 641);
-            this.CerrarSeccionbutton.Name = "CerrarSeccionbutton";
-            this.CerrarSeccionbutton.Size = new System.Drawing.Size(173, 47);
-            this.CerrarSeccionbutton.TabIndex = 12;
-            this.CerrarSeccionbutton.Text = "Cerrar  sesión";
-            this.CerrarSeccionbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.CerrarSeccionbutton.UseVisualStyleBackColor = false;
-            this.CerrarSeccionbutton.Click += new System.EventHandler(this.CerrarSeccionbutton_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Image = global::ProyectoFinalAplicada1.Properties.Resources.find_102325;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(2, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(191, 47);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Consulta de Usuarios";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // CButton
-            // 
-            this.CButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
-            this.CButton.FlatAppearance.BorderSize = 0;
-            this.CButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.CButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.CButton.Image = global::ProyectoFinalAplicada1.Properties.Resources.Deep_Crawl_icon_icons_com_53720;
-            this.CButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CButton.Location = new System.Drawing.Point(0, 3);
-            this.CButton.Name = "CButton";
-            this.CButton.Size = new System.Drawing.Size(197, 47);
-            this.CButton.TabIndex = 13;
-            this.CButton.Text = "Consultas";
-            this.CButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.CButton.UseVisualStyleBackColor = false;
-            this.CButton.Click += new System.EventHandler(this.CButton_Click);
-            // 
-            // EntradadeProductos
-            // 
-            this.EntradadeProductos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
-            this.EntradadeProductos.FlatAppearance.BorderSize = 0;
-            this.EntradadeProductos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.EntradadeProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EntradadeProductos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.EntradadeProductos.Image = global::ProyectoFinalAplicada1.Properties.Resources.businesssettings_thebox_theproduct_negocio_2327;
-            this.EntradadeProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.EntradadeProductos.Location = new System.Drawing.Point(-3, 110);
-            this.EntradadeProductos.Name = "EntradadeProductos";
-            this.EntradadeProductos.Size = new System.Drawing.Size(200, 47);
-            this.EntradadeProductos.TabIndex = 13;
-            this.EntradadeProductos.Text = "Entrada de Productos";
-            this.EntradadeProductos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.EntradadeProductos.UseVisualStyleBackColor = false;
-            this.EntradadeProductos.Click += new System.EventHandler(this.EntradadeProductos_Click);
-            // 
-            // RegistroProductos
-            // 
-            this.RegistroProductos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
-            this.RegistroProductos.FlatAppearance.BorderSize = 0;
-            this.RegistroProductos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.RegistroProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RegistroProductos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.RegistroProductos.Image = global::ProyectoFinalAplicada1.Properties.Resources.businesspackage_additionalpackage_box_add_insert_negoci_2335;
-            this.RegistroProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.RegistroProductos.Location = new System.Drawing.Point(0, 56);
-            this.RegistroProductos.Name = "RegistroProductos";
-            this.RegistroProductos.Size = new System.Drawing.Size(197, 48);
-            this.RegistroProductos.TabIndex = 11;
-            this.RegistroProductos.Text = "       Registro de Productos";
-            this.RegistroProductos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.RegistroProductos.UseVisualStyleBackColor = false;
-            this.RegistroProductos.Click += new System.EventHandler(this.RegistroProductos_Click);
-            // 
-            // ClienteAdd
-            // 
-            this.ClienteAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
-            this.ClienteAdd.FlatAppearance.BorderSize = 0;
-            this.ClienteAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClienteAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ClienteAdd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClienteAdd.Image = global::ProyectoFinalAplicada1.Properties.Resources.business_application_addmale_useradd_insert_add_user_client_2312;
-            this.ClienteAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ClienteAdd.Location = new System.Drawing.Point(0, 163);
-            this.ClienteAdd.Name = "ClienteAdd";
-            this.ClienteAdd.Size = new System.Drawing.Size(197, 47);
-            this.ClienteAdd.TabIndex = 12;
-            this.ClienteAdd.Text = "Registro de Clientes";
-            this.ClienteAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ClienteAdd.UseVisualStyleBackColor = false;
-            // 
-            // RUsuarioButton
-            // 
-            this.RUsuarioButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
-            this.RUsuarioButton.FlatAppearance.BorderSize = 0;
-            this.RUsuarioButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.RUsuarioButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RUsuarioButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.RUsuarioButton.Image = global::ProyectoFinalAplicada1.Properties.Resources.businessregistration_signpen_negocio_inscripcio_2358;
-            this.RUsuarioButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.RUsuarioButton.Location = new System.Drawing.Point(0, 3);
-            this.RUsuarioButton.Name = "RUsuarioButton";
-            this.RUsuarioButton.Size = new System.Drawing.Size(194, 47);
-            this.RUsuarioButton.TabIndex = 8;
-            this.RUsuarioButton.Text = "Registro de Usuarios";
-            this.RUsuarioButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.RUsuarioButton.UseVisualStyleBackColor = false;
-            this.RUsuarioButton.Click += new System.EventHandler(this.RUsuarioButton_Click);
-            // 
-            // Rbutton
-            // 
-            this.Rbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
-            this.Rbutton.FlatAppearance.BorderSize = 0;
-            this.Rbutton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.Rbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Rbutton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Rbutton.Image = global::ProyectoFinalAplicada1.Properties.Resources.folder_add_icon_icons_com_74436;
-            this.Rbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Rbutton.Location = new System.Drawing.Point(3, 3);
-            this.Rbutton.Name = "Rbutton";
-            this.Rbutton.Size = new System.Drawing.Size(197, 45);
-            this.Rbutton.TabIndex = 8;
-            this.Rbutton.Text = "Registros";
-            this.Rbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Rbutton.UseVisualStyleBackColor = false;
-            this.Rbutton.Click += new System.EventHandler(this.Rbutton_Click_2);
+            this.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelContenedor.Location = new System.Drawing.Point(200, 42);
+            this.PanelContenedor.Name = "PanelContenedor";
+            this.PanelContenedor.Size = new System.Drawing.Size(850, 658);
+            this.PanelContenedor.TabIndex = 2;
             // 
             // Main
             // 
@@ -455,6 +455,7 @@
             this.MenuVertical.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.Menu2panel.ResumeLayout(false);
             this.Cpanel.ResumeLayout(false);
             this.Menu1panel.ResumeLayout(false);
@@ -465,7 +466,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.min)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Salir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HideButton)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

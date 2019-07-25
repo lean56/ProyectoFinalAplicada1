@@ -1,6 +1,6 @@
 ﻿namespace ProyectoFinalAplicada1.Consultas
 {
-    partial class cProductos
+    partial class cCategorias
     {
         /// <summary>
         /// Required designer variable.
@@ -167,6 +167,7 @@
             // 
             // ConsultaUserbutton
             // 
+            this.ConsultaUserbutton.Image = global::ProyectoFinalAplicada1.Properties.Resources.seo_social_web_network_internet_340_icon_icons1;
             this.ConsultaUserbutton.Location = new System.Drawing.Point(350, 28);
             this.ConsultaUserbutton.Name = "ConsultaUserbutton";
             this.ConsultaUserbutton.Size = new System.Drawing.Size(36, 34);
@@ -197,16 +198,17 @@
             this.Imprimirbutton.Location = new System.Drawing.Point(638, 388);
             this.Imprimirbutton.Name = "Imprimirbutton";
             this.Imprimirbutton.Size = new System.Drawing.Size(75, 23);
-            this.Imprimirbutton.TabIndex = 28;
+            this.Imprimirbutton.TabIndex = 32;
             this.Imprimirbutton.Text = "Imprimir";
             this.Imprimirbutton.UseVisualStyleBackColor = true;
             this.Imprimirbutton.Visible = false;
+            this.Imprimirbutton.Click += new System.EventHandler(this.Imprimirbutton_Click);
             // 
             // MyErrorProvider
             // 
             this.MyErrorProvider.ContainerControl = this;
             // 
-            // cProductos
+            // cCategorias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -216,8 +218,8 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "cProductos";
-            this.Text = "cProductos";
+            this.Name = "cCategorias";
+            this.Text = "cCategorias";
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox2.ResumeLayout(false);
