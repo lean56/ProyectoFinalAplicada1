@@ -164,6 +164,24 @@
     <Compile Include="Registros\rUsuarios.Designer.cs">
       <DependentUpon>rUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reportes\ReporteClientes.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteClientes.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReporteFacturas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteFacturas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReporteProductos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteProductos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Reportes\ReporteUsuarios.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -175,6 +193,18 @@
     </Compile>
     <Compile Include="Ventana Reportes\VentanaRptClientes.Designer.cs">
       <DependentUpon>VentanaRptClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana Reportes\VentanaRptFacturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana Reportes\VentanaRptFacturas.Designer.cs">
+      <DependentUpon>VentanaRptFacturas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana Reportes\VentanaRptProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana Reportes\VentanaRptProductos.Designer.cs">
+      <DependentUpon>VentanaRptProductos.cs</DependentUpon>
     </Compile>
     <Compile Include="Ventana Reportes\VentanaRptUsuarios.cs">
       <SubType>Form</SubType>
@@ -240,9 +270,30 @@
     <EmbeddedResource Include="Registros\rUsuarios.resx">
       <DependentUpon>rUsuarios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteClientes.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteClientes.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteFacturas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteFacturas.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteProductos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteProductos.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\ReporteUsuarios.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ReporteUsuarios.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana Reportes\VentanaRptClientes.resx">
+      <DependentUpon>VentanaRptClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana Reportes\VentanaRptFacturas.resx">
+      <DependentUpon>VentanaRptFacturas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana Reportes\VentanaRptProductos.resx">
+      <DependentUpon>VentanaRptProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventana Reportes\VentanaRptUsuarios.resx">
       <DependentUpon>VentanaRptUsuarios.cs</DependentUpon>
@@ -360,6 +411,10 @@
     <None Include="Resources\user_accounts_15362.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Sin título2.png" />
+    <None Include="Resources\Sin título1.png" />
+    <None Include="Resources\Sin título.png" />
+    <None Include="Resources\folder_add_256_icon-icons.com_75998.png" />
     <None Include="Resources\seo-social-web-network-internet_340_icon-icons.com_614971.png" />
     <None Include="Resources\business_salesreport_salesreport_negocio_23531.png" />
     <None Include="Resources\business_sales_payment_paymentcard_card_money_23521.png" />
@@ -367,6 +422,8 @@
     <None Include="Resources\Deep-Crawl_icon-icons.com_537201.png" />
     <None Include="Resources\businesspackage_additionalpackage_box_add_insert_negoci_23351.png" />
     <Content Include="Resources\business_salesreport_salesreport_negocio_2353.png" />
+    <None Include="Resources\Expand Arrow_20px.png" />
+    <None Include="Resources\Collapse Arrow_20px.png" />
     <Content Include="Resources\find_102325.png" />
     <None Include="Resources\folder_add_icon-icons.com_744361.png" />
   </ItemGroup>

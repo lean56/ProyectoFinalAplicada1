@@ -1,6 +1,7 @@
 ﻿using BLL;
 using Entidades;
 using ProyectoFinalAplicada1.Consultas;
+using ProyectoFinalAplicada1.Properties;
 using ProyectoFinalAplicada1.Registros;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,12 @@ namespace ProyectoFinalAplicada1
 {
     public partial class Main : Form
     {
+        private bool isCollapsed1;
+        private bool isCollapsed2;
+        private bool isCollapsed3;
+
+
+
         public Main()
         {
             InitializeComponent();
@@ -43,28 +50,7 @@ namespace ProyectoFinalAplicada1
 
         private void Rbutton_Click_2(object sender, EventArgs e)
         {
-            if (Menu1panel.Visible == true)
-            {
-                Menu1panel.Visible = false;
-                Cpanel.Location = new Point(3, 84);
-                CButton.Enabled = true;
-            }
-            else
-            {
-                Menu1panel.Visible = true;
-                Cpanel.Location = new Point(3, 318);
-                CButton.Enabled = false;
-
-            }
-        }
-
-
-
-        private void Main_Load(object sender, EventArgs e)
-        {
-            Cpanel.Location = new Point(3, 84);
-            Menu2panel.Visible = false;
-
+            Registrotimer.Start();
         }
 
         private void RUsuarioButton_Click(object sender, EventArgs e)
@@ -143,22 +129,11 @@ namespace ProyectoFinalAplicada1
 
             Userlabel.Text = repositorio.ReturnUsuario().Usuario;
         }
+        private bool isCollapsed;
 
         private void CButton_Click(object sender, EventArgs e)
         {
-            if (Menu1panel.Visible ==false && Menu2panel.Visible == true)
-            {
-                Menu2panel.Visible = false;
-                Rbutton.Enabled = true;
-                Cpanel.Location = new Point(3, 84);
-            }
-            else
-            {
-                Menu2panel.Visible = true;
-                Cpanel.Location = new Point(3, 84);
-                Menu2panel.Location = new Point(3, 150);
-                Rbutton.Enabled = false;
-            }
+            Consultatimer.Start();
         }
 
         private void BarraTitulo_Click(object sender, EventArgs e)
@@ -186,6 +161,167 @@ namespace ProyectoFinalAplicada1
         private void button2_Click(object sender, EventArgs e)
         {
             AbrirFormInPanel(new cUsuarios());
+        }
+
+        private void FacturaButton_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new rFacturas());
+        }
+
+        private void ClienteAdd_Click_1(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new rClientes());
+        }
+
+        private void Menu2panel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            if (isCollapsed)
+            {
+                button5.Image = Resources.Collapse_Arrow_20px;
+                ConsultaPanel.Height += 10;
+                if (ConsultaPanel.Size == ConsultaPanel.MaximumSize)
+                {
+                    FacturaPanel.Location = new Point(3, 320);
+                    Reportepanel.Location = new Point(3, 350);
+                    CReporte.Enabled = false;
+                    Rbutton.Enabled = false;
+                    CFactura.Enabled = false;
+                    Consultatimer.Stop();
+                    isCollapsed = false;
+                }
+            }
+            else
+            {
+                button5.Image = Resources.Expand_Arrow_20px;
+                ConsultaPanel.Height -= 10;
+                if (ConsultaPanel.Size == ConsultaPanel.MinimumSize)
+                {
+                    FacturaPanel.Location = new Point(3, 160);
+                    Reportepanel.Location = new Point(3, 220);
+
+                    CReporte.Enabled = true;
+                    Rbutton.Enabled = true;
+                    CFactura.Enabled = true;
+                    Consultatimer.Stop();
+                    isCollapsed = true;
+                }
+            }
+        }
+
+        private void Registrotimer_Tick(object sender, EventArgs e)
+        {
+            if (isCollapsed1)
+            {
+                Rbutton.Image = Resources.Collapse_Arrow_20px;
+                RegistroPanel.Height += 10;
+                if (RegistroPanel.Size == RegistroPanel.MaximumSize)
+                {
+                    ConsultaPanel.Location = new Point(3, 225);
+                    FacturaPanel.Location = new Point(3, 260);
+                    Reportepanel.Location = new Point(3, 300);
+                    CReporte.Enabled = false;
+                    CFactura.Enabled = false;
+                    Registrotimer.Stop();
+                    isCollapsed1 = false;
+                    CButton.Enabled = false;
+
+                }
+            }
+            else
+            {
+                Rbutton.Image = Resources.Expand_Arrow_20px;
+                RegistroPanel.Height -= 10;
+                if (RegistroPanel.Size == RegistroPanel.MinimumSize)
+                {
+                    CFactura.Enabled = true;
+                    CReporte.Enabled = true;
+                    ConsultaPanel.Location = new Point(3, 125);
+                    FacturaPanel.Location = new Point(3, 155);
+                    Reportepanel.Location = new Point(3, 190);
+                    CButton.Enabled = true;
+                    Registrotimer.Stop();
+                    isCollapsed1 = true;
+                }
+            }
+        }
+
+        private void CFactura_Click(object sender, EventArgs e)
+        {
+            FacturaTimer.Start();
+        }
+
+        private void FacturaTimer_Tick(object sender, EventArgs e)
+        {
+            if (isCollapsed2)
+            {
+                CFactura.Image = Resources.Collapse_Arrow_20px;
+                FacturaPanel.Height += 10;
+                if (FacturaPanel.Size == FacturaPanel.MaximumSize)
+                {
+                    Reportepanel.Location = new Point(3, 250);
+                    FacturaTimer.Stop();
+                    isCollapsed2 = false;
+                    CButton.Enabled = false;
+                    Rbutton.Enabled = false;
+                    CReporte.Enabled = false;
+
+                }
+            }
+            else
+            {
+                CFactura.Image = Resources.Expand_Arrow_20px;
+                FacturaPanel.Height -= 10;
+                if (FacturaPanel.Size == FacturaPanel.MinimumSize)
+                {
+                    Reportepanel.Location = new Point(3, 190);       
+                    Rbutton.Enabled = true;
+                    CButton.Enabled = true;
+                    CReporte.Enabled = true;
+                    FacturaTimer.Stop();
+                    isCollapsed2 = true;
+                }
+            }
+        }
+
+        private void Reportetimer_Tick(object sender, EventArgs e)
+        {
+            if (isCollapsed3)
+            {
+                CReporte.Image = Resources.Collapse_Arrow_20px;
+                Reportepanel.Height += 10;
+                if (Reportepanel.Size == Reportepanel.MaximumSize)
+                {
+                    Reportetimer.Stop();
+                    isCollapsed3 = false;
+                    CFactura.Enabled = false;
+                    CButton.Enabled = false;
+                    Rbutton.Enabled = false;
+
+                }
+            }
+            else
+            {
+                CReporte.Image = Resources.Expand_Arrow_20px;
+                Reportepanel.Height -= 10;
+                if (Reportepanel.Size == Reportepanel.MinimumSize)
+                {
+                    CFactura.Enabled = true;
+                    Rbutton.Enabled = true;
+                    CButton.Enabled = true;
+                    Reportetimer.Stop();
+                    isCollapsed3 = true;
+                }
+            }
+        }
+
+        private void CReporte_Click(object sender, EventArgs e)
+        {
+            Reportetimer.Start();
         }
     }
 }

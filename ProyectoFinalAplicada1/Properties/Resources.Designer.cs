@@ -173,6 +173,16 @@ namespace ProyectoFinalAplicada1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Collapse_Arrow_20px {
+            get {
+                object obj = ResourceManager.GetObject("Collapse Arrow_20px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Deep_Crawl_icon_icons_com_53720 {
             get {
                 object obj = ResourceManager.GetObject("Deep-Crawl_icon-icons.com_53720", resourceCulture);
@@ -203,6 +213,16 @@ namespace ProyectoFinalAplicada1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Expand_Arrow_20px {
+            get {
+                object obj = ResourceManager.GetObject("Expand Arrow_20px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap explorer_folders_18871 {
             get {
                 object obj = ResourceManager.GetObject("explorer_folders_18871", resourceCulture);
@@ -226,6 +246,16 @@ namespace ProyectoFinalAplicada1.Properties {
         internal static System.Drawing.Bitmap find_102325 {
             get {
                 object obj = ResourceManager.GetObject("find_102325", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap folder_add_256_icon_icons_com_75998 {
+            get {
+                object obj = ResourceManager.GetObject("folder_add_256_icon-icons.com_75998", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -363,9 +393,39 @@ namespace ProyectoFinalAplicada1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Sin_título {
+            get {
+                object obj = ResourceManager.GetObject("Sin título", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Sin_título_1 {
             get {
                 object obj = ResourceManager.GetObject("Sin título-1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sin_título1 {
+            get {
+                object obj = ResourceManager.GetObject("Sin título1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sin_título2 {
+            get {
+                object obj = ResourceManager.GetObject("Sin título2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

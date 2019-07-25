@@ -81,7 +81,7 @@ namespace ProyectoFinalAplicada1
                     this.Hide();
                     lo.ShowDialog(this);
 
-                    new Principal().Show();
+                    new Main().Show();
                 }
             }
             else

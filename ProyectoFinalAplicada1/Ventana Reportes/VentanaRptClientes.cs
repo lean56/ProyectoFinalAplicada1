@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Entidades;
+using ProyectoFinalAplicada1.Reportes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,22 @@ namespace ProyectoFinalAplicada1.Ventana_Reportes
 {
     public partial class VentanaRptClientes : Form
     {
-        public VentanaRptClientes()
+        List<Clientes> ListadoClientes = new List<Clientes>();
+
+
+        public VentanaRptClientes(List<Clientes>clientes)
         {
             InitializeComponent();
+            ListadoClientes = clientes;
         }
+
+        private void ClientescrystalReportViewer_Load(object sender, EventArgs e)
+        {
+            ReporteClientes datos = new ReporteClientes();
+            datos.SetDataSource(ListadoClientes);
+            ClientescrystalReportViewer.ReportSource = datos;
+            ClientescrystalReportViewer.Refresh();
+        }
+
     }
 }
