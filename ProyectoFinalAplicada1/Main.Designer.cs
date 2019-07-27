@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.MenuVertical = new System.Windows.Forms.Panel();
+            this.RegistroPanel = new System.Windows.Forms.Panel();
             this.ConsultaPanel = new System.Windows.Forms.Panel();
             this.Reportepanel = new System.Windows.Forms.Panel();
-            this.RegistroPanel = new System.Windows.Forms.Panel();
             this.FacturaPanel = new System.Windows.Forms.Panel();
             this.Userlabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,16 +42,16 @@
             this.Registrotimer = new System.Windows.Forms.Timer(this.components);
             this.FacturaTimer = new System.Windows.Forms.Timer(this.components);
             this.Reportetimer = new System.Windows.Forms.Timer(this.components);
-            this.EntradadeProductos = new System.Windows.Forms.Button();
-            this.Rbutton = new System.Windows.Forms.Button();
-            this.RegistroProductos = new System.Windows.Forms.Button();
-            this.RUsuarioButton = new System.Windows.Forms.Button();
-            this.ClienteAdd = new System.Windows.Forms.Button();
             this.restaurar = new System.Windows.Forms.PictureBox();
             this.Max = new System.Windows.Forms.PictureBox();
             this.min = new System.Windows.Forms.PictureBox();
             this.Salir = new System.Windows.Forms.PictureBox();
             this.HideButton = new System.Windows.Forms.PictureBox();
+            this.EntradadeProductos = new System.Windows.Forms.Button();
+            this.Rbutton = new System.Windows.Forms.Button();
+            this.RegistroProductos = new System.Windows.Forms.Button();
+            this.RUsuarioButton = new System.Windows.Forms.Button();
+            this.ClienteAdd = new System.Windows.Forms.Button();
             this.cFacturaButton = new System.Windows.Forms.Button();
             this.cClienteButton = new System.Windows.Forms.Button();
             this.CButton = new System.Windows.Forms.Button();
@@ -71,9 +71,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.CerrarSeccionbutton = new System.Windows.Forms.Button();
             this.MenuVertical.SuspendLayout();
+            this.RegistroPanel.SuspendLayout();
             this.ConsultaPanel.SuspendLayout();
             this.Reportepanel.SuspendLayout();
-            this.RegistroPanel.SuspendLayout();
             this.FacturaPanel.SuspendLayout();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.restaurar)).BeginInit();
@@ -103,6 +103,20 @@
             this.MenuVertical.Size = new System.Drawing.Size(209, 650);
             this.MenuVertical.TabIndex = 0;
             this.MenuVertical.Paint += new System.Windows.Forms.PaintEventHandler(this.MenuVertical_Paint);
+            // 
+            // RegistroPanel
+            // 
+            this.RegistroPanel.Controls.Add(this.EntradadeProductos);
+            this.RegistroPanel.Controls.Add(this.Rbutton);
+            this.RegistroPanel.Controls.Add(this.RegistroProductos);
+            this.RegistroPanel.Controls.Add(this.RUsuarioButton);
+            this.RegistroPanel.Controls.Add(this.ClienteAdd);
+            this.RegistroPanel.Location = new System.Drawing.Point(3, 82);
+            this.RegistroPanel.MaximumSize = new System.Drawing.Size(200, 150);
+            this.RegistroPanel.MinimumSize = new System.Drawing.Size(200, 35);
+            this.RegistroPanel.Name = "RegistroPanel";
+            this.RegistroPanel.Size = new System.Drawing.Size(200, 35);
+            this.RegistroPanel.TabIndex = 4;
             // 
             // ConsultaPanel
             // 
@@ -134,20 +148,6 @@
             this.Reportepanel.Name = "Reportepanel";
             this.Reportepanel.Size = new System.Drawing.Size(200, 33);
             this.Reportepanel.TabIndex = 0;
-            // 
-            // RegistroPanel
-            // 
-            this.RegistroPanel.Controls.Add(this.EntradadeProductos);
-            this.RegistroPanel.Controls.Add(this.Rbutton);
-            this.RegistroPanel.Controls.Add(this.RegistroProductos);
-            this.RegistroPanel.Controls.Add(this.RUsuarioButton);
-            this.RegistroPanel.Controls.Add(this.ClienteAdd);
-            this.RegistroPanel.Location = new System.Drawing.Point(3, 82);
-            this.RegistroPanel.MaximumSize = new System.Drawing.Size(200, 150);
-            this.RegistroPanel.MinimumSize = new System.Drawing.Size(200, 35);
-            this.RegistroPanel.Name = "RegistroPanel";
-            this.RegistroPanel.Size = new System.Drawing.Size(200, 35);
-            this.RegistroPanel.TabIndex = 4;
             // 
             // FacturaPanel
             // 
@@ -225,6 +225,66 @@
             // 
             this.Reportetimer.Interval = 50;
             this.Reportetimer.Tick += new System.EventHandler(this.Reportetimer_Tick);
+            // 
+            // restaurar
+            // 
+            this.restaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.restaurar.Image = global::ProyectoFinalAplicada1.Properties.Resources.icon_restaurar;
+            this.restaurar.Location = new System.Drawing.Point(738, 6);
+            this.restaurar.Name = "restaurar";
+            this.restaurar.Size = new System.Drawing.Size(30, 30);
+            this.restaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.restaurar.TabIndex = 11;
+            this.restaurar.TabStop = false;
+            this.restaurar.Click += new System.EventHandler(this.restaurar_Click);
+            // 
+            // Max
+            // 
+            this.Max.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Max.Image = global::ProyectoFinalAplicada1.Properties.Resources.icon_maximizar;
+            this.Max.Location = new System.Drawing.Point(738, 6);
+            this.Max.Name = "Max";
+            this.Max.Size = new System.Drawing.Size(30, 30);
+            this.Max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Max.TabIndex = 12;
+            this.Max.TabStop = false;
+            this.Max.Click += new System.EventHandler(this.Max_Click);
+            // 
+            // min
+            // 
+            this.min.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.min.Image = global::ProyectoFinalAplicada1.Properties.Resources.icon_minimizar;
+            this.min.Location = new System.Drawing.Point(702, 6);
+            this.min.Name = "min";
+            this.min.Size = new System.Drawing.Size(30, 30);
+            this.min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.min.TabIndex = 10;
+            this.min.TabStop = false;
+            this.min.Click += new System.EventHandler(this.min_Click);
+            // 
+            // Salir
+            // 
+            this.Salir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Salir.Image = global::ProyectoFinalAplicada1.Properties.Resources.icon_cerrar2;
+            this.Salir.Location = new System.Drawing.Point(774, 6);
+            this.Salir.Name = "Salir";
+            this.Salir.Size = new System.Drawing.Size(30, 30);
+            this.Salir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Salir.TabIndex = 9;
+            this.Salir.TabStop = false;
+            this.Salir.Click += new System.EventHandler(this.Salir_Click);
+            // 
+            // HideButton
+            // 
+            this.HideButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.HideButton.Image = global::ProyectoFinalAplicada1.Properties.Resources.ic_menu_128_28650;
+            this.HideButton.Location = new System.Drawing.Point(6, 3);
+            this.HideButton.Name = "HideButton";
+            this.HideButton.Size = new System.Drawing.Size(35, 35);
+            this.HideButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.HideButton.TabIndex = 8;
+            this.HideButton.TabStop = false;
+            this.HideButton.Click += new System.EventHandler(this.HideButton_Click);
             // 
             // EntradadeProductos
             // 
@@ -315,66 +375,6 @@
             this.ClienteAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ClienteAdd.UseVisualStyleBackColor = false;
             this.ClienteAdd.Click += new System.EventHandler(this.ClienteAdd_Click_1);
-            // 
-            // restaurar
-            // 
-            this.restaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.restaurar.Image = global::ProyectoFinalAplicada1.Properties.Resources.icon_restaurar;
-            this.restaurar.Location = new System.Drawing.Point(738, 6);
-            this.restaurar.Name = "restaurar";
-            this.restaurar.Size = new System.Drawing.Size(30, 30);
-            this.restaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.restaurar.TabIndex = 11;
-            this.restaurar.TabStop = false;
-            this.restaurar.Click += new System.EventHandler(this.restaurar_Click);
-            // 
-            // Max
-            // 
-            this.Max.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Max.Image = global::ProyectoFinalAplicada1.Properties.Resources.icon_maximizar;
-            this.Max.Location = new System.Drawing.Point(738, 6);
-            this.Max.Name = "Max";
-            this.Max.Size = new System.Drawing.Size(30, 30);
-            this.Max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Max.TabIndex = 12;
-            this.Max.TabStop = false;
-            this.Max.Click += new System.EventHandler(this.Max_Click);
-            // 
-            // min
-            // 
-            this.min.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.min.Image = global::ProyectoFinalAplicada1.Properties.Resources.icon_minimizar;
-            this.min.Location = new System.Drawing.Point(702, 6);
-            this.min.Name = "min";
-            this.min.Size = new System.Drawing.Size(30, 30);
-            this.min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.min.TabIndex = 10;
-            this.min.TabStop = false;
-            this.min.Click += new System.EventHandler(this.min_Click);
-            // 
-            // Salir
-            // 
-            this.Salir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Salir.Image = global::ProyectoFinalAplicada1.Properties.Resources.icon_cerrar2;
-            this.Salir.Location = new System.Drawing.Point(774, 6);
-            this.Salir.Name = "Salir";
-            this.Salir.Size = new System.Drawing.Size(30, 30);
-            this.Salir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Salir.TabIndex = 9;
-            this.Salir.TabStop = false;
-            this.Salir.Click += new System.EventHandler(this.Salir_Click);
-            // 
-            // HideButton
-            // 
-            this.HideButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.HideButton.Image = global::ProyectoFinalAplicada1.Properties.Resources.ic_menu_128_28650;
-            this.HideButton.Location = new System.Drawing.Point(6, 3);
-            this.HideButton.Name = "HideButton";
-            this.HideButton.Size = new System.Drawing.Size(35, 35);
-            this.HideButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.HideButton.TabIndex = 8;
-            this.HideButton.TabStop = false;
-            this.HideButton.Click += new System.EventHandler(this.HideButton_Click);
             // 
             // cFacturaButton
             // 
@@ -588,7 +588,7 @@
             this.rptUsuarioButton.Name = "rptUsuarioButton";
             this.rptUsuarioButton.Size = new System.Drawing.Size(200, 29);
             this.rptUsuarioButton.TabIndex = 20;
-            this.rptUsuarioButton.Text = "Reporte de Usuarios";
+            this.rptUsuarioButton.Text = "Pagos";
             this.rptUsuarioButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.rptUsuarioButton.UseVisualStyleBackColor = false;
             this.rptUsuarioButton.Click += new System.EventHandler(this.rptUsuarioButton_Click);
@@ -699,9 +699,9 @@
             this.Text = "Main";
             this.MenuVertical.ResumeLayout(false);
             this.MenuVertical.PerformLayout();
+            this.RegistroPanel.ResumeLayout(false);
             this.ConsultaPanel.ResumeLayout(false);
             this.Reportepanel.ResumeLayout(false);
-            this.RegistroPanel.ResumeLayout(false);
             this.FacturaPanel.ResumeLayout(false);
             this.BarraTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.restaurar)).EndInit();

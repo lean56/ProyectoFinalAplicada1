@@ -152,6 +152,12 @@
     <Compile Include="Registros\rFacturas.Designer.cs">
       <DependentUpon>rFacturas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Registros\rPagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\rPagos.Designer.cs">
+      <DependentUpon>rPagos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Registros\rProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -263,6 +269,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Registros\rFacturas.resx">
       <DependentUpon>rFacturas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registros\rPagos.resx">
+      <DependentUpon>rPagos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registros\rProductos.resx">
       <DependentUpon>rProductos.cs</DependentUpon>

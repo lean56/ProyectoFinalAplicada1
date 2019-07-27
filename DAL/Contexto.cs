@@ -16,6 +16,8 @@ namespace DAL
         public DbSet<Categorias> Categoria { get; set; }
         public DbSet<Clientes> Cliente { get; set; }
         public DbSet<Facturas> Factura { get; set; }
+        public DbSet<Pagos> Pago { get; set; }
+
 
         public Contexto() : base("Constr") { }
     }

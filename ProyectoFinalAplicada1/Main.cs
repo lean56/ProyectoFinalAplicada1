@@ -351,7 +351,7 @@ namespace ProyectoFinalAplicada1
 
         private void rptUsuarioButton_Click(object sender, EventArgs e)
         {
-            AbrirFormInPanel(new cUsuarios());
+            AbrirFormInPanel(new rPagos());
         }
 
         private void rptProductosButton_Click(object sender, EventArgs e)
