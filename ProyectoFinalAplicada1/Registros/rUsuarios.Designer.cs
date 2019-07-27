@@ -59,10 +59,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Monotype Corsiva", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Monotype Corsiva", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(295, 106);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(229, 37);
+            this.label5.Size = new System.Drawing.Size(218, 36);
             this.label5.TabIndex = 25;
             this.label5.Text = "Registro de Usuario";
             // 
@@ -171,11 +171,11 @@
             // 
             this.NombretextBox.BackColor = System.Drawing.SystemColors.Window;
             this.NombretextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.NombretextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NombretextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NombretextBox.ForeColor = System.Drawing.Color.Silver;
             this.NombretextBox.Location = new System.Drawing.Point(353, 230);
             this.NombretextBox.Name = "NombretextBox";
-            this.NombretextBox.Size = new System.Drawing.Size(171, 27);
+            this.NombretextBox.Size = new System.Drawing.Size(171, 26);
             this.NombretextBox.TabIndex = 44;
             this.NombretextBox.Text = "Nombres";
             this.NombretextBox.Enter += new System.EventHandler(this.NombretextBox_Enter);
@@ -185,11 +185,11 @@
             // 
             this.ClavemaskedTextBox.BackColor = System.Drawing.SystemColors.Window;
             this.ClavemaskedTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ClavemaskedTextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClavemaskedTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ClavemaskedTextBox.ForeColor = System.Drawing.Color.Silver;
             this.ClavemaskedTextBox.Location = new System.Drawing.Point(353, 349);
             this.ClavemaskedTextBox.Name = "ClavemaskedTextBox";
-            this.ClavemaskedTextBox.Size = new System.Drawing.Size(171, 27);
+            this.ClavemaskedTextBox.Size = new System.Drawing.Size(171, 26);
             this.ClavemaskedTextBox.TabIndex = 46;
             this.ClavemaskedTextBox.Text = "Contraseña";
             this.ClavemaskedTextBox.Enter += new System.EventHandler(this.ClavemaskedTextBox_Enter);
@@ -203,11 +203,11 @@
             // 
             this.Clave2maskedTextBox.BackColor = System.Drawing.SystemColors.Window;
             this.Clave2maskedTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Clave2maskedTextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Clave2maskedTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Clave2maskedTextBox.ForeColor = System.Drawing.Color.Silver;
             this.Clave2maskedTextBox.Location = new System.Drawing.Point(353, 391);
             this.Clave2maskedTextBox.Name = "Clave2maskedTextBox";
-            this.Clave2maskedTextBox.Size = new System.Drawing.Size(171, 27);
+            this.Clave2maskedTextBox.Size = new System.Drawing.Size(171, 26);
             this.Clave2maskedTextBox.TabIndex = 47;
             this.Clave2maskedTextBox.Text = "Confirmar";
             this.Clave2maskedTextBox.Enter += new System.EventHandler(this.Clave2maskedTextBox_Enter);
@@ -218,7 +218,7 @@
             this.CerrarButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.CerrarButton.AutoSize = true;
             this.CerrarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CerrarButton.Location = new System.Drawing.Point(711, 83);
+            this.CerrarButton.Location = new System.Drawing.Point(785, 9);
             this.CerrarButton.Name = "CerrarButton";
             this.CerrarButton.Size = new System.Drawing.Size(17, 17);
             this.CerrarButton.TabIndex = 60;
@@ -271,11 +271,11 @@
             // 
             this.UsuariotextBox.BackColor = System.Drawing.SystemColors.Window;
             this.UsuariotextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.UsuariotextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsuariotextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UsuariotextBox.ForeColor = System.Drawing.Color.Silver;
             this.UsuariotextBox.Location = new System.Drawing.Point(353, 307);
             this.UsuariotextBox.Name = "UsuariotextBox";
-            this.UsuariotextBox.Size = new System.Drawing.Size(171, 27);
+            this.UsuariotextBox.Size = new System.Drawing.Size(171, 26);
             this.UsuariotextBox.TabIndex = 45;
             this.UsuariotextBox.Text = "Usuario";
             this.UsuariotextBox.Enter += new System.EventHandler(this.UsuariotextBox_Enter);

@@ -1,5 +1,6 @@
 ﻿using BLL;
 using Entidades;
+using ProyectoFinalAplicada1.Ventana_Reportes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -88,18 +89,24 @@ namespace ProyectoFinalAplicada1.Consultas
             {
                 listado = listado.Where(c => c.Fecha.Date >= DesdedateTimePicker.Value.Date && c.Fecha.Date <= HastadateTimePicker.Value.Date).ToList();
             }
-            cUsuariosdataGridView.DataSource = null;
+            cClientesdataGridView.DataSource = null;
 
-            listaClientes = repositorioE.GetList(p => true);
+            cClientesdataGridView.DataSource = listado;
 
-            cUsuariosdataGridView.DataSource = listado;
+            listaClientes = listado;
 
-            cUsuariosdataGridView.Columns[0].HeaderText = "ID";
-            cUsuariosdataGridView.Columns[0].Width = 50;
-            cUsuariosdataGridView.Columns[1].HeaderText = "Nombres";
-            cUsuariosdataGridView.Columns[1].Width = 150;
-            cUsuariosdataGridView.Columns[2].HeaderText = "Nivel Usuario";
-            cUsuariosdataGridView.Columns[5].DefaultCellStyle.Format = "dd-MM-yyyy";
+            cClientesdataGridView.Columns[0].HeaderText = "ID";
+            cClientesdataGridView.Columns[0].Width = 50;
+            cClientesdataGridView.Columns[1].HeaderText = "Nombres";
+            cClientesdataGridView.Columns[1].Width = 150;
+            cClientesdataGridView.Columns[2].HeaderText = "Cédula";
+            cClientesdataGridView.Columns[3].HeaderText = "Dirección";
+            cClientesdataGridView.Columns[4].HeaderText = "Telefono";
+            cClientesdataGridView.Columns[5].HeaderText = "Celular";
+            cClientesdataGridView.Columns[6].HeaderText = "Email";
+            cClientesdataGridView.Columns[7].DefaultCellStyle.Format = "dd/MM/yyyy";
+            cClientesdataGridView.Columns[8].HeaderText = "Deuda";
+
         }
 
         private void ConsultaUserbutton_Click(object sender, EventArgs e)
@@ -116,9 +123,14 @@ namespace ProyectoFinalAplicada1.Consultas
             }
             else
             {
-               // VentanaRptUsuarios rptE = new VentanaRptUsuarios(listaUsuario);
-                //rptE.ShowDialog();
+                 VentanaRptClientes rptCl = new VentanaRptClientes(listaClientes);
+                 rptCl.ShowDialog();
             }
+        }
+
+        private void CerrarButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

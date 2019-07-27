@@ -159,20 +159,20 @@
             // TelefonomaskedTextBox
             // 
             this.TelefonomaskedTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TelefonomaskedTextBox.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.TelefonomaskedTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.TelefonomaskedTextBox.Location = new System.Drawing.Point(336, 336);
             this.TelefonomaskedTextBox.Mask = "000-000-0000";
             this.TelefonomaskedTextBox.Name = "TelefonomaskedTextBox";
-            this.TelefonomaskedTextBox.Size = new System.Drawing.Size(123, 27);
+            this.TelefonomaskedTextBox.Size = new System.Drawing.Size(123, 26);
             this.TelefonomaskedTextBox.TabIndex = 22;
             // 
             // CelularmaskedTextBox
             // 
-            this.CelularmaskedTextBox.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.CelularmaskedTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.CelularmaskedTextBox.Location = new System.Drawing.Point(336, 377);
             this.CelularmaskedTextBox.Mask = "000-000-0000";
             this.CelularmaskedTextBox.Name = "CelularmaskedTextBox";
-            this.CelularmaskedTextBox.Size = new System.Drawing.Size(123, 27);
+            this.CelularmaskedTextBox.Size = new System.Drawing.Size(123, 26);
             this.CelularmaskedTextBox.TabIndex = 23;
             // 
             // MyErrorProvider
@@ -184,7 +184,7 @@
             this.CerrarButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.CerrarButton.AutoSize = true;
             this.CerrarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CerrarButton.Location = new System.Drawing.Point(704, 42);
+            this.CerrarButton.Location = new System.Drawing.Point(785, 9);
             this.CerrarButton.Name = "CerrarButton";
             this.CerrarButton.Size = new System.Drawing.Size(17, 17);
             this.CerrarButton.TabIndex = 62;
@@ -205,11 +205,11 @@
             // 
             this.NombretextBox.BackColor = System.Drawing.SystemColors.Window;
             this.NombretextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.NombretextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NombretextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NombretextBox.ForeColor = System.Drawing.Color.Silver;
             this.NombretextBox.Location = new System.Drawing.Point(336, 165);
             this.NombretextBox.Name = "NombretextBox";
-            this.NombretextBox.Size = new System.Drawing.Size(171, 27);
+            this.NombretextBox.Size = new System.Drawing.Size(171, 26);
             this.NombretextBox.TabIndex = 63;
             this.NombretextBox.Text = "Nombres";
             this.NombretextBox.Enter += new System.EventHandler(this.NombretextBox_Enter);
@@ -219,11 +219,11 @@
             // 
             this.DirecciontextBox.BackColor = System.Drawing.SystemColors.Window;
             this.DirecciontextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.DirecciontextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DirecciontextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DirecciontextBox.ForeColor = System.Drawing.Color.Silver;
             this.DirecciontextBox.Location = new System.Drawing.Point(336, 206);
             this.DirecciontextBox.Name = "DirecciontextBox";
-            this.DirecciontextBox.Size = new System.Drawing.Size(171, 27);
+            this.DirecciontextBox.Size = new System.Drawing.Size(171, 26);
             this.DirecciontextBox.TabIndex = 64;
             this.DirecciontextBox.Text = "Dirección";
             this.DirecciontextBox.Enter += new System.EventHandler(this.DirecciontextBox_Enter);
@@ -233,11 +233,11 @@
             // 
             this.EmailtextBox.BackColor = System.Drawing.SystemColors.Window;
             this.EmailtextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.EmailtextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmailtextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmailtextBox.ForeColor = System.Drawing.Color.Silver;
             this.EmailtextBox.Location = new System.Drawing.Point(336, 255);
             this.EmailtextBox.Name = "EmailtextBox";
-            this.EmailtextBox.Size = new System.Drawing.Size(171, 27);
+            this.EmailtextBox.Size = new System.Drawing.Size(171, 26);
             this.EmailtextBox.TabIndex = 65;
             this.EmailtextBox.Text = "Email";
             this.EmailtextBox.Enter += new System.EventHandler(this.EmailtextBox_Enter);

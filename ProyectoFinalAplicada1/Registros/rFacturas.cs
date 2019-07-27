@@ -122,7 +122,7 @@ namespace ProyectoFinalAplicada1.Registros
 
             if(CantidadProducto == 0 )
             {
-                MyErrorProvider.SetError(CantidadtextBox, "La cantidad no puede ser Cero");
+                MyErrorProvider.SetError(CantidadtextBox, "Cantidad mayor a la existente en inventario!");
                 paso = true;
             }
             else

@@ -200,17 +200,17 @@
     <Compile Include="Ventana Reportes\VentanaRptFacturas.Designer.cs">
       <DependentUpon>VentanaRptFacturas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventana Reportes\VentanaRptProductos.cs">
+    <Compile Include="Ventana Reportes\VentanaRptProducto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventana Reportes\VentanaRptProductos.Designer.cs">
-      <DependentUpon>VentanaRptProductos.cs</DependentUpon>
+    <Compile Include="Ventana Reportes\VentanaRptProducto.Designer.cs">
+      <DependentUpon>VentanaRptProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventana Reportes\VentanaRptUsuarios.cs">
+    <Compile Include="Ventana Reportes\VentanaRptUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventana Reportes\VentanaRptUsuarios.Designer.cs">
-      <DependentUpon>VentanaRptUsuarios.cs</DependentUpon>
+    <Compile Include="Ventana Reportes\VentanaRptUsuario.Designer.cs">
+      <DependentUpon>VentanaRptUsuario.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Consultas\cCategorias.resx">
       <DependentUpon>cCategorias.cs</DependentUpon>
@@ -292,11 +292,11 @@
     <EmbeddedResource Include="Ventana Reportes\VentanaRptFacturas.resx">
       <DependentUpon>VentanaRptFacturas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ventana Reportes\VentanaRptProductos.resx">
-      <DependentUpon>VentanaRptProductos.cs</DependentUpon>
+    <EmbeddedResource Include="Ventana Reportes\VentanaRptProducto.resx">
+      <DependentUpon>VentanaRptProducto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ventana Reportes\VentanaRptUsuarios.resx">
-      <DependentUpon>VentanaRptUsuarios.cs</DependentUpon>
+    <EmbeddedResource Include="Ventana Reportes\VentanaRptUsuario.resx">
+      <DependentUpon>VentanaRptUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -421,6 +421,10 @@
     <None Include="Resources\find_1023251.png" />
     <None Include="Resources\Deep-Crawl_icon-icons.com_537201.png" />
     <None Include="Resources\businesspackage_additionalpackage_box_add_insert_negoci_23351.png" />
+    <None Include="Resources\business_application_addmale_useradd_insert_add_user_client_23121.png" />
+    <None Include="Resources\businesspackage_additionalpackage_box_add_insert_negoci_23352.png" />
+    <None Include="Resources\addusergroup_1251.png" />
+    <None Include="Resources\businesssettings_thebox_theproduct_negocio_23271.png" />
     <Content Include="Resources\business_salesreport_salesreport_negocio_2353.png" />
     <None Include="Resources\Expand Arrow_20px.png" />
     <None Include="Resources\Collapse Arrow_20px.png" />

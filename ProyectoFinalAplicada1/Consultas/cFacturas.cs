@@ -1,5 +1,6 @@
 ﻿using BLL;
 using Entidades;
+using ProyectoFinalAplicada1.Ventana_Reportes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -105,16 +106,17 @@ namespace ProyectoFinalAplicada1.Consultas
             }
             cUsuariosdataGridView.DataSource = null;
 
-            listaFactura = repositorio.GetList(p => true);
-
             cUsuariosdataGridView.DataSource = listado;
+
+            listaFactura = listado;
 
             cUsuariosdataGridView.Columns[0].HeaderText = "ID";
             cUsuariosdataGridView.Columns[0].Width = 50;
-            cUsuariosdataGridView.Columns[1].HeaderText = "Nombres";
-            cUsuariosdataGridView.Columns[1].Width = 150;
-            cUsuariosdataGridView.Columns[2].HeaderText = "Nivel Usuario";
-            cUsuariosdataGridView.Columns[5].DefaultCellStyle.Format = "dd-MM-yyyy";
+            cUsuariosdataGridView.Columns[1].HeaderText = "Cliente Id";
+            cUsuariosdataGridView.Columns[1].Width = 80;
+            cUsuariosdataGridView.Columns[3].HeaderText = "Producto Id";
+            cUsuariosdataGridView.Columns[3].Width = 100;
+            cUsuariosdataGridView.Columns[5].DefaultCellStyle.Format = "dd/MM/yyyy";
         }
 
         private void ConsultaUserbutton_Click(object sender, EventArgs e)
@@ -131,9 +133,14 @@ namespace ProyectoFinalAplicada1.Consultas
             }
             else
             {
-                //   VentanaRptUsuarios rptE = new VentanaRptUsuarios(listaUsuario);
-                // rptE.ShowDialog();
+                VentanaRptFacturas rptE = new VentanaRptFacturas(listaFactura);
+                rptE.ShowDialog();
             }
+        }
+
+        private void CerrarButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

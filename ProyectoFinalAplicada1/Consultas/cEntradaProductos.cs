@@ -105,16 +105,16 @@ namespace ProyectoFinalAplicada1.Consultas
             }
             cUsuariosdataGridView.DataSource = null;
 
-            listaEntradaProductos = repositorio.GetList(p => true);
-
             cUsuariosdataGridView.DataSource = listado;
 
-            cUsuariosdataGridView.Columns[0].HeaderText = "ID";
-            cUsuariosdataGridView.Columns[0].Width = 50;
-            cUsuariosdataGridView.Columns[1].HeaderText = "Nombres";
-            cUsuariosdataGridView.Columns[1].Width = 150;
-            cUsuariosdataGridView.Columns[2].HeaderText = "Nivel Usuario";
-            cUsuariosdataGridView.Columns[5].DefaultCellStyle.Format = "dd-MM-yyyy";
+            listaEntradaProductos = listado;
+
+            cUsuariosdataGridView.Columns[0].HeaderText = "Entrada Id";
+            cUsuariosdataGridView.Columns[0].Width = 90;
+            cUsuariosdataGridView.Columns[1].HeaderText = "Producto Id";
+            cUsuariosdataGridView.Columns[1].Width = 90;
+            cUsuariosdataGridView.Columns[2].Width = 90;
+            cUsuariosdataGridView.Columns[3].DefaultCellStyle.Format = "dd/MM/yyyy";
         }
 
         private void ConsultaUserbutton_Click(object sender, EventArgs e)
@@ -134,6 +134,11 @@ namespace ProyectoFinalAplicada1.Consultas
              //   VentanaRptUsuarios rptE = new VentanaRptUsuarios(listaUsuario);
                // rptE.ShowDialog();
             }
+        }
+
+        private void CerrarButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

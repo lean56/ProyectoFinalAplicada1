@@ -120,7 +120,7 @@
             this.CerrarButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.CerrarButton.AutoSize = true;
             this.CerrarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CerrarButton.Location = new System.Drawing.Point(688, 101);
+            this.CerrarButton.Location = new System.Drawing.Point(785, 9);
             this.CerrarButton.Name = "CerrarButton";
             this.CerrarButton.Size = new System.Drawing.Size(17, 17);
             this.CerrarButton.TabIndex = 62;
@@ -141,11 +141,11 @@
             // 
             this.CantidadtextBox.BackColor = System.Drawing.SystemColors.Window;
             this.CantidadtextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.CantidadtextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CantidadtextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CantidadtextBox.ForeColor = System.Drawing.Color.Silver;
             this.CantidadtextBox.Location = new System.Drawing.Point(351, 286);
             this.CantidadtextBox.Name = "CantidadtextBox";
-            this.CantidadtextBox.Size = new System.Drawing.Size(107, 27);
+            this.CantidadtextBox.Size = new System.Drawing.Size(107, 26);
             this.CantidadtextBox.TabIndex = 63;
             this.CantidadtextBox.Text = "Cantidad";
             this.CantidadtextBox.Enter += new System.EventHandler(this.CantidadtextBox_Enter);

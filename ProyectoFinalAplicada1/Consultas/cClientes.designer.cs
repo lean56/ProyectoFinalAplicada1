@@ -37,7 +37,7 @@
             this.FechacheckBox = new System.Windows.Forms.CheckBox();
             this.Imprimirbutton = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.cUsuariosdataGridView = new System.Windows.Forms.DataGridView();
+            this.cClientesdataGridView = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.FiltroComboBox = new System.Windows.Forms.ComboBox();
             this.CristerioTextBox = new System.Windows.Forms.TextBox();
@@ -45,9 +45,10 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.MyErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.CerrarButton = new System.Windows.Forms.Label();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cUsuariosdataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cClientesdataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).BeginInit();
             this.SuspendLayout();
@@ -124,20 +125,20 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.cUsuariosdataGridView);
+            this.groupBox2.Controls.Add(this.cClientesdataGridView);
             this.groupBox2.Location = new System.Drawing.Point(94, 141);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(625, 241);
             this.groupBox2.TabIndex = 26;
             this.groupBox2.TabStop = false;
             // 
-            // cUsuariosdataGridView
+            // cClientesdataGridView
             // 
-            this.cUsuariosdataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.cUsuariosdataGridView.Location = new System.Drawing.Point(9, 19);
-            this.cUsuariosdataGridView.Name = "cUsuariosdataGridView";
-            this.cUsuariosdataGridView.Size = new System.Drawing.Size(596, 196);
-            this.cUsuariosdataGridView.TabIndex = 8;
+            this.cClientesdataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.cClientesdataGridView.Location = new System.Drawing.Point(9, 19);
+            this.cClientesdataGridView.Name = "cClientesdataGridView";
+            this.cClientesdataGridView.Size = new System.Drawing.Size(596, 196);
+            this.cClientesdataGridView.TabIndex = 8;
             // 
             // groupBox1
             // 
@@ -208,11 +209,24 @@
             // 
             this.MyErrorProvider.ContainerControl = this;
             // 
+            // CerrarButton
+            // 
+            this.CerrarButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.CerrarButton.AutoSize = true;
+            this.CerrarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CerrarButton.Location = new System.Drawing.Point(771, 9);
+            this.CerrarButton.Name = "CerrarButton";
+            this.CerrarButton.Size = new System.Drawing.Size(17, 17);
+            this.CerrarButton.TabIndex = 63;
+            this.CerrarButton.Text = "X";
+            this.CerrarButton.Click += new System.EventHandler(this.CerrarButton_Click);
+            // 
             // cClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.CerrarButton);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.Imprimirbutton);
             this.Controls.Add(this.groupBox2);
@@ -223,11 +237,12 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.cUsuariosdataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cClientesdataGridView)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -241,7 +256,7 @@
         private System.Windows.Forms.CheckBox FechacheckBox;
         private System.Windows.Forms.Button Imprimirbutton;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView cUsuariosdataGridView;
+        private System.Windows.Forms.DataGridView cClientesdataGridView;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox FiltroComboBox;
         private System.Windows.Forms.TextBox CristerioTextBox;
@@ -249,5 +264,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ErrorProvider MyErrorProvider;
+        private System.Windows.Forms.Label CerrarButton;
     }
 }

@@ -20,11 +20,6 @@ namespace ProyectoFinalAplicada1.Ventana_Reportes
         {
             InitializeComponent();
             ListadoFacturas = facturas;
-
-        }
-
-        private void FacturascrystalReportViewer_Load(object sender, EventArgs e)
-        {
             ReporteFacturas datos = new ReporteFacturas();
             datos.SetDataSource(ListadoFacturas);
             FacturascrystalReportViewer.ReportSource = datos;

@@ -1,5 +1,6 @@
 ﻿using BLL;
 using Entidades;
+using ProyectoFinalAplicada1.Reportes;
 using ProyectoFinalAplicada1.Ventana_Reportes;
 using System;
 using System.Collections.Generic;
@@ -44,8 +45,9 @@ namespace ProyectoFinalAplicada1.Consultas
 
         private void Buscar()
         {
-            var listado = new List<Usuarios>();
             RepositorioBase<Usuarios> repositorioE = new RepositorioBase<Usuarios>();
+
+            var listado = new List<Usuarios>();
 
             if (!Validar())
                 return;
@@ -92,16 +94,18 @@ namespace ProyectoFinalAplicada1.Consultas
             }
             cUsuariosdataGridView.DataSource = null;
 
-            listaUsuario = repositorioE.GetList(p => true);
-
             cUsuariosdataGridView.DataSource = listado;
+            listaUsuario = listado;
 
             cUsuariosdataGridView.Columns[0].HeaderText = "ID";
             cUsuariosdataGridView.Columns[0].Width = 50;
             cUsuariosdataGridView.Columns[1].HeaderText = "Nombres";
             cUsuariosdataGridView.Columns[1].Width = 150;
             cUsuariosdataGridView.Columns[2].HeaderText = "Nivel Usuario";
-            cUsuariosdataGridView.Columns[5].DefaultCellStyle.Format = "dd-MM-yyyy";
+            cUsuariosdataGridView.Columns[4].Visible = false;
+            cUsuariosdataGridView.Columns[5].HeaderText = "Fecha Ingreso";
+            cUsuariosdataGridView.Columns[5].DefaultCellStyle.Format = "dd/MM/yyyy";
+
         }
 
         private void ConsultaUserbutton_Click(object sender, EventArgs e)
@@ -120,9 +124,14 @@ namespace ProyectoFinalAplicada1.Consultas
             }
             else
             {
-                VentanaRptUsuarios rptE = new VentanaRptUsuarios(listaUsuario);
+                VentanaRptUsuario rptE = new VentanaRptUsuario(listaUsuario);   
                 rptE.ShowDialog();
             }
+        }
+
+        private void CerrarButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

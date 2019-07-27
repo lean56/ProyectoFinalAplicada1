@@ -1,5 +1,6 @@
 ﻿using BLL;
 using Entidades;
+using ProyectoFinalAplicada1.Ventana_Reportes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -88,28 +89,48 @@ namespace ProyectoFinalAplicada1.Consultas
                 listado = listado.Where(c => c.FechaCreacion.Date >= DesdedateTimePicker.Value.Date && c.FechaCreacion.Date <= HastadateTimePicker.Value.Date).ToList();
             }
             cUsuariosdataGridView.DataSource = null;
-
-            listaProductos = repositorio.GetList(p => true);
-
+  
             cUsuariosdataGridView.DataSource = listado;
+
+            listaProductos = listado;
+
 
             cUsuariosdataGridView.Columns[0].HeaderText = "ID";
             cUsuariosdataGridView.Columns[0].Width = 50;
-            cUsuariosdataGridView.Columns[1].HeaderText = "Nombres";
+            cUsuariosdataGridView.Columns[1].HeaderText = "Descripción";
             cUsuariosdataGridView.Columns[1].Width = 150;
-            cUsuariosdataGridView.Columns[2].HeaderText = "Nivel Usuario";
-            cUsuariosdataGridView.Columns[5].DefaultCellStyle.Format = "dd-MM-yyyy";
-        }
-
-        private void Imprimirbutton_Click(object sender, EventArgs e)
-        {
-
+            cUsuariosdataGridView.Columns[2].Width = 60;
+            cUsuariosdataGridView.Columns[3].Width = 60;
+            cUsuariosdataGridView.Columns[4].HeaderText = "% Ganancia";
+            cUsuariosdataGridView.Columns[4].Width = 90;
+            cUsuariosdataGridView.Columns[5].HeaderText = "Fecha Creación";
+            cUsuariosdataGridView.Columns[5].DefaultCellStyle.Format = "dd/MM/yyyy";
+            cUsuariosdataGridView.Columns[5].Width = 120; 
+            cUsuariosdataGridView.Columns[6].Width = 100;
         }
 
         private void ConsultaUserbutton_Click(object sender, EventArgs e)
         {
             Buscar();
+        }
 
+        private void CerrarButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Imprimirbutton_Click(object sender, EventArgs e)
+        {
+            if (listaProductos.Count == 0)
+            {
+                MessageBox.Show("No Hay Datos para imprimir");
+                return;
+            }
+            else
+            {
+                VentanaRptProducto rptE = new VentanaRptProducto(listaProductos);
+                rptE.ShowDialog();
+            }
         }
     }
 }

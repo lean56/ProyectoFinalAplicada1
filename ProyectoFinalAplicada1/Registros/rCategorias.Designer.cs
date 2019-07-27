@@ -33,7 +33,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.MyErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.CerrarButton = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.DescripciontextBox = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -48,7 +47,7 @@
             // 
             // IdnumericUpDown
             // 
-            this.IdnumericUpDown.Location = new System.Drawing.Point(345, 240);
+            this.IdnumericUpDown.Location = new System.Drawing.Point(124, 123);
             this.IdnumericUpDown.Name = "IdnumericUpDown";
             this.IdnumericUpDown.Size = new System.Drawing.Size(56, 20);
             this.IdnumericUpDown.TabIndex = 0;
@@ -56,7 +55,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(276, 242);
+            this.label1.Location = new System.Drawing.Point(55, 125);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(18, 13);
             this.label1.TabIndex = 1;
@@ -65,7 +64,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(276, 298);
+            this.label2.Location = new System.Drawing.Point(55, 181);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 13);
             this.label2.TabIndex = 3;
@@ -75,23 +74,11 @@
             // 
             this.MyErrorProvider.ContainerControl = this;
             // 
-            // CerrarButton
-            // 
-            this.CerrarButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.CerrarButton.AutoSize = true;
-            this.CerrarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CerrarButton.Location = new System.Drawing.Point(688, 114);
-            this.CerrarButton.Name = "CerrarButton";
-            this.CerrarButton.Size = new System.Drawing.Size(17, 17);
-            this.CerrarButton.TabIndex = 62;
-            this.CerrarButton.Text = "X";
-            this.CerrarButton.Click += new System.EventHandler(this.CerrarButton_Click);
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Monotype Corsiva", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(272, 137);
+            this.label5.Location = new System.Drawing.Point(51, 20);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(244, 37);
             this.label5.TabIndex = 61;
@@ -101,11 +88,11 @@
             // 
             this.DescripciontextBox.BackColor = System.Drawing.SystemColors.Window;
             this.DescripciontextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.DescripciontextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DescripciontextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DescripciontextBox.ForeColor = System.Drawing.Color.Silver;
-            this.DescripciontextBox.Location = new System.Drawing.Point(345, 290);
+            this.DescripciontextBox.Location = new System.Drawing.Point(124, 173);
             this.DescripciontextBox.Name = "DescripciontextBox";
-            this.DescripciontextBox.Size = new System.Drawing.Size(145, 27);
+            this.DescripciontextBox.Size = new System.Drawing.Size(145, 26);
             this.DescripciontextBox.TabIndex = 63;
             this.DescripciontextBox.Text = "Categoría";
             this.DescripciontextBox.Enter += new System.EventHandler(this.DescripciontextBox_Enter);
@@ -116,7 +103,7 @@
             this.groupBox1.Controls.Add(this.Nuevobutton);
             this.groupBox1.Controls.Add(this.Guardarbutton);
             this.groupBox1.Controls.Add(this.Eliminarbutton);
-            this.groupBox1.Location = new System.Drawing.Point(267, 360);
+            this.groupBox1.Location = new System.Drawing.Point(46, 243);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(279, 80);
             this.groupBox1.TabIndex = 67;
@@ -156,7 +143,7 @@
             // Buscarbutton
             // 
             this.Buscarbutton.Image = global::ProyectoFinalAplicada1.Properties.Resources.seo_social_web_network_internet_340_icon_icons_com_61497;
-            this.Buscarbutton.Location = new System.Drawing.Point(418, 231);
+            this.Buscarbutton.Location = new System.Drawing.Point(197, 114);
             this.Buscarbutton.Name = "Buscarbutton";
             this.Buscarbutton.Size = new System.Drawing.Size(39, 35);
             this.Buscarbutton.TabIndex = 66;
@@ -167,18 +154,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(814, 554);
+            this.ClientSize = new System.Drawing.Size(362, 344);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.Buscarbutton);
             this.Controls.Add(this.DescripciontextBox);
-            this.Controls.Add(this.CerrarButton);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.IdnumericUpDown);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "rCategorias";
-            this.Text = "rCategoria";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize)(this.IdnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -193,7 +179,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ErrorProvider MyErrorProvider;
-        private System.Windows.Forms.Label CerrarButton;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox DescripciontextBox;
         private System.Windows.Forms.GroupBox groupBox1;

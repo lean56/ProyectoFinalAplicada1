@@ -252,7 +252,7 @@ namespace ProyectoFinalAplicada1.Registros
         private void CategoriaButton_Click(object sender, EventArgs e)
         {
             rCategorias cr = new rCategorias();
-            cr.Show();
+            cr.ShowDialog();
         }
 
         private void CerrarButton_Click(object sender, EventArgs e)

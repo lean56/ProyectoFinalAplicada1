@@ -41,10 +41,11 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.FiltroComboBox = new System.Windows.Forms.ComboBox();
             this.CristerioTextBox = new System.Windows.Forms.TextBox();
+            this.ConsultaUserbutton = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.ConsultaUserbutton = new System.Windows.Forms.Button();
             this.MyErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.CerrarButton = new System.Windows.Forms.Label();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cUsuariosdataGridView)).BeginInit();
@@ -176,6 +177,16 @@
             this.CristerioTextBox.Size = new System.Drawing.Size(181, 20);
             this.CristerioTextBox.TabIndex = 19;
             // 
+            // ConsultaUserbutton
+            // 
+            this.ConsultaUserbutton.Image = global::ProyectoFinalAplicada1.Properties.Resources.seo_social_web_network_internet_340_icon_icons1;
+            this.ConsultaUserbutton.Location = new System.Drawing.Point(350, 28);
+            this.ConsultaUserbutton.Name = "ConsultaUserbutton";
+            this.ConsultaUserbutton.Size = new System.Drawing.Size(36, 34);
+            this.ConsultaUserbutton.TabIndex = 15;
+            this.ConsultaUserbutton.UseVisualStyleBackColor = true;
+            this.ConsultaUserbutton.Click += new System.EventHandler(this.ConsultaUserbutton_Click);
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -194,25 +205,28 @@
             this.label7.TabIndex = 11;
             this.label7.Text = "Filtro";
             // 
-            // ConsultaUserbutton
-            // 
-            this.ConsultaUserbutton.Image = global::ProyectoFinalAplicada1.Properties.Resources.seo_social_web_network_internet_340_icon_icons1;
-            this.ConsultaUserbutton.Location = new System.Drawing.Point(350, 28);
-            this.ConsultaUserbutton.Name = "ConsultaUserbutton";
-            this.ConsultaUserbutton.Size = new System.Drawing.Size(36, 34);
-            this.ConsultaUserbutton.TabIndex = 15;
-            this.ConsultaUserbutton.UseVisualStyleBackColor = true;
-            this.ConsultaUserbutton.Click += new System.EventHandler(this.ConsultaUserbutton_Click);
-            // 
             // MyErrorProvider
             // 
             this.MyErrorProvider.ContainerControl = this;
+            // 
+            // CerrarButton
+            // 
+            this.CerrarButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.CerrarButton.AutoSize = true;
+            this.CerrarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CerrarButton.Location = new System.Drawing.Point(771, 9);
+            this.CerrarButton.Name = "CerrarButton";
+            this.CerrarButton.Size = new System.Drawing.Size(17, 17);
+            this.CerrarButton.TabIndex = 63;
+            this.CerrarButton.Text = "X";
+            this.CerrarButton.Click += new System.EventHandler(this.CerrarButton_Click);
             // 
             // cFacturas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.CerrarButton);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.Imprimirbutton);
             this.Controls.Add(this.groupBox2);
@@ -228,6 +242,7 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -249,5 +264,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ErrorProvider MyErrorProvider;
+        private System.Windows.Forms.Label CerrarButton;
     }
 }

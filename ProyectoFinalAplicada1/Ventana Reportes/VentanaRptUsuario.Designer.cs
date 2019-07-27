@@ -1,6 +1,6 @@
 ﻿namespace ProyectoFinalAplicada1.Ventana_Reportes
 {
-    partial class VentanaRptProductos
+    partial class VentanaRptUsuario
     {
         /// <summary>
         /// Required designer variable.
@@ -28,35 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ProductoscrystalReportViewer = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.MyCrystalReportViewer = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+          //  this.rptusuario1 = new ProyectoFinalAplicada1.rptusuario();
             this.SuspendLayout();
             // 
-            // ProductoscrystalReportViewer
+            // MyCrystalReportViewer
             // 
-            this.ProductoscrystalReportViewer.ActiveViewIndex = -1;
-            this.ProductoscrystalReportViewer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ProductoscrystalReportViewer.Cursor = System.Windows.Forms.Cursors.Default;
-            this.ProductoscrystalReportViewer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ProductoscrystalReportViewer.Location = new System.Drawing.Point(0, 0);
-            this.ProductoscrystalReportViewer.Name = "ProductoscrystalReportViewer";
-            this.ProductoscrystalReportViewer.Size = new System.Drawing.Size(800, 450);
-            this.ProductoscrystalReportViewer.TabIndex = 0;
-            this.ProductoscrystalReportViewer.Load += new System.EventHandler(this.crystalReportViewer1_Load);
+            this.MyCrystalReportViewer.ActiveViewIndex = -1;
+            this.MyCrystalReportViewer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.MyCrystalReportViewer.Cursor = System.Windows.Forms.Cursors.Default;
+            this.MyCrystalReportViewer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MyCrystalReportViewer.Location = new System.Drawing.Point(0, 0);
+            this.MyCrystalReportViewer.Name = "MyCrystalReportViewer";
+            this.MyCrystalReportViewer.Size = new System.Drawing.Size(800, 450);
+            this.MyCrystalReportViewer.TabIndex = 0;
             // 
-            // VentanaRptProductos
+            // VentanaRptUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.ProductoscrystalReportViewer);
-            this.Name = "VentanaRptProductos";
-            this.Text = "VentanaRptProductos";
+            this.Controls.Add(this.MyCrystalReportViewer);
+            this.Name = "VentanaRptUsuario";
+            this.Text = "VentanaRptUsuario";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private CrystalDecisions.Windows.Forms.CrystalReportViewer ProductoscrystalReportViewer;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer MyCrystalReportViewer;
+       // private rptusuario rptusuario1;
     }
 }

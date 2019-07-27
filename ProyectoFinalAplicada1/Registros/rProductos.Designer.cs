@@ -186,7 +186,7 @@
             this.CerrarButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.CerrarButton.AutoSize = true;
             this.CerrarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CerrarButton.Location = new System.Drawing.Point(632, 103);
+            this.CerrarButton.Location = new System.Drawing.Point(769, 9);
             this.CerrarButton.Name = "CerrarButton";
             this.CerrarButton.Size = new System.Drawing.Size(17, 17);
             this.CerrarButton.TabIndex = 61;
@@ -197,11 +197,11 @@
             // 
             this.DescripciontextBox.BackColor = System.Drawing.SystemColors.Window;
             this.DescripciontextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.DescripciontextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DescripciontextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DescripciontextBox.ForeColor = System.Drawing.Color.Silver;
             this.DescripciontextBox.Location = new System.Drawing.Point(328, 208);
             this.DescripciontextBox.Name = "DescripciontextBox";
-            this.DescripciontextBox.Size = new System.Drawing.Size(171, 27);
+            this.DescripciontextBox.Size = new System.Drawing.Size(171, 26);
             this.DescripciontextBox.TabIndex = 62;
             this.DescripciontextBox.Text = "Descripción";
             this.DescripciontextBox.Enter += new System.EventHandler(this.DescripciontextBox_Enter);
@@ -211,11 +211,11 @@
             // 
             this.CostotextBox.BackColor = System.Drawing.SystemColors.Window;
             this.CostotextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.CostotextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CostotextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CostotextBox.ForeColor = System.Drawing.Color.Silver;
             this.CostotextBox.Location = new System.Drawing.Point(299, 301);
             this.CostotextBox.Name = "CostotextBox";
-            this.CostotextBox.Size = new System.Drawing.Size(56, 27);
+            this.CostotextBox.Size = new System.Drawing.Size(56, 26);
             this.CostotextBox.TabIndex = 45;
             this.CostotextBox.Text = "Costo";
             this.CostotextBox.TextChanged += new System.EventHandler(this.CostotextBox_TextChanged_1);
@@ -227,11 +227,11 @@
             // 
             this.PreciotextBox.BackColor = System.Drawing.SystemColors.Window;
             this.PreciotextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PreciotextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PreciotextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PreciotextBox.ForeColor = System.Drawing.Color.Silver;
             this.PreciotextBox.Location = new System.Drawing.Point(299, 334);
             this.PreciotextBox.Name = "PreciotextBox";
-            this.PreciotextBox.Size = new System.Drawing.Size(56, 27);
+            this.PreciotextBox.Size = new System.Drawing.Size(56, 26);
             this.PreciotextBox.TabIndex = 63;
             this.PreciotextBox.Text = "Precio";
             this.PreciotextBox.TextChanged += new System.EventHandler(this.PreciotextBox_TextChanged_1);
@@ -243,24 +243,24 @@
             // 
             this.GananciatextBox.BackColor = System.Drawing.SystemColors.Window;
             this.GananciatextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.GananciatextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GananciatextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GananciatextBox.ForeColor = System.Drawing.Color.Silver;
             this.GananciatextBox.Location = new System.Drawing.Point(428, 301);
             this.GananciatextBox.Name = "GananciatextBox";
             this.GananciatextBox.ReadOnly = true;
-            this.GananciatextBox.Size = new System.Drawing.Size(56, 27);
+            this.GananciatextBox.Size = new System.Drawing.Size(56, 26);
             this.GananciatextBox.TabIndex = 64;
             // 
             // InventariotextBox
             // 
             this.InventariotextBox.BackColor = System.Drawing.SystemColors.Window;
             this.InventariotextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.InventariotextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InventariotextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InventariotextBox.ForeColor = System.Drawing.Color.Silver;
             this.InventariotextBox.Location = new System.Drawing.Point(428, 334);
             this.InventariotextBox.Name = "InventariotextBox";
             this.InventariotextBox.ReadOnly = true;
-            this.InventariotextBox.Size = new System.Drawing.Size(56, 27);
+            this.InventariotextBox.Size = new System.Drawing.Size(56, 26);
             this.InventariotextBox.TabIndex = 65;
             // 
             // Buscarbutton

@@ -158,11 +158,6 @@ namespace ProyectoFinalAplicada1
             AbrirFormInPanel(new rClientes());
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            AbrirFormInPanel(new cUsuarios());
-        }
-
         private void FacturaButton_Click(object sender, EventArgs e)
         {
             AbrirFormInPanel(new rFacturas());
@@ -182,7 +177,7 @@ namespace ProyectoFinalAplicada1
         {
             if (isCollapsed)
             {
-                button5.Image = Resources.Collapse_Arrow_20px;
+                cProductoButton.Image = Resources.Collapse_Arrow_20px;
                 ConsultaPanel.Height += 10;
                 if (ConsultaPanel.Size == ConsultaPanel.MaximumSize)
                 {
@@ -197,7 +192,7 @@ namespace ProyectoFinalAplicada1
             }
             else
             {
-                button5.Image = Resources.Expand_Arrow_20px;
+                cProductoButton.Image = Resources.Expand_Arrow_20px;
                 ConsultaPanel.Height -= 10;
                 if (ConsultaPanel.Size == ConsultaPanel.MinimumSize)
                 {
@@ -322,6 +317,61 @@ namespace ProyectoFinalAplicada1
         private void CReporte_Click(object sender, EventArgs e)
         {
             Reportetimer.Start();
+        }
+        //Todo: Consultas
+        private void cClienteButton_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new cClientes());
+        }
+
+        private void cProductoButton_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new cProductos());
+        }
+
+        private void cEntradaButton_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new cEntradaProductos());
+        }
+
+        private void cCategoriaButton_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new cCategorias());
+        }
+
+        private void cFacturaButton_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new cFacturas());
+        }
+
+        private void cUsuarioButton_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new cUsuarios());
+        }
+
+        private void rptUsuarioButton_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new cUsuarios());
+        }
+
+        private void rptProductosButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rptEntradaButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rptCategoriaButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RptFacturasButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

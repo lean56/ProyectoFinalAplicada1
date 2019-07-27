@@ -46,6 +46,7 @@
             this.HastadateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.FechacheckBox = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.CerrarButton = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cUsuariosdataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -56,7 +57,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.cUsuariosdataGridView);
-            this.groupBox2.Location = new System.Drawing.Point(12, 108);
+            this.groupBox2.Location = new System.Drawing.Point(68, 157);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(625, 241);
             this.groupBox2.TabIndex = 19;
@@ -69,7 +70,6 @@
             this.cUsuariosdataGridView.Name = "cUsuariosdataGridView";
             this.cUsuariosdataGridView.Size = new System.Drawing.Size(596, 196);
             this.cUsuariosdataGridView.TabIndex = 8;
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.FiltroComboBox);
@@ -80,7 +80,7 @@
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.groupBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.groupBox1.Location = new System.Drawing.Point(231, 35);
+            this.groupBox1.Location = new System.Drawing.Point(287, 84);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(406, 73);
             this.groupBox1.TabIndex = 18;
@@ -140,7 +140,7 @@
             // 
             // Imprimirbutton
             // 
-            this.Imprimirbutton.Location = new System.Drawing.Point(542, 363);
+            this.Imprimirbutton.Location = new System.Drawing.Point(598, 412);
             this.Imprimirbutton.Name = "Imprimirbutton";
             this.Imprimirbutton.Size = new System.Drawing.Size(75, 23);
             this.Imprimirbutton.TabIndex = 20;
@@ -156,7 +156,7 @@
             this.groupBox4.Controls.Add(this.DesdedateTimePicker);
             this.groupBox4.Controls.Add(this.HastadateTimePicker);
             this.groupBox4.Controls.Add(this.FechacheckBox);
-            this.groupBox4.Location = new System.Drawing.Point(12, 35);
+            this.groupBox4.Location = new System.Drawing.Point(68, 84);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(213, 73);
             this.groupBox4.TabIndex = 24;
@@ -211,17 +211,30 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(254, 9);
+            this.label3.Location = new System.Drawing.Point(310, 58);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(107, 13);
             this.label3.TabIndex = 25;
             this.label3.Text = "Consulta de Usuarios";
             // 
+            // CerrarButton
+            // 
+            this.CerrarButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.CerrarButton.AutoSize = true;
+            this.CerrarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CerrarButton.Location = new System.Drawing.Point(746, 9);
+            this.CerrarButton.Name = "CerrarButton";
+            this.CerrarButton.Size = new System.Drawing.Size(17, 17);
+            this.CerrarButton.TabIndex = 61;
+            this.CerrarButton.Text = "X";
+            this.CerrarButton.Click += new System.EventHandler(this.CerrarButton_Click);
+            // 
             // cUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(652, 404);
+            this.ClientSize = new System.Drawing.Size(775, 459);
+            this.Controls.Add(this.CerrarButton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.Imprimirbutton);
@@ -261,5 +274,6 @@
         private System.Windows.Forms.DateTimePicker HastadateTimePicker;
         private System.Windows.Forms.CheckBox FechacheckBox;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label CerrarButton;
     }
 }

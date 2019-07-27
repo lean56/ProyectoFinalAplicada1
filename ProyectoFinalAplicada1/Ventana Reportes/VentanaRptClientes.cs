@@ -20,16 +20,11 @@ namespace ProyectoFinalAplicada1.Ventana_Reportes
         public VentanaRptClientes(List<Clientes>clientes)
         {
             InitializeComponent();
-            ListadoClientes = clientes;
-        }
-
-        private void ClientescrystalReportViewer_Load(object sender, EventArgs e)
-        {
+            this.ListadoClientes = clientes;
             ReporteClientes datos = new ReporteClientes();
             datos.SetDataSource(ListadoClientes);
             ClientescrystalReportViewer.ReportSource = datos;
             ClientescrystalReportViewer.Refresh();
         }
-
     }
 }

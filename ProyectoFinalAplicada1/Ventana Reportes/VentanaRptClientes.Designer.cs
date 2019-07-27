@@ -41,8 +41,6 @@
             this.ClientescrystalReportViewer.Name = "ClientescrystalReportViewer";
             this.ClientescrystalReportViewer.Size = new System.Drawing.Size(800, 450);
             this.ClientescrystalReportViewer.TabIndex = 0;
-            this.ClientescrystalReportViewer.Load += new System.EventHandler(this.ClientescrystalReportViewer_Load);
-            // 
             // VentanaRptClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
