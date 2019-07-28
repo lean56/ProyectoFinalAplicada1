@@ -189,50 +189,23 @@ namespace ProyectoFinalAplicada1.Registros
             Limpiar();
         }
 
-        private FacturaDetalle llenaFactura()
-        {
-            FacturaDetalle factura = new FacturaDetalle();
-
-            factura.FacturaId = (int)IdFacturanumericUpDown.Value;
-            factura.ProductoId = (int)IdProductnumericUpDown.Value;
-            factura.Cantidad = Convert.ToInt32( CantidadtextBox.Text);
-            factura.Precio = Convert.ToDecimal(PreciotextBox.Text);
-            factura.Importe = Convert.ToDecimal(ImportetextBox.Text);
-
-
-            return factura;
-        }
-
         private void Recibo()
         {
+            List<FacturaDetalle> detalle = new List<FacturaDetalle>();
 
-            Facturas factura;
-            factura = LlenaClase();
-
-           
-           // VentaraImprimirFactura viewer = new VentaraImprimirFactura(factura);
-           // viewer.ShowDialog();
-            //RepositorioBase<ReciboFact> Repositorio = new RepositorioBase<ReciboFact>(); // Creando el recibo de ingreso
-
-            //ReciboFact Recibo = new ReciboFact();
-            //Recibo.FacturaId= Convert.ToInt32( IdFacturanumericUpDown.Value);
-            //Recibo.Cliente = NombretextBox.Text;
-            //Recibo.vendedor = UsuarioTextBox.Text;
-            //Recibo.Descripcion = DescripciontextBox.Text;
-            //Recibo.Cantidad = Convert.ToInt32(CantidadtextBox.Text);
-            //Recibo.Precio = Convert.ToDecimal(PreciotextBox.Text);
-            //Recibo.Importe = Convert.ToInt32(ImportetextBox.Text);
-            //Repositorio.Guardar(Recibo);
-
-            //if (MessageBox.Show("Desea generar el recibo de pago?", "Advertencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) == DialogResult.OK) // Haciendo el recibo de pago
-            //{      
-            //    List<ReciboFact> ReciboDeIngreso = new List<ReciboFact>();
-
-            //    ReciboDeIngreso.Insert(0, Recibo);
-            //    VentanaReciboFactura reciboDePagoReportViewer = new VentanaReciboFactura(ReciboDeIngreso);
-            //    reciboDePagoReportViewer.ShowDialog();
-            //}
+            if (DetalledataGridView.DataSource == null)
+            {
+                MessageBox.Show("No Hay Datos para Imprimir", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                detalle = (List<FacturaDetalle>)DetalledataGridView.DataSource;
+            }
+            VentaraImprimirFactura viewer = new VentaraImprimirFactura(detalle);
+            viewer.ShowDialog();
         }
+
+   
 
         private void Guardarbutton_Click_1(object sender, EventArgs e)
         {
@@ -564,9 +537,14 @@ namespace ProyectoFinalAplicada1.Registros
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            FacturaDetalle factura = llenaFactura();
 
-            VentaraImprimirFactura viewer = new VentaraImprimirFactura(factura);
+            List<FacturaDetalle> detalle = new List<FacturaDetalle>();
+
+           
+             detalle = (List<FacturaDetalle>)DetalledataGridView.DataSource;
+            
+          
+            VentaraImprimirFactura viewer = new VentaraImprimirFactura(detalle);
             viewer.ShowDialog();
         }
     }

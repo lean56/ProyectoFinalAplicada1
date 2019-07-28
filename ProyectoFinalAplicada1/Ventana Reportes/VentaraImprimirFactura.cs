@@ -15,21 +15,23 @@ namespace ProyectoFinalAplicada1.Ventana_Reportes
     public partial class VentaraImprimirFactura : Form
     {
         List<FacturaDetalle> lista;
-        public VentaraImprimirFactura(FacturaDetalle factura)
+        public VentaraImprimirFactura(List< FacturaDetalle> factura)
         {
             InitializeComponent();
-            lista = new List<FacturaDetalle>();
-            this.lista.Add(factura);
-
-          Cargar();
-        }
-
-        private void Cargar()
-        {
+            this.lista = factura;
             Factura facturas = new Factura();
             facturas.SetDataSource(lista);
             MyCrystalReportViewer.ReportSource = facturas;
             MyCrystalReportViewer.Refresh();
+            //Cargar();
+        }
+
+        private void Cargar()
+        {
+           // prueba facturas = new prueba();
+           // facturas.SetDataSource(lista);
+          // MyCrystalReportViewer.ReportSource = facturas;
+            //MyCrystalReportViewer.Refresh();
         }
     }
 }
