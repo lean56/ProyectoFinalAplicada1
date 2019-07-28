@@ -33,7 +33,7 @@ namespace BLL.Tests
             {
                 FacturaId = 1,
                 ClienteId = 1,
-                UsuarioId = 1,
+                //UsuarioId = 1,
                 ProductoId = 1,
                 Total = 100,
                 Fecha = DateTime.Now
@@ -52,7 +52,7 @@ namespace BLL.Tests
             {
                 FacturaId = 1,
                 ClienteId = 1,
-                UsuarioId = 1,
+                //UsuarioId = 1,
                 ProductoId = 2,
                 Total = 120,
                 Fecha = DateTime.Now
@@ -94,7 +94,7 @@ namespace BLL.Tests
             {
                 FacturaId = 1,
                 ClienteId = 1,
-                UsuarioId = 1,
+                //UsuarioId = 1,
                 ProductoId = 2,
                 Total = 120,
                 Fecha = DateTime.Now

@@ -1,6 +1,7 @@
 ﻿using BLL;
 using DAL;
 using Entidades;
+using ProyectoFinalAplicada1.Ventana_Reportes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,7 +16,7 @@ namespace ProyectoFinalAplicada1.Registros
 {
     public partial class rFacturas : Form
     {
-        public List<FacturaDetalle> detalle;
+        public List<FacturaDetalle> detalle = new List<FacturaDetalle>();
         public List<Productos> productoInvent;
         RepositorioBase<Usuarios> repositorio = new RepositorioBase<Usuarios>();
 
@@ -105,41 +106,57 @@ namespace ProyectoFinalAplicada1.Registros
             RepositorioBase<Productos> repositorio = new RepositorioBase<Productos>();
 
             Productos producto = BuscarProductos(Convert.ToInt32(IdProductnumericUpDown.Value));
-
-            int CantidadCotizada = 0;
-            foreach (var item in detalle)
+            if (IdProductnumericUpDown.Value == 0)
             {
-                CantidadCotizada += item.Cantidad;
-            }
-
-            if(CantidadtextBox.Text == string.Empty)
-            {
-                MyErrorProvider.SetError(CantidadtextBox, "Digite la Cantidad");
-                paso = true;
-            }
-           
-            int CantidadProducto = producto.Inventario;
-
-            if(CantidadProducto == 0 )
-            {
-                MyErrorProvider.SetError(CantidadtextBox, "Cantidad mayor a la existente en inventario!");
+                MyErrorProvider.SetError(CantidadtextBox, "Primero debe de buscar un producto!");
                 paso = true;
             }
             else
-
-
-            if (Convert.ToInt32(CantidadtextBox.Text) > producto.Inventario)
             {
-                CantidadProducto = producto.Inventario;
 
-                MyErrorProvider.SetError(CantidadtextBox, "Error");
-                MessageBox.Show("Cantidad mayor a la existente en inventario!!", "Falló!!",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-                paso = true;
+                int CantidadCotizada = 0;
+                foreach (var item in detalle)
+                {
+                    CantidadCotizada += item.Cantidad;
+                }
+
+                if (CantidadtextBox.Text == string.Empty)
+                {
+                    MyErrorProvider.SetError(CantidadtextBox, "Digite la Cantidad");
+                    paso = true;
+                }
+
+                int CantidadProducto = producto.Inventario;
+
+                if (CantidadProducto == 0)
+                {
+                    MyErrorProvider.SetError(CantidadtextBox, "Producto No Disponible en Inventario!");
+                    paso = true;
+                }
+                else
+
+                if (CantidadtextBox.Text == string.Empty)
+                {
+                    MyErrorProvider.SetError(CantidadtextBox, "Digite la Cantidad");
+                    paso = true;
+                }else
+
+                if (Convert.ToInt32(CantidadtextBox.Text) > producto.Inventario)
+                {
+                    CantidadProducto = producto.Inventario;
+
+                    MyErrorProvider.SetError(CantidadtextBox, "Cantidad Mayor a la existente en inventario");
+                    MessageBox.Show("Cantidad Mayor a la existente en inventario!!", "Falló!!",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    MessageBox.Show($"Solo quedan {CantidadProducto} del articulo deseado!!", "Articulo Agotado!!",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    paso = true;
+                    paso = true;
+                }
+
+                CantidadProducto -= CantidadCotizada;
             }
-
-            CantidadProducto -= CantidadCotizada;
-
             return paso;
         }
 
@@ -149,50 +166,20 @@ namespace ProyectoFinalAplicada1.Registros
 
             if (CantidadtextBox.Text == string.Empty)
             {
-                MyErrorProvider.SetError(NombretextBox, "Este Campo Esta Vacio");
+                MyErrorProvider.SetError(CantidadtextBox, "Este Campo Esta Vacio");
                 paso = false;
             }
 
             if(DescripciontextBox.Text == string.Empty)
             {
-                MyErrorProvider.SetError(CantidadtextBox, "Debe de Buscar un producto");
+                MyErrorProvider.SetError(IdProductnumericUpDown, "Debe de Buscar un producto");
                 paso = false;
             }
             if(NombretextBox.Text == string.Empty)
             {
-                MyErrorProvider.SetError(NombretextBox, "Debe de Buscar un Cliente");
+                MyErrorProvider.SetError(IdClientenumericUpDown, "Debe de Buscar un Cliente");
                 paso = false;
             }
-
-            //if (Id.Text == "Dirección")
-            //{
-            //    MyErrorProvider.SetError(DirecciontextBox, "Este Campo Esta Vacio");
-            //    paso = false;
-            //}
-
-            //if (EmailtextBox.Text == "Email")
-            //{
-            //    MyErrorProvider.SetError(EmailtextBox, "Este campo no puede estar vacio");
-            //    paso = false;
-            //}
-
-            //if (CedulamaskedTextBox.Text == string.Empty)
-            //{
-            //    MyErrorProvider.SetError(CedulamaskedTextBox, "Este campo no puede estar vacio");
-            //    CedulamaskedTextBox.Focus();
-            //    paso = false;
-            //}
-            //if (TelefonomaskedTextBox.Text == string.Empty)
-            //{
-            //    MyErrorProvider.SetError(TelefonomaskedTextBox, "Este campo no puede estar vacio");
-            //    paso = false;
-            //}
-
-            //if (CelularmaskedTextBox.Text == string.Empty)
-            //{
-            //    MyErrorProvider.SetError(CelularmaskedTextBox, "Este campo no puede estar vacio");
-            //    paso = false;
-            //}
 
             return paso;
         }
@@ -200,6 +187,30 @@ namespace ProyectoFinalAplicada1.Registros
         private void button1_Click(object sender, EventArgs e)
         {
             Limpiar();
+        }
+
+        private void Recibo()
+        {
+            //RepositorioBase<ReciboFact> Repositorio = new RepositorioBase<ReciboFact>(); // Creando el recibo de ingreso
+
+            //ReciboFact Recibo = new ReciboFact();
+            //Recibo.FacturaId= Convert.ToInt32( IdFacturanumericUpDown.Value);
+            //Recibo.Cliente = NombretextBox.Text;
+            //Recibo.vendedor = UsuarioTextBox.Text;
+            //Recibo.Descripcion = DescripciontextBox.Text;
+            //Recibo.Cantidad = Convert.ToInt32(CantidadtextBox.Text);
+            //Recibo.Precio = Convert.ToDecimal(PreciotextBox.Text);
+            //Recibo.Importe = Convert.ToInt32(ImportetextBox.Text);
+            //Repositorio.Guardar(Recibo);
+
+            //if (MessageBox.Show("Desea generar el recibo de pago?", "Advertencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) == DialogResult.OK) // Haciendo el recibo de pago
+            //{      
+            //    List<ReciboFact> ReciboDeIngreso = new List<ReciboFact>();
+
+            //    ReciboDeIngreso.Insert(0, Recibo);
+            //    VentanaReciboFactura reciboDePagoReportViewer = new VentanaReciboFactura(ReciboDeIngreso);
+            //    reciboDePagoReportViewer.ShowDialog();
+            //}
         }
 
         private void Guardarbutton_Click_1(object sender, EventArgs e)
@@ -223,19 +234,20 @@ namespace ProyectoFinalAplicada1.Registros
             {
                 if (!ExisteEnLaBaseDeDatos())
                 {
-                    MessageBox.Show("No se puede modificar una Factura que no existe", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Factura que no existe", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                //if (repositorio.Duplicado(p => p.Usuario == UsuariotextBox.Text))
-                //{
-                //    MyErrorProvider.SetError(UsuariotextBox, "Este Usuario Ya existe!!!");
-                //    return;
-                //}
-                paso = db.Modificar(factura);
+                paso = db.Modificar(factura);         
             }
             if (paso)
             {
                 MessageBox.Show("Factura Guardada!!", "Exito!!!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                var result = MessageBox.Show("Desea Imprimir un recibo?", "+Ventas",
+                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    Recibo();
+                }
                 Limpiar();
             }
             else
@@ -279,7 +291,6 @@ namespace ProyectoFinalAplicada1.Registros
         private void Addbutton_Click(object sender, EventArgs e)
         {
             List<FacturaDetalle> detalle = new List<FacturaDetalle>();
-            RepositorioBase<Productos> repositorio = new RepositorioBase<Productos>();
 
             if (DetalledataGridView.DataSource != null)
             {
@@ -289,7 +300,6 @@ namespace ProyectoFinalAplicada1.Registros
                 detalle = (List<FacturaDetalle>)DetalledataGridView.DataSource;
             if(CantidadInventario())
             {
-             //   MessageBox.Show($"Solo quedan del articulo deseado!!", "Articulo Agotado!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -313,10 +323,8 @@ namespace ProyectoFinalAplicada1.Registros
                   importe: Convert.ToDecimal(ImportetextBox.Text)
                   ));
             }
-  
             CargarGrid();
             LlenarValores();
-
         }
         //llenar producto
         private void LlenarProducto(Productos producto)
@@ -403,8 +411,7 @@ namespace ProyectoFinalAplicada1.Registros
                 LlenarCliente(cliente);
             }
             else
-                MyErrorProvider.SetError(IdClientenumericUpDown, "Cliente  no encontrado!!!");
-                
+                MyErrorProvider.SetError(IdClientenumericUpDown, "Cliente  no encontrado!!!");             
         }
 
         private Clientes BuscarCliente(int id)
@@ -421,11 +428,6 @@ namespace ProyectoFinalAplicada1.Registros
             }
 
             return cliente;
-        }
-
-        private void CantidadtextBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            
         }
 
         private void BuscarFacturabutton_Click(object sender, EventArgs e)
@@ -470,7 +472,6 @@ namespace ProyectoFinalAplicada1.Registros
 
                 Total *= (-1);
                 TotaltextBox.Text = Total.ToString();
-
             }
         }
 
@@ -480,7 +481,6 @@ namespace ProyectoFinalAplicada1.Registros
             RepositorioFactura db = new RepositorioFactura();
 
             RepositorioBase<Facturas> repositorio = new RepositorioBase<Facturas>();
-
 
             MyErrorProvider.Clear();
             int.TryParse(IdFacturanumericUpDown.Text, out int id);
@@ -497,7 +497,14 @@ namespace ProyectoFinalAplicada1.Registros
             }
         }
 
-        private void CantidadtextBox_TextChanged(object sender, EventArgs e)
+
+
+        private void CerrarButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void CantidadtextBox_TextChanged_2(object sender, EventArgs e)
         {
             if (CantidadtextBox.Text != string.Empty)
             {
@@ -505,8 +512,12 @@ namespace ProyectoFinalAplicada1.Registros
             }
         }
 
-        private void CantidadtextBox_KeyPress_1(object sender, KeyPressEventArgs e)
+        private void CantidadtextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if (e.KeyChar == 13)
+            {
+                Addbutton_Click(e.KeyChar, null);
+            }
             if (Char.IsWhiteSpace(e.KeyChar))
             {
                 e.Handled = false;
@@ -528,11 +539,6 @@ namespace ProyectoFinalAplicada1.Registros
             {
                 e.Handled = true;
             }
-        }
-
-        private void CerrarButton_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

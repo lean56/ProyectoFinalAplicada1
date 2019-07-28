@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rFacturas));
             this.label1 = new System.Windows.Forms.Label();
             this.IdFacturanumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
@@ -85,6 +86,11 @@
             // IdFacturanumericUpDown
             // 
             this.IdFacturanumericUpDown.Location = new System.Drawing.Point(173, 141);
+            this.IdFacturanumericUpDown.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
             this.IdFacturanumericUpDown.Name = "IdFacturanumericUpDown";
             this.IdFacturanumericUpDown.Size = new System.Drawing.Size(80, 20);
             this.IdFacturanumericUpDown.TabIndex = 1;
@@ -149,8 +155,8 @@
             this.CantidadtextBox.Name = "CantidadtextBox";
             this.CantidadtextBox.Size = new System.Drawing.Size(69, 20);
             this.CantidadtextBox.TabIndex = 102;
-            this.CantidadtextBox.TextChanged += new System.EventHandler(this.CantidadtextBox_TextChanged);
-            this.CantidadtextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CantidadtextBox_KeyPress_1);
+            this.CantidadtextBox.TextChanged += new System.EventHandler(this.CantidadtextBox_TextChanged_2);
+            this.CantidadtextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CantidadtextBox_KeyPress);
             // 
             // DetalledataGridView
             // 
@@ -164,7 +170,7 @@
             // Addbutton
             // 
             this.Addbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Addbutton.Image = global::ProyectoFinalAplicada1.Properties.Resources.add_icon_icons_com_52393;
+            this.Addbutton.Image = ((System.Drawing.Image)(resources.GetObject("Addbutton.Image")));
             this.Addbutton.Location = new System.Drawing.Point(466, 22);
             this.Addbutton.Name = "Addbutton";
             this.Addbutton.Size = new System.Drawing.Size(29, 24);
@@ -235,7 +241,7 @@
             // 
             // BuscarProductbutton
             // 
-            this.BuscarProductbutton.Image = global::ProyectoFinalAplicada1.Properties.Resources.loupe_78347;
+            this.BuscarProductbutton.Image = ((System.Drawing.Image)(resources.GetObject("BuscarProductbutton.Image")));
             this.BuscarProductbutton.Location = new System.Drawing.Point(71, 21);
             this.BuscarProductbutton.Name = "BuscarProductbutton";
             this.BuscarProductbutton.Size = new System.Drawing.Size(29, 23);
@@ -331,7 +337,7 @@
             // EliminarDetalle
             // 
             this.EliminarDetalle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.EliminarDetalle.Image = global::ProyectoFinalAplicada1.Properties.Resources.delete_file256_25240;
+            this.EliminarDetalle.Image = ((System.Drawing.Image)(resources.GetObject("EliminarDetalle.Image")));
             this.EliminarDetalle.Location = new System.Drawing.Point(126, 494);
             this.EliminarDetalle.Name = "EliminarDetalle";
             this.EliminarDetalle.Size = new System.Drawing.Size(41, 38);
@@ -341,7 +347,7 @@
             // 
             // BuscarClientebutton
             // 
-            this.BuscarClientebutton.Image = global::ProyectoFinalAplicada1.Properties.Resources.seo_social_web_network_internet_340_icon_icons_com_61497;
+            this.BuscarClientebutton.Image = ((System.Drawing.Image)(resources.GetObject("BuscarClientebutton.Image")));
             this.BuscarClientebutton.Location = new System.Drawing.Point(277, 173);
             this.BuscarClientebutton.Name = "BuscarClientebutton";
             this.BuscarClientebutton.Size = new System.Drawing.Size(35, 30);
@@ -352,7 +358,7 @@
             // BuscarFacturabutton
             // 
             this.BuscarFacturabutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BuscarFacturabutton.Image = global::ProyectoFinalAplicada1.Properties.Resources.preview_search_find_locate_1551;
+            this.BuscarFacturabutton.Image = ((System.Drawing.Image)(resources.GetObject("BuscarFacturabutton.Image")));
             this.BuscarFacturabutton.Location = new System.Drawing.Point(277, 129);
             this.BuscarFacturabutton.Name = "BuscarFacturabutton";
             this.BuscarFacturabutton.Size = new System.Drawing.Size(35, 33);
@@ -374,7 +380,7 @@
             // 
             // Nuevo
             // 
-            this.Nuevo.Image = global::ProyectoFinalAplicada1.Properties.Resources.file_new_22051;
+            this.Nuevo.Image = ((System.Drawing.Image)(resources.GetObject("Nuevo.Image")));
             this.Nuevo.Location = new System.Drawing.Point(6, 19);
             this.Nuevo.Name = "Nuevo";
             this.Nuevo.Size = new System.Drawing.Size(75, 50);
@@ -384,7 +390,7 @@
             // 
             // Guardarbutton
             // 
-            this.Guardarbutton.Image = global::ProyectoFinalAplicada1.Properties.Resources.save_21411;
+            this.Guardarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Guardarbutton.Image")));
             this.Guardarbutton.Location = new System.Drawing.Point(108, 19);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(75, 50);
@@ -394,7 +400,7 @@
             // 
             // Eliminarbutton
             // 
-            this.Eliminarbutton.Image = global::ProyectoFinalAplicada1.Properties.Resources.action_exit_close_remove_13915;
+            this.Eliminarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Eliminarbutton.Image")));
             this.Eliminarbutton.Location = new System.Drawing.Point(198, 19);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(75, 50);

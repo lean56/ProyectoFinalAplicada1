@@ -17,6 +17,8 @@ namespace DAL
         public DbSet<Clientes> Cliente { get; set; }
         public DbSet<Facturas> Factura { get; set; }
         public DbSet<Pagos> Pago { get; set; }
+        public DbSet<ReciboPago> ReciboPago { get; set; }
+
 
 
         public Contexto() : base("Constr") { }

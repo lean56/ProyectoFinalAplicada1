@@ -21,6 +21,7 @@ namespace ProyectoFinalAplicada1
         public Login()
         {
             InitializeComponent();
+            User();
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -54,6 +55,20 @@ namespace ProyectoFinalAplicada1
             }
      
             return paso;
+        }
+
+        private void User()
+        {
+            RepositorioBase<Usuarios> repositorio = new RepositorioBase<Usuarios>();
+            repositorio.Guardar(new Usuarios()
+
+            {
+                Nombre = "Leonardo Emil",
+                NivelUsuario = "Administrador",
+                Usuario = "lean56",
+                Contraseña = "admin",
+                FechaIngreso = DateTime.Now
+            } );
         }
 
 

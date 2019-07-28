@@ -135,10 +135,9 @@ namespace BLL
 
             try
             {
-                ProcientoGanancia = ((precio - costo) / costo);
-                ProcientoGanancia *= 100;
-                        
-            }catch(Exception)
+                ProcientoGanancia = precio - costo;                        
+            }
+            catch (Exception)
             {
                 throw;
             }
