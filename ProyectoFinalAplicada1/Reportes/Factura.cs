@@ -16,14 +16,14 @@ namespace ProyectoFinalAplicada1.Reportes {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class recibo : ReportClass {
+    public class Factura : ReportClass {
         
-        public recibo() {
+        public Factura() {
         }
         
         public override string ResourceName {
             get {
-                return "recibo.rpt";
+                return "Factura.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace ProyectoFinalAplicada1.Reportes {
         
         public override string FullResourceName {
             get {
-                return "ProyectoFinalAplicada1.Reportes.recibo.rpt";
+                return "ProyectoFinalAplicada1.Reportes.Factura.rpt";
             }
             set {
                 // Do nothing
@@ -90,9 +90,9 @@ namespace ProyectoFinalAplicada1.Reportes {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class Cachedrecibo : Component, ICachedReport {
+    public class CachedFactura : Component, ICachedReport {
         
-        public Cachedrecibo() {
+        public CachedFactura() {
         }
         
         [Browsable(false)]
@@ -129,7 +129,7 @@ namespace ProyectoFinalAplicada1.Reportes {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            recibo rpt = new recibo();
+            Factura rpt = new Factura();
             rpt.Site = this.Site;
             return rpt;
         }

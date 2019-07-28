@@ -189,8 +189,29 @@ namespace ProyectoFinalAplicada1.Registros
             Limpiar();
         }
 
+        private FacturaDetalle llenaFactura()
+        {
+            FacturaDetalle factura = new FacturaDetalle();
+
+            factura.FacturaId = (int)IdFacturanumericUpDown.Value;
+            factura.ProductoId = (int)IdProductnumericUpDown.Value;
+            factura.Cantidad = Convert.ToInt32( CantidadtextBox.Text);
+            factura.Precio = Convert.ToDecimal(PreciotextBox.Text);
+            factura.Importe = Convert.ToDecimal(ImportetextBox.Text);
+
+
+            return factura;
+        }
+
         private void Recibo()
         {
+
+            Facturas factura;
+            factura = LlenaClase();
+
+           
+           // VentaraImprimirFactura viewer = new VentaraImprimirFactura(factura);
+           // viewer.ShowDialog();
             //RepositorioBase<ReciboFact> Repositorio = new RepositorioBase<ReciboFact>(); // Creando el recibo de ingreso
 
             //ReciboFact Recibo = new ReciboFact();
@@ -539,6 +560,14 @@ namespace ProyectoFinalAplicada1.Registros
             {
                 e.Handled = true;
             }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            FacturaDetalle factura = llenaFactura();
+
+            VentaraImprimirFactura viewer = new VentaraImprimirFactura(factura);
+            viewer.ShowDialog();
         }
     }
 }

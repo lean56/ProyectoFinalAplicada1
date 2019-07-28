@@ -39,7 +39,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.CantidadtextBox = new System.Windows.Forms.TextBox();
             this.DetalledataGridView = new System.Windows.Forms.DataGridView();
-            this.Addbutton = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.ImportetextBox = new System.Windows.Forms.TextBox();
@@ -47,7 +46,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.DescripciontextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.BuscarProductbutton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.IdProductnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.TotaltextBox = new System.Windows.Forms.TextBox();
@@ -58,13 +56,16 @@
             this.label10 = new System.Windows.Forms.Label();
             this.CerrarButton = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.EliminarDetalle = new System.Windows.Forms.Button();
-            this.BuscarClientebutton = new System.Windows.Forms.Button();
-            this.BuscarFacturabutton = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.Nuevo = new System.Windows.Forms.Button();
             this.Guardarbutton = new System.Windows.Forms.Button();
             this.Eliminarbutton = new System.Windows.Forms.Button();
+            this.EliminarDetalle = new System.Windows.Forms.Button();
+            this.Addbutton = new System.Windows.Forms.Button();
+            this.BuscarProductbutton = new System.Windows.Forms.Button();
+            this.BuscarClientebutton = new System.Windows.Forms.Button();
+            this.BuscarFacturabutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.IdFacturanumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IdClientenumericUpDown)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -167,17 +168,6 @@
             this.DetalledataGridView.Size = new System.Drawing.Size(476, 167);
             this.DetalledataGridView.TabIndex = 18;
             // 
-            // Addbutton
-            // 
-            this.Addbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Addbutton.Image = ((System.Drawing.Image)(resources.GetObject("Addbutton.Image")));
-            this.Addbutton.Location = new System.Drawing.Point(466, 22);
-            this.Addbutton.Name = "Addbutton";
-            this.Addbutton.Size = new System.Drawing.Size(29, 24);
-            this.Addbutton.TabIndex = 17;
-            this.Addbutton.UseVisualStyleBackColor = true;
-            this.Addbutton.Click += new System.EventHandler(this.Addbutton_Click);
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -238,16 +228,6 @@
             this.label5.Size = new System.Drawing.Size(63, 13);
             this.label5.TabIndex = 9;
             this.label5.Text = "Descripción";
-            // 
-            // BuscarProductbutton
-            // 
-            this.BuscarProductbutton.Image = ((System.Drawing.Image)(resources.GetObject("BuscarProductbutton.Image")));
-            this.BuscarProductbutton.Location = new System.Drawing.Point(71, 21);
-            this.BuscarProductbutton.Name = "BuscarProductbutton";
-            this.BuscarProductbutton.Size = new System.Drawing.Size(29, 23);
-            this.BuscarProductbutton.TabIndex = 8;
-            this.BuscarProductbutton.UseVisualStyleBackColor = true;
-            this.BuscarProductbutton.Click += new System.EventHandler(this.BuscarProductbutton_Click);
             // 
             // label4
             // 
@@ -334,6 +314,58 @@
             this.label11.TabIndex = 99;
             this.label11.Text = "Factura";
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.Nuevo);
+            this.groupBox2.Controls.Add(this.Guardarbutton);
+            this.groupBox2.Controls.Add(this.Eliminarbutton);
+            this.groupBox2.Location = new System.Drawing.Point(218, 519);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(279, 80);
+            this.groupBox2.TabIndex = 101;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Botones";
+            // 
+            // button1
+            // 
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(513, 538);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 50);
+            this.button1.TabIndex = 102;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // Nuevo
+            // 
+            this.Nuevo.Image = ((System.Drawing.Image)(resources.GetObject("Nuevo.Image")));
+            this.Nuevo.Location = new System.Drawing.Point(6, 19);
+            this.Nuevo.Name = "Nuevo";
+            this.Nuevo.Size = new System.Drawing.Size(75, 50);
+            this.Nuevo.TabIndex = 38;
+            this.Nuevo.UseVisualStyleBackColor = true;
+            this.Nuevo.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Guardarbutton
+            // 
+            this.Guardarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Guardarbutton.Image")));
+            this.Guardarbutton.Location = new System.Drawing.Point(100, 19);
+            this.Guardarbutton.Name = "Guardarbutton";
+            this.Guardarbutton.Size = new System.Drawing.Size(75, 50);
+            this.Guardarbutton.TabIndex = 39;
+            this.Guardarbutton.UseVisualStyleBackColor = true;
+            this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click_1);
+            // 
+            // Eliminarbutton
+            // 
+            this.Eliminarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Eliminarbutton.Image")));
+            this.Eliminarbutton.Location = new System.Drawing.Point(198, 19);
+            this.Eliminarbutton.Name = "Eliminarbutton";
+            this.Eliminarbutton.Size = new System.Drawing.Size(75, 50);
+            this.Eliminarbutton.TabIndex = 40;
+            this.Eliminarbutton.UseVisualStyleBackColor = true;
+            this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
+            // 
             // EliminarDetalle
             // 
             this.EliminarDetalle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -344,6 +376,27 @@
             this.EliminarDetalle.TabIndex = 98;
             this.EliminarDetalle.UseVisualStyleBackColor = true;
             this.EliminarDetalle.Click += new System.EventHandler(this.EliminarDetalle_Click);
+            // 
+            // Addbutton
+            // 
+            this.Addbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Addbutton.Image = ((System.Drawing.Image)(resources.GetObject("Addbutton.Image")));
+            this.Addbutton.Location = new System.Drawing.Point(466, 22);
+            this.Addbutton.Name = "Addbutton";
+            this.Addbutton.Size = new System.Drawing.Size(29, 24);
+            this.Addbutton.TabIndex = 17;
+            this.Addbutton.UseVisualStyleBackColor = true;
+            this.Addbutton.Click += new System.EventHandler(this.Addbutton_Click);
+            // 
+            // BuscarProductbutton
+            // 
+            this.BuscarProductbutton.Image = ((System.Drawing.Image)(resources.GetObject("BuscarProductbutton.Image")));
+            this.BuscarProductbutton.Location = new System.Drawing.Point(71, 21);
+            this.BuscarProductbutton.Name = "BuscarProductbutton";
+            this.BuscarProductbutton.Size = new System.Drawing.Size(29, 23);
+            this.BuscarProductbutton.TabIndex = 8;
+            this.BuscarProductbutton.UseVisualStyleBackColor = true;
+            this.BuscarProductbutton.Click += new System.EventHandler(this.BuscarProductbutton_Click);
             // 
             // BuscarClientebutton
             // 
@@ -366,53 +419,12 @@
             this.BuscarFacturabutton.UseVisualStyleBackColor = true;
             this.BuscarFacturabutton.Click += new System.EventHandler(this.BuscarFacturabutton_Click);
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.Nuevo);
-            this.groupBox2.Controls.Add(this.Guardarbutton);
-            this.groupBox2.Controls.Add(this.Eliminarbutton);
-            this.groupBox2.Location = new System.Drawing.Point(218, 519);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(279, 80);
-            this.groupBox2.TabIndex = 101;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Botones";
-            // 
-            // Nuevo
-            // 
-            this.Nuevo.Image = ((System.Drawing.Image)(resources.GetObject("Nuevo.Image")));
-            this.Nuevo.Location = new System.Drawing.Point(6, 19);
-            this.Nuevo.Name = "Nuevo";
-            this.Nuevo.Size = new System.Drawing.Size(75, 50);
-            this.Nuevo.TabIndex = 38;
-            this.Nuevo.UseVisualStyleBackColor = true;
-            this.Nuevo.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // Guardarbutton
-            // 
-            this.Guardarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Guardarbutton.Image")));
-            this.Guardarbutton.Location = new System.Drawing.Point(108, 19);
-            this.Guardarbutton.Name = "Guardarbutton";
-            this.Guardarbutton.Size = new System.Drawing.Size(75, 50);
-            this.Guardarbutton.TabIndex = 39;
-            this.Guardarbutton.UseVisualStyleBackColor = true;
-            this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click_1);
-            // 
-            // Eliminarbutton
-            // 
-            this.Eliminarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Eliminarbutton.Image")));
-            this.Eliminarbutton.Location = new System.Drawing.Point(198, 19);
-            this.Eliminarbutton.Name = "Eliminarbutton";
-            this.Eliminarbutton.Size = new System.Drawing.Size(75, 50);
-            this.Eliminarbutton.TabIndex = 40;
-            this.Eliminarbutton.UseVisualStyleBackColor = true;
-            this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
-            // 
             // rFacturas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(846, 604);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.CerrarButton);
             this.Controls.Add(this.label11);
@@ -484,5 +496,6 @@
         private System.Windows.Forms.Button Guardarbutton;
         private System.Windows.Forms.Button Eliminarbutton;
         private System.Windows.Forms.TextBox CantidadtextBox;
+        private System.Windows.Forms.Button button1;
     }
 }

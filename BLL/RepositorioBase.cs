@@ -161,6 +161,7 @@ namespace BLL
         {
             usuario.Usuario = Usuario;
             usuario.NivelUsuario = tipodeusuario;
+         
         }
         public virtual Usuarios ReturnUsuario()
         {

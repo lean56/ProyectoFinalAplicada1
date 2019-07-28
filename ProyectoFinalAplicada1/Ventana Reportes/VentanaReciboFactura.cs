@@ -27,7 +27,7 @@ namespace ProyectoFinalAplicada1.Ventana_Reportes
 
         private void Cargar()
         {
-            recibo recib = new recibo();
+            ReciboPagos recib = new ReciboPagos();
             recib.SetDataSource(reciboFact);
             MyCrystalReportViewer.ReportSource = recib;
             MyCrystalReportViewer.Refresh();

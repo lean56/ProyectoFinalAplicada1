@@ -16,9 +16,12 @@ namespace ProyectoFinalAplicada1.Registros
 {
     public partial class rPagos : Form
     {
+        RepositorioBase<Usuarios> repositorio = new RepositorioBase<Usuarios>();
+
         public rPagos()
         {
             InitializeComponent();
+            UsuarioLabel.Text = repositorio.ReturnUsuario().Usuario;
             LlenarComboBox();
         }
 
@@ -148,7 +151,8 @@ namespace ProyectoFinalAplicada1.Registros
 
             ReciboPago Recibo = new ReciboPago();
             Recibo.Cliente = ClienteComboBox.Text;
-            Recibo.Monto = Convert.ToInt32(MontotextBox.Text);
+            Recibo.vendedor = UsuarioLabel.Text;
+            Recibo.Monto = Convert.ToDecimal(MontotextBox.Text);
             Recibo.Fecha = FechadateTimePicker.Value;
 
             Repositorio.Guardar(Recibo);
@@ -196,8 +200,10 @@ namespace ProyectoFinalAplicada1.Registros
             }
             if (paso)
             {
+                Recibo();
                 MessageBox.Show("Pago Guardado!!", "Exito!!!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Limpiar();
+               
             }
             else
                 MessageBox.Show("No Se Pudo Guardar!!", "Fallo!!!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);

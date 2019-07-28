@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rPagos));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Nuevobutton = new System.Windows.Forms.Button();
             this.Guardarbutton = new System.Windows.Forms.Button();
@@ -45,6 +46,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.MyErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.CerrarButton = new System.Windows.Forms.Label();
+            this.UsuarioLabel = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IdNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).BeginInit();
@@ -64,7 +66,7 @@
             // 
             // Nuevobutton
             // 
-            this.Nuevobutton.Image = global::ProyectoFinalAplicada1.Properties.Resources.file_new_22051;
+            this.Nuevobutton.Image = ((System.Drawing.Image)(resources.GetObject("Nuevobutton.Image")));
             this.Nuevobutton.Location = new System.Drawing.Point(6, 19);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(75, 50);
@@ -74,7 +76,7 @@
             // 
             // Guardarbutton
             // 
-            this.Guardarbutton.Image = global::ProyectoFinalAplicada1.Properties.Resources.save_21411;
+            this.Guardarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Guardarbutton.Image")));
             this.Guardarbutton.Location = new System.Drawing.Point(108, 19);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(75, 50);
@@ -84,7 +86,7 @@
             // 
             // Eliminarbutton
             // 
-            this.Eliminarbutton.Image = global::ProyectoFinalAplicada1.Properties.Resources.action_exit_close_remove_13915;
+            this.Eliminarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Eliminarbutton.Image")));
             this.Eliminarbutton.Location = new System.Drawing.Point(198, 19);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(75, 50);
@@ -94,7 +96,7 @@
             // 
             // BuscarButton
             // 
-            this.BuscarButton.Image = global::ProyectoFinalAplicada1.Properties.Resources.seo_social_web_network_internet_340_icon_icons_com_61497;
+            this.BuscarButton.Image = ((System.Drawing.Image)(resources.GetObject("BuscarButton.Image")));
             this.BuscarButton.Location = new System.Drawing.Point(448, 125);
             this.BuscarButton.Name = "BuscarButton";
             this.BuscarButton.Size = new System.Drawing.Size(39, 35);
@@ -203,11 +205,22 @@
             this.CerrarButton.Text = "X";
             this.CerrarButton.Click += new System.EventHandler(this.CerrarButton_Click);
             // 
+            // UsuarioLabel
+            // 
+            this.UsuarioLabel.AutoSize = true;
+            this.UsuarioLabel.Location = new System.Drawing.Point(795, 437);
+            this.UsuarioLabel.Name = "UsuarioLabel";
+            this.UsuarioLabel.Size = new System.Drawing.Size(10, 13);
+            this.UsuarioLabel.TabIndex = 102;
+            this.UsuarioLabel.Text = ".";
+            this.UsuarioLabel.Visible = false;
+            // 
             // rPagos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(804, 450);
+            this.Controls.Add(this.UsuarioLabel);
             this.Controls.Add(this.CerrarButton);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.groupBox1);
@@ -249,5 +262,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ErrorProvider MyErrorProvider;
         private System.Windows.Forms.Label CerrarButton;
+        private System.Windows.Forms.Label UsuarioLabel;
     }
 }
