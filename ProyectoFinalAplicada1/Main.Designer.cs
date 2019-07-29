@@ -66,6 +66,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.CerrarSeccionbutton = new System.Windows.Forms.Button();
+            this.cPagosButton = new System.Windows.Forms.Button();
             this.MenuVertical.SuspendLayout();
             this.RegistroPanel.SuspendLayout();
             this.ConsultaPanel.SuspendLayout();
@@ -132,10 +133,11 @@
             // 
             // Reportepanel
             // 
+            this.Reportepanel.Controls.Add(this.cPagosButton);
             this.Reportepanel.Controls.Add(this.rptUsuarioButton);
             this.Reportepanel.Controls.Add(this.CReporte);
             this.Reportepanel.Location = new System.Drawing.Point(3, 196);
-            this.Reportepanel.MaximumSize = new System.Drawing.Size(200, 69);
+            this.Reportepanel.MaximumSize = new System.Drawing.Size(200, 89);
             this.Reportepanel.MinimumSize = new System.Drawing.Size(200, 33);
             this.Reportepanel.Name = "Reportepanel";
             this.Reportepanel.Size = new System.Drawing.Size(200, 33);
@@ -605,6 +607,24 @@
             this.CerrarSeccionbutton.UseVisualStyleBackColor = false;
             this.CerrarSeccionbutton.Click += new System.EventHandler(this.CerrarSeccionbutton_Click);
             // 
+            // cPagosButton
+            // 
+            this.cPagosButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.cPagosButton.FlatAppearance.BorderSize = 0;
+            this.cPagosButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.cPagosButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cPagosButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.cPagosButton.Image = global::ProyectoFinalAplicada1.Properties.Resources.find_102325;
+            this.cPagosButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cPagosButton.Location = new System.Drawing.Point(0, 65);
+            this.cPagosButton.Name = "cPagosButton";
+            this.cPagosButton.Size = new System.Drawing.Size(200, 29);
+            this.cPagosButton.TabIndex = 21;
+            this.cPagosButton.Text = "Consulta Pagos";
+            this.cPagosButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cPagosButton.UseVisualStyleBackColor = false;
+            this.cPagosButton.Click += new System.EventHandler(this.cPagosButton_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -674,5 +694,6 @@
         private System.Windows.Forms.Button CReporte;
         private System.Windows.Forms.Button rptUsuarioButton;
         private System.Windows.Forms.Timer Reportetimer;
+        private System.Windows.Forms.Button cPagosButton;
     }
 }

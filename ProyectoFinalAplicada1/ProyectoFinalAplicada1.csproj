@@ -90,6 +90,12 @@
     <Compile Include="Consultas\cFacturas.Designer.cs">
       <DependentUpon>cFacturas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Consultas\cPagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\cPagos.Designer.cs">
+      <DependentUpon>cPagos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Consultas\cProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,6 +188,12 @@
       <DependentUpon>ReporteFacturas.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Reportes\ReportePagos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportePagos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Reportes\ReporteProductos.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -218,6 +230,12 @@
     <Compile Include="Ventana Reportes\VentanaRptFacturas.Designer.cs">
       <DependentUpon>VentanaRptFacturas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ventana Reportes\VentanaRptPagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana Reportes\VentanaRptPagos.Designer.cs">
+      <DependentUpon>VentanaRptPagos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventana Reportes\VentanaRptProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -247,6 +265,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Consultas\cFacturas.resx">
       <DependentUpon>cFacturas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\cPagos.resx">
+      <DependentUpon>cPagos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Consultas\cProductos.resx">
       <DependentUpon>cProductos.cs</DependentUpon>
@@ -306,6 +327,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ReporteFacturas.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReportePagos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReportePagos.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\ReporteProductos.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ReporteProductos.cs</LastGenOutput>
@@ -326,6 +351,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ventana Reportes\VentanaRptFacturas.resx">
       <DependentUpon>VentanaRptFacturas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventana Reportes\VentanaRptPagos.resx">
+      <DependentUpon>VentanaRptPagos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventana Reportes\VentanaRptProducto.resx">
       <DependentUpon>VentanaRptProducto.cs</DependentUpon>

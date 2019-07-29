@@ -354,24 +354,9 @@ namespace ProyectoFinalAplicada1
             AbrirFormInPanel(new rPagos());
         }
 
-        private void rptProductosButton_Click(object sender, EventArgs e)
+        private void cPagosButton_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void rptEntradaButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void rptCategoriaButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void RptFacturasButton_Click(object sender, EventArgs e)
-        {
-
+            AbrirFormInPanel(new cPagos());
         }
     }
 }
