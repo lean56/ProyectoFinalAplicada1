@@ -60,15 +60,18 @@ namespace ProyectoFinalAplicada1
         private void User()
         {
             RepositorioBase<Usuarios> repositorio = new RepositorioBase<Usuarios>();
-            repositorio.Guardar(new Usuarios()
-
+            if (!repositorio.Duplicado(p => p.Usuario == "lean56"))
             {
-                Nombre = "Leonardo Emil",
-                NivelUsuario = "Administrador",
-                Usuario = "lean56",
-                Contraseña = "admin",
-                FechaIngreso = DateTime.Now
-            } );
+                repositorio.Guardar(new Usuarios()
+
+                {
+                    Nombre = "Leonardo Emil",
+                    NivelUsuario = "Administrador",
+                    Usuario = "lean56",
+                    Contraseña = "admin",
+                    FechaIngreso = DateTime.Now
+                });
+            }
         }
 
 

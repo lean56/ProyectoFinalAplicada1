@@ -64,6 +64,7 @@ namespace ProyectoFinalAplicada1.Registros
             if (categorias != null)
             {
                 MyErrorProvider.Clear();
+                Eliminarbutton.Enabled = true;
                 LlenaCampo(categorias);
                 
             }

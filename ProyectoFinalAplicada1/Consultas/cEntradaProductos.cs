@@ -54,7 +54,6 @@ namespace ProyectoFinalAplicada1.Consultas
                 {
                     case 0://Todo: todo
                         listado = repositorio.GetList(p => true);
-                        Imprimirbutton.Visible = true;
                         break;
                     case 1: //Todo: ID Entrada
                         if (CristerioTextBox.Text.Any(x => !char.IsNumber(x)))
@@ -64,9 +63,7 @@ namespace ProyectoFinalAplicada1.Consultas
                         else
                         {
                             int idEntrada = Convert.ToInt32(CristerioTextBox.Text);
-                            listado = repositorio.GetList(p => p.EntradaId == idEntrada);
-                            Imprimirbutton.Visible = true;
-                        }
+                            listado = repositorio.GetList(p => p.EntradaId == idEntrada);                        }
                         break;
                     case 2: //Todo: ID
                         if (CristerioTextBox.Text.Any(x => !char.IsNumber(x)))
@@ -77,7 +74,6 @@ namespace ProyectoFinalAplicada1.Consultas
                         {
                             int idProducto = Convert.ToInt32(CristerioTextBox.Text);
                             listado = repositorio.GetList(p => p.ProductoId == idProducto);
-                            Imprimirbutton.Visible = true;
                         }
                         break;
                     case 3://Todo: Cantidad
@@ -89,7 +85,6 @@ namespace ProyectoFinalAplicada1.Consultas
                         {
                             int cantidad = Convert.ToInt32(CristerioTextBox.Text);
                             listado = repositorio.GetList(p => p.Cantidad == cantidad);
-                            Imprimirbutton.Visible = true;
                         }
                         break;     
                 }
@@ -120,20 +115,6 @@ namespace ProyectoFinalAplicada1.Consultas
         private void ConsultaUserbutton_Click(object sender, EventArgs e)
         {
             Buscar();
-        }
-
-        private void Imprimirbutton_Click(object sender, EventArgs e)
-        {
-            if (listaEntradaProductos.Count == 0)
-            {
-                MessageBox.Show("No Hay Datos para imprimir");
-                return;
-            }
-            else
-            {
-             //   VentanaRptUsuarios rptE = new VentanaRptUsuarios(listaUsuario);
-               // rptE.ShowDialog();
-            }
         }
 
         private void CerrarButton_Click(object sender, EventArgs e)

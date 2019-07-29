@@ -120,12 +120,6 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Principal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Principal.Designer.cs">
-      <DependentUpon>Principal.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registros\rCategorias.cs">
@@ -169,12 +163,6 @@
     </Compile>
     <Compile Include="Registros\rUsuarios.Designer.cs">
       <DependentUpon>rUsuarios.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reportes\ReciboFactura.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ReciboFactura.rpt</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reportes\ReciboPagos.cs">
       <AutoGen>True</AutoGen>
@@ -275,9 +263,6 @@
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Principal.resx">
-      <DependentUpon>Principal.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -308,10 +293,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Registros\rUsuarios.resx">
       <DependentUpon>rUsuarios.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\ReciboFactura.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>ReciboFactura.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\ReciboPagos.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -482,6 +463,7 @@
     <None Include="Resources\businesspackage_additionalpackage_box_add_insert_negoci_23352.png" />
     <None Include="Resources\addusergroup_1251.png" />
     <None Include="Resources\businesssettings_thebox_theproduct_negocio_23271.png" />
+    <None Include="Resources\apps_printer_15747.png" />
     <Content Include="Resources\business_salesreport_salesreport_negocio_2353.png" />
     <None Include="Resources\Expand Arrow_20px.png" />
     <None Include="Resources\Collapse Arrow_20px.png" />

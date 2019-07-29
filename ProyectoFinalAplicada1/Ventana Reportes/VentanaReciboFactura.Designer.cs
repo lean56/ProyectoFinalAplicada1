@@ -41,7 +41,6 @@
             this.MyCrystalReportViewer.Name = "MyCrystalReportViewer";
             this.MyCrystalReportViewer.Size = new System.Drawing.Size(800, 450);
             this.MyCrystalReportViewer.TabIndex = 0;
-            this.MyCrystalReportViewer.Load += new System.EventHandler(this.MyCrystalReportViewer_Load);
             // 
             // VentanaReciboFactura
             // 
@@ -49,10 +48,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.MyCrystalReportViewer);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "VentanaReciboFactura";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "VentanaReciboFactura";
+            this.Text = "Recibo de Pagos";
             this.ResumeLayout(false);
 
         }

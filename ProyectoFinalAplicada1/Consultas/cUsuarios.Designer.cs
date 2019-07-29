@@ -70,6 +70,7 @@
             this.cUsuariosdataGridView.Name = "cUsuariosdataGridView";
             this.cUsuariosdataGridView.Size = new System.Drawing.Size(596, 196);
             this.cUsuariosdataGridView.TabIndex = 8;
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.FiltroComboBox);
@@ -109,6 +110,7 @@
             // 
             // ConsultaUserbutton
             // 
+            this.ConsultaUserbutton.Image = global::ProyectoFinalAplicada1.Properties.Resources.seo_social_web_network_internet_340_icon_icons1;
             this.ConsultaUserbutton.Location = new System.Drawing.Point(350, 28);
             this.ConsultaUserbutton.Name = "ConsultaUserbutton";
             this.ConsultaUserbutton.Size = new System.Drawing.Size(36, 34);
@@ -140,11 +142,11 @@
             // 
             // Imprimirbutton
             // 
-            this.Imprimirbutton.Location = new System.Drawing.Point(598, 412);
+            this.Imprimirbutton.Image = global::ProyectoFinalAplicada1.Properties.Resources.apps_printer_15747;
+            this.Imprimirbutton.Location = new System.Drawing.Point(616, 402);
             this.Imprimirbutton.Name = "Imprimirbutton";
-            this.Imprimirbutton.Size = new System.Drawing.Size(75, 23);
+            this.Imprimirbutton.Size = new System.Drawing.Size(75, 51);
             this.Imprimirbutton.TabIndex = 20;
-            this.Imprimirbutton.Text = "Imprimir";
             this.Imprimirbutton.UseVisualStyleBackColor = true;
             this.Imprimirbutton.Visible = false;
             this.Imprimirbutton.Click += new System.EventHandler(this.Imprimirbutton_Click);
@@ -211,9 +213,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(310, 58);
+            this.label3.Font = new System.Drawing.Font("Monotype Corsiva", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(256, 29);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(107, 13);
+            this.label3.Size = new System.Drawing.Size(219, 33);
             this.label3.TabIndex = 25;
             this.label3.Text = "Consulta de Usuarios";
             // 

@@ -180,6 +180,12 @@ namespace ProyectoFinalAplicada1.Registros
                 MyErrorProvider.SetError(IdClientenumericUpDown, "Debe de Buscar un Cliente");
                 paso = false;
             }
+            if (this.detalle.Count == 0)
+            {
+                MyErrorProvider.SetError(DetalledataGridView, "debe agregar un Producto");
+                IdProductnumericUpDown.Focus();
+                paso = false;
+            }
 
             return paso;
         }
@@ -440,7 +446,7 @@ namespace ProyectoFinalAplicada1.Registros
                 LlenaCampo(factura); //todo: llenar datos de la Factura
                 LlenarCliente(BuscarCliente(factura.ClienteId)); //todo: llena id & nombre del Cliente
                 LlenarProducto(BuscarProductos(factura.ProductoId));
-
+                Eliminarbutton.Enabled = true;
             }
             else
                 MyErrorProvider.SetError(IdFacturanumericUpDown, "Factura  no encontrada");
@@ -476,19 +482,26 @@ namespace ProyectoFinalAplicada1.Registros
 
             RepositorioBase<Facturas> repositorio = new RepositorioBase<Facturas>();
 
-            MyErrorProvider.Clear();
-            int.TryParse(IdFacturanumericUpDown.Text, out int id);
+            RepositorioBase<Usuarios> repositorioUser = new RepositorioBase<Usuarios>();
 
-            if (!ExisteEnLaBaseDeDatos())
+            if (repositorioUser.ReturnUsuario().NivelUsuario == "Administrador")
             {
-                MyErrorProvider.SetError(IdFacturanumericUpDown, "Factura no existe!!!");
-                return;
+                MyErrorProvider.Clear();
+                int.TryParse(IdFacturanumericUpDown.Text, out int id);
+
+                if (!ExisteEnLaBaseDeDatos())
+                {
+                    MyErrorProvider.SetError(IdFacturanumericUpDown, "Factura no existe!!!");
+                    return;
+                }
+                if (db.Eliminar(id))
+                {
+                    Limpiar();
+                    MessageBox.Show("Factura Eliminada!!", "Exito!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
-            if (db.Eliminar(id))
-            {
-                Limpiar();
-                MessageBox.Show("Factura Eliminada!!", "Exito!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            else
+                MessageBox.Show("No tiene Acceso a Eliminar Factura", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);        
         }
 
 
@@ -533,19 +546,6 @@ namespace ProyectoFinalAplicada1.Registros
             {
                 e.Handled = true;
             }
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-
-            List<FacturaDetalle> detalle = new List<FacturaDetalle>();
-
-           
-             detalle = (List<FacturaDetalle>)DetalledataGridView.DataSource;
-            
-          
-            VentaraImprimirFactura viewer = new VentaraImprimirFactura(detalle);
-            viewer.ShowDialog();
         }
     }
 }

@@ -86,6 +86,7 @@
             // 
             // Eliminarbutton
             // 
+            this.Eliminarbutton.Enabled = false;
             this.Eliminarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Eliminarbutton.Image")));
             this.Eliminarbutton.Location = new System.Drawing.Point(198, 19);
             this.Eliminarbutton.Name = "Eliminarbutton";
@@ -114,6 +115,7 @@
             this.MontotextBox.Name = "MontotextBox";
             this.MontotextBox.Size = new System.Drawing.Size(107, 26);
             this.MontotextBox.TabIndex = 74;
+            this.MontotextBox.Text = "Monto";
             this.MontotextBox.Enter += new System.EventHandler(this.MontotextBox_Enter);
             this.MontotextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MontotextBox_KeyPress);
             this.MontotextBox.Leave += new System.EventHandler(this.MontotextBox_Leave);

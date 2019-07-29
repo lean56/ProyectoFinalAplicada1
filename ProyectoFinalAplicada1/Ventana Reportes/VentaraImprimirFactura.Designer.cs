@@ -49,7 +49,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.MyCrystalReportViewer);
             this.Name = "VentaraImprimirFactura";
-            this.Text = "VentaraImprimirFactura";
+            this.Text = "Factura";
             this.ResumeLayout(false);
 
         }

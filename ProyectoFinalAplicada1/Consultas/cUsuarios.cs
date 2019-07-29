@@ -35,11 +35,13 @@ namespace ProyectoFinalAplicada1.Consultas
                 FiltroComboBox.Focus();
                 paso = false;
             }
-            if (CristerioTextBox.Text == string.Empty)
+            if (String.IsNullOrWhiteSpace(CristerioTextBox.Text))
             {
-                MyErrorProvider.SetError(CristerioTextBox, "El campo Criterio esta vacio");
+                MyErrorProvider.SetError(CristerioTextBox, "Campo vacio");
                 CristerioTextBox.Focus();
+                paso = false;
             }
+
             return paso;
         }
 
@@ -50,7 +52,7 @@ namespace ProyectoFinalAplicada1.Consultas
             var listado = new List<Usuarios>();
 
             if (!Validar())
-                return;
+                //return;
 
             if (CristerioTextBox.Text.Trim().Length > 0)
             {
@@ -61,7 +63,7 @@ namespace ProyectoFinalAplicada1.Consultas
                         Imprimirbutton.Visible = true;
                         break;
                     case 1: //Todo: ID
-                        if (CristerioTextBox.Text.Any(x => !char.IsNumber(x)))
+                        if (CristerioTextBox.Text.Any(x => !char.IsNumber(x))|| CristerioTextBox.Text == string.Empty)
                         {
                             MyErrorProvider.SetError(CristerioTextBox, "No es Un Numero,Digite el ID");
                         }
@@ -73,6 +75,10 @@ namespace ProyectoFinalAplicada1.Consultas
                         }
                         break;
                     case 2://Todo: Nombres
+                        if (CristerioTextBox.Text == string.Empty)
+                        {
+                            return;
+                        }else
                         listado = repositorioE.GetList(p => p.Nombre.Contains(CristerioTextBox.Text));
                         Imprimirbutton.Visible = true;
                         break;
@@ -86,25 +92,26 @@ namespace ProyectoFinalAplicada1.Consultas
             else
             {
                 listado = repositorioE.GetList(p => true);
+                cUsuariosdataGridView.DataSource = null;
+
+                cUsuariosdataGridView.DataSource = listado;
+                listaUsuario = listado;
+
+                cUsuariosdataGridView.Columns[0].HeaderText = "ID";
+                cUsuariosdataGridView.Columns[0].Width = 50;
+                cUsuariosdataGridView.Columns[1].HeaderText = "Nombres";
+                cUsuariosdataGridView.Columns[1].Width = 150;
+                cUsuariosdataGridView.Columns[2].HeaderText = "Nivel Usuario";
+                cUsuariosdataGridView.Columns[4].Visible = false;
+                cUsuariosdataGridView.Columns[5].HeaderText = "Fecha Ingreso";
+                cUsuariosdataGridView.Columns[5].DefaultCellStyle.Format = "dd/MM/yyyy";
             }
 
             if (FechacheckBox.Checked)
             {
                 listado = listado.Where(c => c.FechaIngreso.Date >= DesdedateTimePicker.Value.Date && c.FechaIngreso.Date <= HastadateTimePicker.Value.Date).ToList();
             }
-            cUsuariosdataGridView.DataSource = null;
-
-            cUsuariosdataGridView.DataSource = listado;
-            listaUsuario = listado;
-
-            cUsuariosdataGridView.Columns[0].HeaderText = "ID";
-            cUsuariosdataGridView.Columns[0].Width = 50;
-            cUsuariosdataGridView.Columns[1].HeaderText = "Nombres";
-            cUsuariosdataGridView.Columns[1].Width = 150;
-            cUsuariosdataGridView.Columns[2].HeaderText = "Nivel Usuario";
-            cUsuariosdataGridView.Columns[4].Visible = false;
-            cUsuariosdataGridView.Columns[5].HeaderText = "Fecha Ingreso";
-            cUsuariosdataGridView.Columns[5].DefaultCellStyle.Format = "dd/MM/yyyy";
+            
 
         }
 

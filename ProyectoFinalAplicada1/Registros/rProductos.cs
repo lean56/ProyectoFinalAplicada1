@@ -97,6 +97,7 @@ namespace ProyectoFinalAplicada1.Registros
             if (producto != null)
             {
                 MyErrorProvider.Clear();
+                Eliminarbutton.Enabled = true;
                 LlenaCampo(producto);
                 InventariotextBox.Text  = producto.Inventario.ToString();
             }
@@ -175,11 +176,11 @@ namespace ProyectoFinalAplicada1.Registros
                     MessageBox.Show("No se puede modificar un Producto que no existe", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-              //  if (repositorio.Duplicado(p => p.Usuario == UsuariotextBox.Text))
-             //   {
-                    //MyErrorProvider.SetError(UsuariotextBox, "Este Usuario Ya existe!!!");
-                   // return;
-              //  }
+                if (repositorio.Duplicado(p => p.Descripcion == DescripciontextBox.Text))
+                {
+                    MyErrorProvider.SetError(DescripciontextBox, "Este Producto ya Existe!!!");
+                    return;
+                }
                 paso = repositorio.Modificar(producto);
             }
             if (paso)
@@ -194,19 +195,28 @@ namespace ProyectoFinalAplicada1.Registros
         private void Eliminarbutton_Click_1(object sender, EventArgs e)
         {
             RepositorioBase<Productos> repositorio = new RepositorioBase<Productos>();
-            MyErrorProvider.Clear();
-            int.TryParse(IdnumericUpDown.Text, out int id);
 
-            if (!ExisteEnLaBaseDeDatos())
+            RepositorioBase<Usuarios> repositorioUser = new RepositorioBase<Usuarios>();
+
+            if (repositorioUser.ReturnUsuario().NivelUsuario == "Administrador")
             {
-                MyErrorProvider.SetError(IdnumericUpDown, "Producto No Existe!!!");
-                return;
+                MyErrorProvider.Clear();
+                int.TryParse(IdnumericUpDown.Text, out int id);
+
+                if (!ExisteEnLaBaseDeDatos())
+                {
+                    MyErrorProvider.SetError(IdnumericUpDown, "Producto No Existe!!!");
+                    return;
+                }
+                if (repositorio.Eliminar(id))
+                {
+                    Limpiar();
+                    MessageBox.Show("Producto Eliminado!!", "Exito!!!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
-            if (repositorio.Eliminar(id))
-            {
-                Limpiar();
-                MessageBox.Show("Producto Eliminado!!", "Exito!!!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+
+            else
+                MessageBox.Show("No tiene Acceso a Eliminar Producto", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);     
         }
 
         private decimal ToDecimal(object valor)

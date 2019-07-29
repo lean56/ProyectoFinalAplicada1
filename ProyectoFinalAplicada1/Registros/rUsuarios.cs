@@ -128,6 +128,7 @@ namespace ProyectoFinalAplicada1.Registros
             if (usuario != null)
             {
                 MyErrorProvider.Clear();
+                Eliminarbutton.Enabled = true;
                 LlenaCampo(usuario);
             }
             else

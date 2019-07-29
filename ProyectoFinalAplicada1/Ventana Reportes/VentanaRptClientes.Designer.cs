@@ -41,6 +41,7 @@
             this.ClientescrystalReportViewer.Name = "ClientescrystalReportViewer";
             this.ClientescrystalReportViewer.Size = new System.Drawing.Size(800, 450);
             this.ClientescrystalReportViewer.TabIndex = 0;
+            // 
             // VentanaRptClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -48,7 +49,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.ClientescrystalReportViewer);
             this.Name = "VentanaRptClientes";
-            this.Text = "VentanaRptClientes";
+            this.Text = "Clientes";
             this.ResumeLayout(false);
 
         }

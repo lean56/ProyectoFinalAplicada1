@@ -43,9 +43,9 @@
             this.ConsultaUserbutton = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.Imprimirbutton = new System.Windows.Forms.Button();
             this.MyErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.CerrarButton = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cUsuariosdataGridView)).BeginInit();
@@ -194,17 +194,6 @@
             this.label7.TabIndex = 11;
             this.label7.Text = "Filtro";
             // 
-            // Imprimirbutton
-            // 
-            this.Imprimirbutton.Location = new System.Drawing.Point(638, 388);
-            this.Imprimirbutton.Name = "Imprimirbutton";
-            this.Imprimirbutton.Size = new System.Drawing.Size(75, 23);
-            this.Imprimirbutton.TabIndex = 32;
-            this.Imprimirbutton.Text = "Imprimir";
-            this.Imprimirbutton.UseVisualStyleBackColor = true;
-            this.Imprimirbutton.Visible = false;
-            this.Imprimirbutton.Click += new System.EventHandler(this.Imprimirbutton_Click);
-            // 
             // MyErrorProvider
             // 
             this.MyErrorProvider.ContainerControl = this;
@@ -221,13 +210,23 @@
             this.CerrarButton.Text = "X";
             this.CerrarButton.Click += new System.EventHandler(this.CerrarButton_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Monotype Corsiva", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(276, 18);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(232, 33);
+            this.label3.TabIndex = 64;
+            this.label3.Text = "Consulta de Categorias";
+            // 
             // cCategorias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.CerrarButton);
-            this.Controls.Add(this.Imprimirbutton);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -262,8 +261,8 @@
         private System.Windows.Forms.Button ConsultaUserbutton;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button Imprimirbutton;
         private System.Windows.Forms.ErrorProvider MyErrorProvider;
         private System.Windows.Forms.Label CerrarButton;
+        private System.Windows.Forms.Label label3;
     }
 }

@@ -41,12 +41,14 @@
             this.FacturascrystalReportViewer.Name = "FacturascrystalReportViewer";
             this.FacturascrystalReportViewer.Size = new System.Drawing.Size(800, 450);
             this.FacturascrystalReportViewer.TabIndex = 0;
-          // VentanaRptFacturas
+            // 
+            // VentanaRptFacturas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.FacturascrystalReportViewer);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "VentanaRptFacturas";
             this.Text = "VentanaRptFacturas";
             this.ResumeLayout(false);

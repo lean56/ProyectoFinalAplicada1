@@ -87,6 +87,7 @@ namespace ProyectoFinalAplicada1.Registros
             if (cliente != null)
             {
                 MyErrorProvider.Clear();
+                Eliminarbutton.Enabled = true;
                 LlenaCampo(cliente);
             }
             else
@@ -183,19 +184,29 @@ namespace ProyectoFinalAplicada1.Registros
         private void Eliminarbutton_Click_1(object sender, EventArgs e)
         {
             RepositorioBase<Clientes> repositorio = new RepositorioBase<Clientes>();
-            MyErrorProvider.Clear();
-            int.TryParse(IdnumericUpDown.Text, out int id);
 
-            if (!ExisteEnLaBaseDeDatos())
+
+            RepositorioBase<Usuarios> repositorioUser = new RepositorioBase<Usuarios>();
+
+            if (repositorioUser.ReturnUsuario().NivelUsuario == "Administrador")
             {
-                MyErrorProvider.SetError(IdnumericUpDown, "Cliente No Existe!!!");
-                return;
+                MyErrorProvider.Clear();
+                int.TryParse(IdnumericUpDown.Text, out int id);
+
+                if (!ExisteEnLaBaseDeDatos())
+                {
+                    MyErrorProvider.SetError(IdnumericUpDown, "Cliente No Existe!!!");
+                    return;
+                }
+                if (repositorio.Eliminar(id))
+                {
+                    Limpiar();
+                    MessageBox.Show("Cliente Eliminado!!", "Exito!!!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
-            if (repositorio.Eliminar(id))
-            {
-                Limpiar();
-                MessageBox.Show("Cliente Eliminado!!", "Exito!!!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            else
+                MessageBox.Show("No tiene Acceso a Eliminar Cliente", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+          
         }
 
         //Todo: Eventos de TextBox

@@ -15,32 +15,18 @@ namespace ProyectoFinalAplicada1.Ventana_Reportes
 {
     public partial class VentanaReciboFactura : Form
     {
-        List<Entidades.ReciboPago> reciboFact = new List<Entidades.ReciboPago>();
+        List<ReciboPago> reciboFact = new List<ReciboPago>();
 
-        public VentanaReciboFactura(List<Entidades.ReciboPago> recibo)
+        public VentanaReciboFactura(List<ReciboPago> recibo)
         {
-            this.reciboFact = recibo;
-
             InitializeComponent();
-            Cargar();
-        }
-
-        private void Cargar()
-        {
+            this.reciboFact = recibo;
             ReciboPagos recib = new ReciboPagos();
             recib.SetDataSource(reciboFact);
             MyCrystalReportViewer.ReportSource = recib;
             MyCrystalReportViewer.Refresh();
         }
-
-        private void MyCrystalReportViewer_Load(object sender, EventArgs e)
-        {
-            ReciboFactura datos = new ReciboFactura();
-            datos.SetDataSource(reciboFact);
-            MyCrystalReportViewer.ReportSource = datos;
-            MyCrystalReportViewer.Refresh();
-        }
-        
+     
     }
 
 }

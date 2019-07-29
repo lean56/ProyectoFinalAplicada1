@@ -106,6 +106,7 @@ namespace ProyectoFinalAplicada1.Registros
             if (entrada != null)
             {
                 MyErrorProvider.Clear();
+                Eliminarbutton.Enabled = true;
                 LlenaCampo(entrada);
             }
             else
@@ -164,19 +165,30 @@ namespace ProyectoFinalAplicada1.Registros
             RepositorioEntrada db = new RepositorioEntrada();
 
             RepositorioBase<EntradaProductos> repositorio = new RepositorioBase<EntradaProductos>();
-            MyErrorProvider.Clear();
-            int.TryParse(IdNumericUpDown.Text, out int id);
 
-            if (!ExisteEnLaBaseDeDatos())
+            RepositorioBase<Usuarios> repositorioUser = new RepositorioBase<Usuarios>();
+
+            if (repositorioUser.ReturnUsuario().NivelUsuario == "Administrador")
             {
-                MyErrorProvider.SetError(IdNumericUpDown, "Entrada de Producto No Existe!!!");
-                return;
+                MyErrorProvider.Clear();
+                int.TryParse(IdNumericUpDown.Text, out int id);
+
+                if (!ExisteEnLaBaseDeDatos())
+                {
+                    MyErrorProvider.SetError(IdNumericUpDown, "Entrada de Producto No Existe!!!");
+                    return;
+                }
+                if (db.Eliminar(id))
+                {
+                    Limpiar();
+                    MessageBox.Show("Entrada de Producto Eliminado!!", "Exito!!!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
-            if (db.Eliminar(id))
-            {
-                Limpiar();
-                MessageBox.Show("Entrada de Producto Eliminado!!", "Exito!!!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+
+            else
+                MessageBox.Show("No tiene Acceso a Eliminar", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+          
         }
 
         private void CerrarButton_Click(object sender, EventArgs e)

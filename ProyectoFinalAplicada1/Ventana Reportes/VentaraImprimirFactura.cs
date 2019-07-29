@@ -23,15 +23,7 @@ namespace ProyectoFinalAplicada1.Ventana_Reportes
             facturas.SetDataSource(lista);
             MyCrystalReportViewer.ReportSource = facturas;
             MyCrystalReportViewer.Refresh();
-            //Cargar();
         }
-
-        private void Cargar()
-        {
-           // prueba facturas = new prueba();
-           // facturas.SetDataSource(lista);
-          // MyCrystalReportViewer.ReportSource = facturas;
-            //MyCrystalReportViewer.Refresh();
-        }
+  
     }
 }

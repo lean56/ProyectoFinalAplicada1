@@ -84,6 +84,7 @@ namespace ProyectoFinalAplicada1.Registros
             if (pago != null)
             {
                 MyErrorProvider.Clear();
+                Eliminarbutton.Enabled = true;
                 LlenaCampo(pago);
             }
             else
@@ -157,7 +158,7 @@ namespace ProyectoFinalAplicada1.Registros
 
             Repositorio.Guardar(Recibo);
 
-            if (MessageBox.Show("Desea generar el recibo de pago?", "Advertencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) == DialogResult.OK) // Haciendo el recibo de pago
+            if (MessageBox.Show("Desea generar el recibo de pago?", "Advertencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) == DialogResult.OK) 
             {      
                List<ReciboPago> ReciboDeIngreso = new List<ReciboPago>();
 
@@ -200,10 +201,9 @@ namespace ProyectoFinalAplicada1.Registros
             }
             if (paso)
             {
-                Recibo();
                 MessageBox.Show("Pago Guardado!!", "Exito!!!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Recibo();
                 Limpiar();
-               
             }
             else
                 MessageBox.Show("No Se Pudo Guardar!!", "Fallo!!!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -219,19 +219,27 @@ namespace ProyectoFinalAplicada1.Registros
             RepositorioPago db = new RepositorioPago();
 
             RepositorioBase<Pagos> repositorio = new RepositorioBase<Pagos>();
-            MyErrorProvider.Clear();
-            int.TryParse(IdNumericUpDown.Text, out int id);
 
-            if (!ExisteEnLaBaseDeDatos())
+            RepositorioBase<Usuarios> repositorioUser = new RepositorioBase<Usuarios>();
+
+            if (repositorioUser.ReturnUsuario().NivelUsuario == "Administrador")
             {
-                MyErrorProvider.SetError(IdNumericUpDown, "Pago No Existe!!!");
-                return;
+                MyErrorProvider.Clear();
+                int.TryParse(IdNumericUpDown.Text, out int id);
+
+                if (!ExisteEnLaBaseDeDatos())
+                {
+                    MyErrorProvider.SetError(IdNumericUpDown, "Pago No Existe!!!");
+                    return;
+                }
+                if (db.Eliminar(id))
+                {
+                    Limpiar();
+                    MessageBox.Show("Pago Eliminado!!", "Exito!!!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
-            if (db.Eliminar(id))
-            {
-                Limpiar();
-                MessageBox.Show("Pago Eliminado!!", "Exito!!!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            else
+                MessageBox.Show("No tiene Acceso a Eliminar Pago", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void MontotextBox_KeyPress(object sender, KeyPressEventArgs e)

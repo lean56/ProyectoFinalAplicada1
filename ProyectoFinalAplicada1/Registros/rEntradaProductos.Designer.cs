@@ -186,6 +186,7 @@
             // 
             // Eliminarbutton
             // 
+            this.Eliminarbutton.Enabled = false;
             this.Eliminarbutton.Image = global::ProyectoFinalAplicada1.Properties.Resources.action_exit_close_remove_13915;
             this.Eliminarbutton.Location = new System.Drawing.Point(198, 19);
             this.Eliminarbutton.Name = "Eliminarbutton";
