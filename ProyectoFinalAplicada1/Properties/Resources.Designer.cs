@@ -223,6 +223,16 @@ namespace ProyectoFinalAplicada1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cash_icon_icons_com_51090 {
+            get {
+                object obj = ResourceManager.GetObject("cash_icon-icons.com_51090", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Collapse_Arrow_20px {
             get {
                 object obj = ResourceManager.GetObject("Collapse Arrow_20px", resourceCulture);

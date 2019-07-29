@@ -136,23 +136,20 @@
   <data name="add_icon-icons.com_52393" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\add_icon-icons.com_52393.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon minimizar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon minimizar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="explorer_folders_18871" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\explorer_folders_18871.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="preview_search_find_locate_1551" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\preview_search_find_locate_1551.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="folder_add_icon-icons.com_74436" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\folder_add_icon-icons.com_744361.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="businesspackage_additionalpackage_box_add_insert_negoci_2335" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\businesspackage_additionalpackage_box_add_insert_negoci_23351.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icon restaurar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon restaurar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="user_accounts_15362" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user_accounts_15362.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="apps_printer_15747" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\apps_printer_15747.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="folder_add_256_icon-icons.com_75998" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\folder_add_256_icon-icons.com_75998.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -174,6 +171,9 @@
   </data>
   <data name="business_salesreport_salesreport_negocio_2353" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\business_salesreport_salesreport_negocio_23531.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Expand Arrow_20px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Expand Arrow_20px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="businessapplication_distributor_report_document_negocio_2319" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\businessapplication_distributor_report_document_negocio_2319.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -199,14 +199,14 @@
   <data name="icon cerrar2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon cerrar2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon restaurar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon restaurar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="folder_add_icon-icons.com_74436" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\folder_add_icon-icons.com_744361.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="SignOut_icon-icons.com_74704" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SignOut_icon-icons.com_74704.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Expand Arrow_20px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Expand Arrow_20px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon minimizar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon minimizar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="businesssettings_thebox_theproduct_negocio_23271" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\businesssettings_thebox_theproduct_negocio_23271.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -214,17 +214,20 @@
   <data name="Sin título" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sin título.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="businesssettings_thebox_theproduct_negocio_2327" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\businesssettings_thebox_theproduct_negocio_2327.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="loupe_78347" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\loupe_78347.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Cargo_1_35517" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cargo_1_35517.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="seo-social-web-network-internet_340_icon-icons.com_61497" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\seo-social-web-network-internet_340_icon-icons.com_61497.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Sin título-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sin título-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="find_102325" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\find_1023251.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="business_sales_payment_paymentcard_card_money_2352" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\business_sales_payment_paymentcard_card_money_23521.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -244,13 +247,13 @@
   <data name="ic_add_shopping_cart_128_28122" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ic_add_shopping_cart_128_28122.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="businesssettings_thebox_theproduct_negocio_2327" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\businesssettings_thebox_theproduct_negocio_2327.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="preview_search_find_locate_1551" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\preview_search_find_locate_1551.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="find_102325" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\find_1023251.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="seo-social-web-network-internet_340_icon-icons.com_61497" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\seo-social-web-network-internet_340_icon-icons.com_61497.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="apps_printer_15747" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\apps_printer_15747.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cash_icon-icons.com_51090" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cash_icon-icons.com_51090.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -53,6 +53,8 @@
             this.Guardarbutton = new System.Windows.Forms.Button();
             this.Eliminarbutton = new System.Windows.Forms.Button();
             this.Buscarbutton = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.DeudatextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.IdnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -61,7 +63,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(281, 130);
+            this.label1.Location = new System.Drawing.Point(281, 114);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(18, 13);
             this.label1.TabIndex = 0;
@@ -70,7 +72,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(281, 173);
+            this.label2.Location = new System.Drawing.Point(281, 157);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 13);
             this.label2.TabIndex = 1;
@@ -79,7 +81,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(281, 301);
+            this.label3.Location = new System.Drawing.Point(281, 285);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 13);
             this.label3.TabIndex = 2;
@@ -88,7 +90,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(278, 214);
+            this.label4.Location = new System.Drawing.Point(278, 198);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 13);
             this.label4.TabIndex = 3;
@@ -97,7 +99,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(281, 343);
+            this.label5.Location = new System.Drawing.Point(281, 327);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 13);
             this.label5.TabIndex = 4;
@@ -106,7 +108,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(281, 380);
+            this.label6.Location = new System.Drawing.Point(281, 364);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(39, 13);
             this.label6.TabIndex = 5;
@@ -115,7 +117,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(281, 263);
+            this.label7.Location = new System.Drawing.Point(281, 247);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(32, 13);
             this.label7.TabIndex = 6;
@@ -124,7 +126,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(281, 415);
+            this.label8.Location = new System.Drawing.Point(281, 399);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(37, 13);
             this.label8.TabIndex = 7;
@@ -132,7 +134,7 @@
             // 
             // IdnumericUpDown
             // 
-            this.IdnumericUpDown.Location = new System.Drawing.Point(336, 128);
+            this.IdnumericUpDown.Location = new System.Drawing.Point(336, 112);
             this.IdnumericUpDown.Name = "IdnumericUpDown";
             this.IdnumericUpDown.Size = new System.Drawing.Size(70, 20);
             this.IdnumericUpDown.TabIndex = 8;
@@ -141,7 +143,7 @@
             // 
             this.FechadateTimePicker.CustomFormat = "dd/MM/yyyy";
             this.FechadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.FechadateTimePicker.Location = new System.Drawing.Point(336, 415);
+            this.FechadateTimePicker.Location = new System.Drawing.Point(336, 399);
             this.FechadateTimePicker.Name = "FechadateTimePicker";
             this.FechadateTimePicker.Size = new System.Drawing.Size(123, 20);
             this.FechadateTimePicker.TabIndex = 20;
@@ -150,7 +152,7 @@
             // 
             this.CedulamaskedTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CedulamaskedTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CedulamaskedTextBox.Location = new System.Drawing.Point(336, 301);
+            this.CedulamaskedTextBox.Location = new System.Drawing.Point(336, 285);
             this.CedulamaskedTextBox.Mask = "000-0000000-0";
             this.CedulamaskedTextBox.Name = "CedulamaskedTextBox";
             this.CedulamaskedTextBox.Size = new System.Drawing.Size(123, 26);
@@ -160,7 +162,7 @@
             // 
             this.TelefonomaskedTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TelefonomaskedTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.TelefonomaskedTextBox.Location = new System.Drawing.Point(336, 336);
+            this.TelefonomaskedTextBox.Location = new System.Drawing.Point(336, 320);
             this.TelefonomaskedTextBox.Mask = "000-000-0000";
             this.TelefonomaskedTextBox.Name = "TelefonomaskedTextBox";
             this.TelefonomaskedTextBox.Size = new System.Drawing.Size(123, 26);
@@ -169,7 +171,7 @@
             // CelularmaskedTextBox
             // 
             this.CelularmaskedTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.CelularmaskedTextBox.Location = new System.Drawing.Point(336, 377);
+            this.CelularmaskedTextBox.Location = new System.Drawing.Point(336, 361);
             this.CelularmaskedTextBox.Mask = "000-000-0000";
             this.CelularmaskedTextBox.Name = "CelularmaskedTextBox";
             this.CelularmaskedTextBox.Size = new System.Drawing.Size(123, 26);
@@ -184,7 +186,7 @@
             this.CerrarButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.CerrarButton.AutoSize = true;
             this.CerrarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CerrarButton.Location = new System.Drawing.Point(785, 9);
+            this.CerrarButton.Location = new System.Drawing.Point(796, 9);
             this.CerrarButton.Name = "CerrarButton";
             this.CerrarButton.Size = new System.Drawing.Size(17, 17);
             this.CerrarButton.TabIndex = 62;
@@ -195,7 +197,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Monotype Corsiva", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(288, 65);
+            this.label9.Location = new System.Drawing.Point(288, 49);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(216, 37);
             this.label9.TabIndex = 61;
@@ -207,7 +209,7 @@
             this.NombretextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.NombretextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NombretextBox.ForeColor = System.Drawing.Color.Silver;
-            this.NombretextBox.Location = new System.Drawing.Point(336, 165);
+            this.NombretextBox.Location = new System.Drawing.Point(336, 149);
             this.NombretextBox.Name = "NombretextBox";
             this.NombretextBox.Size = new System.Drawing.Size(171, 26);
             this.NombretextBox.TabIndex = 63;
@@ -221,7 +223,7 @@
             this.DirecciontextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.DirecciontextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DirecciontextBox.ForeColor = System.Drawing.Color.Silver;
-            this.DirecciontextBox.Location = new System.Drawing.Point(336, 206);
+            this.DirecciontextBox.Location = new System.Drawing.Point(336, 190);
             this.DirecciontextBox.Name = "DirecciontextBox";
             this.DirecciontextBox.Size = new System.Drawing.Size(171, 26);
             this.DirecciontextBox.TabIndex = 64;
@@ -235,7 +237,7 @@
             this.EmailtextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.EmailtextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmailtextBox.ForeColor = System.Drawing.Color.Silver;
-            this.EmailtextBox.Location = new System.Drawing.Point(336, 255);
+            this.EmailtextBox.Location = new System.Drawing.Point(336, 239);
             this.EmailtextBox.Name = "EmailtextBox";
             this.EmailtextBox.Size = new System.Drawing.Size(171, 26);
             this.EmailtextBox.TabIndex = 65;
@@ -248,7 +250,7 @@
             this.groupBox1.Controls.Add(this.Nuevobutton);
             this.groupBox1.Controls.Add(this.Guardarbutton);
             this.groupBox1.Controls.Add(this.Eliminarbutton);
-            this.groupBox1.Location = new System.Drawing.Point(278, 462);
+            this.groupBox1.Location = new System.Drawing.Point(278, 471);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(279, 80);
             this.groupBox1.TabIndex = 67;
@@ -289,18 +291,41 @@
             // Buscarbutton
             // 
             this.Buscarbutton.Image = global::ProyectoFinalAplicada1.Properties.Resources.seo_social_web_network_internet_340_icon_icons_com_61497;
-            this.Buscarbutton.Location = new System.Drawing.Point(420, 119);
+            this.Buscarbutton.Location = new System.Drawing.Point(420, 103);
             this.Buscarbutton.Name = "Buscarbutton";
             this.Buscarbutton.Size = new System.Drawing.Size(39, 35);
             this.Buscarbutton.TabIndex = 66;
             this.Buscarbutton.UseVisualStyleBackColor = true;
             this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click_1);
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(283, 439);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(39, 13);
+            this.label10.TabIndex = 68;
+            this.label10.Text = "Deuda";
+            // 
+            // DeudatextBox
+            // 
+            this.DeudatextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.DeudatextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.DeudatextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeudatextBox.ForeColor = System.Drawing.Color.Silver;
+            this.DeudatextBox.Location = new System.Drawing.Point(336, 435);
+            this.DeudatextBox.Name = "DeudatextBox";
+            this.DeudatextBox.ReadOnly = true;
+            this.DeudatextBox.Size = new System.Drawing.Size(123, 26);
+            this.DeudatextBox.TabIndex = 69;
+            // 
             // rClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(814, 554);
+            this.ClientSize = new System.Drawing.Size(825, 568);
+            this.Controls.Add(this.DeudatextBox);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.Buscarbutton);
             this.Controls.Add(this.EmailtextBox);
@@ -358,5 +383,7 @@
         private System.Windows.Forms.Button Guardarbutton;
         private System.Windows.Forms.Button Eliminarbutton;
         private System.Windows.Forms.Button Buscarbutton;
+        private System.Windows.Forms.TextBox DeudatextBox;
+        private System.Windows.Forms.Label label10;
     }
 }

@@ -54,7 +54,6 @@ namespace ProyectoFinalAplicada1.Consultas
                 {
                     case 0://Todo: todo
                         listado = repositorio.GetList(p => true);
-                        Imprimirbutton.Visible = true;
                         break;
                     case 1: //Todo: ID
                         if (CristerioTextBox.Text.Any(x => !char.IsNumber(x)))
@@ -65,12 +64,10 @@ namespace ProyectoFinalAplicada1.Consultas
                         {
                             int id = Convert.ToInt32(CristerioTextBox.Text);
                             listado = repositorio.GetList(p => p.CategoriaId == id);
-                            Imprimirbutton.Visible = true;
                         }
                         break;
                     case 2://Todo: Descripcion
                         listado = repositorio.GetList(p => p.Nombre.Contains(CristerioTextBox.Text));
-                        Imprimirbutton.Visible = true;
                         break;
                 }
 

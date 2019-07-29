@@ -80,10 +80,10 @@ namespace BLL.Tests
             Usuarios usuario = new Usuarios()
             {
                 UsuarioId = 1,
-                Nombre = "Prueba",
-                NivelUsuario = "user",
-                Usuario = "p1",
-                Contraseña = "123",
+                Nombre = "root",
+                NivelUsuario = "Administrador",
+                Usuario = "admin",
+                Contraseña = "admin",
                 FechaIngreso = DateTime.Now
             };
 

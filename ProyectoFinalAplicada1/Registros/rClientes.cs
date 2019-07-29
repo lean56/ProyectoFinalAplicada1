@@ -32,6 +32,7 @@ namespace ProyectoFinalAplicada1.Registros
             TelefonomaskedTextBox.Clear();
             CelularmaskedTextBox.Clear();
             FechadateTimePicker.Value = DateTime.Now;
+            DeudatextBox.Text = "0";
             MyErrorProvider.Clear();
         }
 
@@ -61,10 +62,12 @@ namespace ProyectoFinalAplicada1.Registros
             TelefonomaskedTextBox.Text = cliente.Telefono;
             CelularmaskedTextBox.Text = cliente.Cedula;
             FechadateTimePicker.Value = cliente.Fecha;
+            DeudatextBox.Text = cliente.Deuda.ToString();
 
             NombretextBox.ForeColor = Color.Black;
             DirecciontextBox.ForeColor = Color.Black;
             EmailtextBox.ForeColor = Color.Black;
+            DeudatextBox.ForeColor = Color.Black;
         }
 
         private bool ExisteEnLaBaseDeDatos()
@@ -165,11 +168,6 @@ namespace ProyectoFinalAplicada1.Registros
                     MessageBox.Show("No se puede modificar un Cliente que no existe", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                //if (repositorio.Duplicado(p => p.Usuario == UsuariotextBox.Text))
-                //{
-                //    MyErrorProvider.SetError(UsuariotextBox, "Este Usuario Ya existe!!!");
-                //    return;
-                //}
                 paso = repositorio.Modificar(cliente);
             }
             if (paso)

@@ -467,6 +467,7 @@
     <Content Include="Resources\business_salesreport_salesreport_negocio_2353.png" />
     <None Include="Resources\Expand Arrow_20px.png" />
     <None Include="Resources\Collapse Arrow_20px.png" />
+    <None Include="Resources\cash_icon-icons.com_51090.png" />
     <Content Include="Resources\find_102325.png" />
     <None Include="Resources\folder_add_icon-icons.com_744361.png" />
   </ItemGroup>

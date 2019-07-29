@@ -59,10 +59,6 @@
             this.cEntradaButton = new System.Windows.Forms.Button();
             this.cCategoriaButton = new System.Windows.Forms.Button();
             this.cProductoButton = new System.Windows.Forms.Button();
-            this.RptFacturasButton = new System.Windows.Forms.Button();
-            this.rptEntradaButton = new System.Windows.Forms.Button();
-            this.rptCategoriaButton = new System.Windows.Forms.Button();
-            this.rptProductosButton = new System.Windows.Forms.Button();
             this.rptUsuarioButton = new System.Windows.Forms.Button();
             this.CReporte = new System.Windows.Forms.Button();
             this.FacturaButton = new System.Windows.Forms.Button();
@@ -136,14 +132,10 @@
             // 
             // Reportepanel
             // 
-            this.Reportepanel.Controls.Add(this.RptFacturasButton);
-            this.Reportepanel.Controls.Add(this.rptEntradaButton);
-            this.Reportepanel.Controls.Add(this.rptCategoriaButton);
-            this.Reportepanel.Controls.Add(this.rptProductosButton);
             this.Reportepanel.Controls.Add(this.rptUsuarioButton);
             this.Reportepanel.Controls.Add(this.CReporte);
             this.Reportepanel.Location = new System.Drawing.Point(3, 196);
-            this.Reportepanel.MaximumSize = new System.Drawing.Size(200, 176);
+            this.Reportepanel.MaximumSize = new System.Drawing.Size(200, 69);
             this.Reportepanel.MinimumSize = new System.Drawing.Size(200, 33);
             this.Reportepanel.Name = "Reportepanel";
             this.Reportepanel.Size = new System.Drawing.Size(200, 33);
@@ -503,78 +495,6 @@
             this.cProductoButton.UseVisualStyleBackColor = false;
             this.cProductoButton.Click += new System.EventHandler(this.cProductoButton_Click);
             // 
-            // RptFacturasButton
-            // 
-            this.RptFacturasButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.RptFacturasButton.FlatAppearance.BorderSize = 0;
-            this.RptFacturasButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.RptFacturasButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RptFacturasButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.RptFacturasButton.Image = global::ProyectoFinalAplicada1.Properties.Resources.find_102325;
-            this.RptFacturasButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.RptFacturasButton.Location = new System.Drawing.Point(0, 148);
-            this.RptFacturasButton.Name = "RptFacturasButton";
-            this.RptFacturasButton.Size = new System.Drawing.Size(200, 29);
-            this.RptFacturasButton.TabIndex = 24;
-            this.RptFacturasButton.Text = "Reporte Facturas";
-            this.RptFacturasButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.RptFacturasButton.UseVisualStyleBackColor = false;
-            this.RptFacturasButton.Click += new System.EventHandler(this.RptFacturasButton_Click);
-            // 
-            // rptEntradaButton
-            // 
-            this.rptEntradaButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.rptEntradaButton.FlatAppearance.BorderSize = 0;
-            this.rptEntradaButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.rptEntradaButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rptEntradaButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.rptEntradaButton.Image = global::ProyectoFinalAplicada1.Properties.Resources.find_102325;
-            this.rptEntradaButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.rptEntradaButton.Location = new System.Drawing.Point(1, 94);
-            this.rptEntradaButton.Name = "rptEntradaButton";
-            this.rptEntradaButton.Size = new System.Drawing.Size(200, 27);
-            this.rptEntradaButton.TabIndex = 22;
-            this.rptEntradaButton.Text = "Reporte Entrada Productos";
-            this.rptEntradaButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.rptEntradaButton.UseVisualStyleBackColor = false;
-            this.rptEntradaButton.Click += new System.EventHandler(this.rptEntradaButton_Click);
-            // 
-            // rptCategoriaButton
-            // 
-            this.rptCategoriaButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.rptCategoriaButton.FlatAppearance.BorderSize = 0;
-            this.rptCategoriaButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.rptCategoriaButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rptCategoriaButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.rptCategoriaButton.Image = global::ProyectoFinalAplicada1.Properties.Resources.find_102325;
-            this.rptCategoriaButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.rptCategoriaButton.Location = new System.Drawing.Point(1, 121);
-            this.rptCategoriaButton.Name = "rptCategoriaButton";
-            this.rptCategoriaButton.Size = new System.Drawing.Size(200, 27);
-            this.rptCategoriaButton.TabIndex = 23;
-            this.rptCategoriaButton.Text = "Reporte Categoria";
-            this.rptCategoriaButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.rptCategoriaButton.UseVisualStyleBackColor = false;
-            this.rptCategoriaButton.Click += new System.EventHandler(this.rptCategoriaButton_Click);
-            // 
-            // rptProductosButton
-            // 
-            this.rptProductosButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.rptProductosButton.FlatAppearance.BorderSize = 0;
-            this.rptProductosButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.rptProductosButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rptProductosButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.rptProductosButton.Image = global::ProyectoFinalAplicada1.Properties.Resources.find_102325;
-            this.rptProductosButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.rptProductosButton.Location = new System.Drawing.Point(1, 65);
-            this.rptProductosButton.Name = "rptProductosButton";
-            this.rptProductosButton.Size = new System.Drawing.Size(200, 29);
-            this.rptProductosButton.TabIndex = 21;
-            this.rptProductosButton.Text = "Reporte de Productos";
-            this.rptProductosButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.rptProductosButton.UseVisualStyleBackColor = false;
-            this.rptProductosButton.Click += new System.EventHandler(this.rptProductosButton_Click);
-            // 
             // rptUsuarioButton
             // 
             this.rptUsuarioButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
@@ -582,7 +502,7 @@
             this.rptUsuarioButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.rptUsuarioButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rptUsuarioButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.rptUsuarioButton.Image = global::ProyectoFinalAplicada1.Properties.Resources.find_102325;
+            this.rptUsuarioButton.Image = global::ProyectoFinalAplicada1.Properties.Resources.cash_icon_icons_com_51090;
             this.rptUsuarioButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.rptUsuarioButton.Location = new System.Drawing.Point(0, 36);
             this.rptUsuarioButton.Name = "rptUsuarioButton";
@@ -607,7 +527,7 @@
             this.CReporte.Name = "CReporte";
             this.CReporte.Size = new System.Drawing.Size(200, 36);
             this.CReporte.TabIndex = 14;
-            this.CReporte.Text = "Reportes";
+            this.CReporte.Text = "Pagos";
             this.CReporte.UseVisualStyleBackColor = false;
             this.CReporte.Click += new System.EventHandler(this.CReporte_Click);
             // 
@@ -752,10 +672,6 @@
         private System.Windows.Forms.Timer FacturaTimer;
         private System.Windows.Forms.Panel Reportepanel;
         private System.Windows.Forms.Button CReporte;
-        private System.Windows.Forms.Button RptFacturasButton;
-        private System.Windows.Forms.Button rptEntradaButton;
-        private System.Windows.Forms.Button rptCategoriaButton;
-        private System.Windows.Forms.Button rptProductosButton;
         private System.Windows.Forms.Button rptUsuarioButton;
         private System.Windows.Forms.Timer Reportetimer;
     }

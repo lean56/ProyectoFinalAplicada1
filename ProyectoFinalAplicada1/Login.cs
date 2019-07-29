@@ -12,7 +12,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
-
+using DAL;
 
 namespace ProyectoFinalAplicada1
 {
@@ -21,7 +21,7 @@ namespace ProyectoFinalAplicada1
         public Login()
         {
             InitializeComponent();
-            User();
+          //  User();
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -59,21 +59,20 @@ namespace ProyectoFinalAplicada1
 
         private void User()
         {
-            RepositorioBase<Usuarios> repositorio = new RepositorioBase<Usuarios>();
-            if (!repositorio.Duplicado(p => p.Usuario == "lean56"))
-            {
-                repositorio.Guardar(new Usuarios()
+            RepositorioBase<Usuarios> db = new RepositorioBase<Usuarios>();
 
-                {
-                    Nombre = "Leonardo Emil",
-                    NivelUsuario = "Administrador",
-                    Usuario = "lean56",
-                    Contraseña = "admin",
-                    FechaIngreso = DateTime.Now
-                });
-            }
+            if (db.Duplicado(U => U.Usuario.Equals("admin")) == false)
+               {
+                 db.Guardar(new Usuarios()
+                 {
+                   Nombre = "Root",
+                   Usuario = "admin",
+                   Contraseña = "admin",
+                   NivelUsuario = "Administrador",
+                   FechaIngreso = DateTime.Now
+                  });
+                }
         }
-
 
         private void Logins()
         {
